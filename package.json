@@ -1,0 +1,45 @@
+{
+  "name": "@alilc/lowcode-demo",
+  "version": "1.0.0-beta.1",
+  "description": "Low-Code Engine 低代码搭建引擎 Demo 项目",
+  "repository": "git@github.com:alibaba/lowcode-demo.git",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "build-scripts start --disable-reload",
+    "build": "build-scripts build",
+    "pub": "node ./scripts/watchdog.js && npm pub"
+  },
+  "files": [
+    "build"
+  ],
+  "config": {},
+  "dependencies": {
+    "@alilc/lowcode-plugin-code-editor": "^1.0.1",
+    "@alilc/lowcode-plugin-code-generator": "^1.0.0",
+    "@alilc/lowcode-plugin-components-pane": "^1.0.2",
+    "@alilc/lowcode-plugin-datasource-pane": "^1.0.0",
+    "@alilc/lowcode-plugin-inject": "^1.0.0",
+    "@alilc/lowcode-plugin-manual": "^1.0.0",
+    "@alilc/lowcode-plugin-schema": "^1.0.0",
+    "@alilc/lowcode-plugin-simulator-select": "^1.0.0",
+    "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
+    "@alilc/lowcode-plugin-zh-en": "^1.0.0",
+    "@alilc/lowcode-react-renderer": "^1.0.0",
+    "@alilc/lowcode-setter-behavior": "^1.0.0",
+    "@alilc/lowcode-setter-title": "^1.0.2"
+  },
+  "devDependencies": {
+    "@alilc/lowcode-engine": "^1.0.0",
+    "@alilc/lowcode-types": "^1.0.0",
+    "@alib/build-scripts": "^0.1.18",
+    "@types/events": "^3.0.0",
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.2",
+    "@types/streamsaver": "^2.0.0",
+    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "build-plugin-react-app": "^1.1.2",
+    "tsconfig-paths-webpack-plugin": "^3.2.0"
+  }
+}
