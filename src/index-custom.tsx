@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import registerPlugins from './universal/plugin';
 import './universal/global.scss';
-import { project } from '@alilc/lowcode-engine';
 
 const preference = new Map();
 preference.set('DataSourcePane', {
