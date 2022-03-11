@@ -1,6 +1,7 @@
 {
   "entry": {
-    "index": "src/index"
+    "index": "src/index",
+    "index-custom": "src/index-custom"
   },
   "vendor": false,
   "devServer": {
