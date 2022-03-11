@@ -6,6 +6,7 @@ import {
   project,
   setters,
 } from '@alilc/lowcode-engine';
+import AliLowCodeEngineExt from '@alilc/lowcode-engine-ext';
 import { Button } from '@alifd/next';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
 import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
@@ -115,7 +116,7 @@ export default async function registerPlugins() {
 
   // 设置内置 setter 和事件绑定、插件绑定面板
   const setterRegistry = (ctx: ILowCodePluginContext) => {
-    const { setterMap, pluginMap } = window.AliLowCodeEngineExt;
+    const { setterMap, pluginMap } = AliLowCodeEngineExt;
     return {
       name: 'ext-setters-registry',
       async init() {
