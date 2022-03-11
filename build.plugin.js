@@ -33,6 +33,17 @@ module.exports = ({ onGetWebpackConfig }) => {
         },
       ]);
     config
+      .plugin('index-custom')
+      .use(HtmlWebpackPlugin, [
+        {
+          inject: false,
+          templateParameters: {
+          },
+          template: require.resolve('./public/index-custom.html'),
+          filename: 'index-custom.html',
+        },
+      ]);
+    config
       .plugin('preview')
       .use(HtmlWebpackPlugin, [
         {
