@@ -157,7 +157,7 @@
                                     "type": "h5",
                                     "children": {
                                       "type": "JSExpression",
-                                      "value": "this.state.info.info",
+                                      "value": "this.state.info?.info",
                                       "mock": "标题标题"
                                     },
                                     "mark": false,
