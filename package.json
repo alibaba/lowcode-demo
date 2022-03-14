@@ -8,6 +8,7 @@
   "scripts": {
     "start": "build-scripts start --disable-reload --port 5556",
     "build": "build-scripts build",
+    "prepublishOnly": "npm run build",
     "pub": "node ./scripts/watchdog.js && npm pub"
   },
   "files": [
