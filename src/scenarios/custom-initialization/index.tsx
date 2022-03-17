@@ -1,8 +1,8 @@
 import { common, plugins, config } from '@alilc/lowcode-engine';
 import { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import registerPlugins from './universal/plugin';
-import './universal/global.scss';
+import registerPlugins from '../../universal/plugin';
+import '../../universal/global.scss';
 
 const preference = new Map();
 preference.set('DataSourcePane', {
@@ -20,6 +20,7 @@ preference.set('DataSourcePane', {
 (async function main() {
   await registerPlugins();
 
+  const Workbench = common.skeletonCabin.Workbench;
   function EditorView() {
     /** 插件是否已初始化成功，因为必须要等插件初始化后才能渲染 Workbench */
     const [hasPluginInited, setHasPluginInited] = useState(false);
@@ -30,9 +31,7 @@ preference.set('DataSourcePane', {
       }).catch(err => console.error(err));
     }, []);
 
-    return hasPluginInited && (
-      <common.skeletonCabin.Workbench />
-    );
+    return hasPluginInited && <Workbench />;
   }
 
   config.setConfig({

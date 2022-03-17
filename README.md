@@ -4,6 +4,6 @@
 
 更多参考资料：
 
-- [马上玩一下](https://alifd.alicdn.com/npm/@alilc/lowcode-demo@1.0.0/build/index.html)
+- [马上玩一下](https://alifd.alicdn.com/npm/@alilc/lowcode-demo@1.0.3/build/index.html)
 - [低代码引擎官网](http://lowcode-engine.cn)
 - [引擎主包](https://github.com/alibaba/lowcode-engine)
