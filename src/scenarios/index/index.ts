@@ -1,6 +1,6 @@
 import { init } from '@alilc/lowcode-engine';
-import registerPlugins from './universal/plugin';
-import './universal/global.scss';
+import registerPlugins from '../../universal/plugin';
+import '../../universal/global.scss';
 
 const preference = new Map();
 preference.set('DataSourcePane', {

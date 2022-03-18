@@ -1,6 +1,9 @@
+const { join } = require('path');
+const fs = require('fs-extra');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const scenarioNames = fs.readdirSync(join('./src/scenarios')).filter(name => !name.startsWith('.'));
 
 module.exports = ({ onGetWebpackConfig }) => {
   onGetWebpackConfig((config) => {
@@ -15,34 +18,29 @@ module.exports = ({ onGetWebpackConfig }) => {
         fs: 'empty',
       },
     });
-    config.merge({
-      entry: {
-        index: require.resolve('./src/index.ts'),
-        preview: require.resolve('./src/preview.tsx'),
-      },
-    });
-    config
-      .plugin('index')
-      .use(HtmlWebpackPlugin, [
-        {
-          inject: false,
-          templateParameters: {
-          },
-          template: require.resolve('./public/index.html'),
-          filename: 'index.html',
+
+    scenarioNames.forEach(name => {
+      const hasTsx = fs.existsSync(join(`./src/scenarios/${name}/index.tsx`));
+      config.merge({
+        entry: {
+          [name]: hasTsx ? require.resolve(`./src/scenarios/${name}/index.tsx`) : require.resolve(`./src/scenarios/${name}/index.ts`),
         },
-      ]);
-    config
-      .plugin('index-custom')
-      .use(HtmlWebpackPlugin, [
-        {
-          inject: false,
-          templateParameters: {
+      });
+      config
+        .plugin(name)
+        .use(HtmlWebpackPlugin, [
+          {
+            inject: false,
+            minify: false,
+            templateParameters: {
+              scenario: name
+            },
+            template: require.resolve('./public/index.ejs'),
+            filename: `${name}.html`,
           },
-          template: require.resolve('./public/index-custom.html'),
-          filename: 'index-custom.html',
-        },
-      ]);
+        ]);
+    })
+
     config
       .plugin('preview')
       .use(HtmlWebpackPlugin, [
