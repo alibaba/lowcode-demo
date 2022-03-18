@@ -21,9 +21,9 @@ import SimulatorResizer from '@alilc/lowcode-plugin-simulator-select';
 
 // 注册到引擎
 import TitleSetter from '@alilc/lowcode-setter-title';
-import BehaviorSetter from '../setters/behavior-setter';
-import CustomSetter from '../setters/custom-setter';
-import Logo from '../sample-plugins/logo';
+import BehaviorSetter from '../../setters/behavior-setter';
+import CustomSetter from '../../setters/custom-setter';
+import Logo from '../../sample-plugins/logo';
 
 import {
   loadIncrementalAssets,
@@ -31,8 +31,9 @@ import {
   saveSchema,
   resetSchema,
   preview,
-} from './utils';
-import assets from './assets.json'
+} from '../../universal/utils';
+import assets from './assets.json';
+import schema from './schema.json';
 
 export default async function registerPlugins() {
   await plugins.register(ManualPlugin);
@@ -60,8 +61,6 @@ export default async function registerPlugins() {
         const { material, project } = ctx;
 
         material.setAssets(await injectAssets(assets));
-
-        const schema = await getPageSchema();
 
         // 加载 schema
         project.openDocument(schema);
@@ -180,47 +179,47 @@ export default async function registerPlugins() {
   await plugins.register(loadAssetsSample);
 
   // 注册保存面板
-  const saveSample = (ctx: ILowCodePluginContext) => {
-    return {
-      name: 'saveSample',
-      async init() {
-        const { skeleton, hotkey } = ctx;
+  // const saveSample = (ctx: ILowCodePluginContext) => {
+  //   return {
+  //     name: 'saveSample',
+  //     async init() {
+  //       const { skeleton, hotkey } = ctx;
 
-        skeleton.add({
-          name: 'saveSample',
-          area: 'topArea',
-          type: 'Widget',
-          props: {
-            align: 'right',
-          },
-          content: (
-            <Button onClick={saveSchema}>
-              保存到本地
-            </Button>
-          ),
-        });
-        skeleton.add({
-          name: 'resetSchema',
-          area: 'topArea',
-          type: 'Widget',
-          props: {
-            align: 'right',
-          },
-          content: (
-            <Button onClick={resetSchema}>
-              重置页面
-            </Button>
-          ),
-        });
-        hotkey.bind('command+s', (e) => {
-          e.preventDefault();
-          saveSchema();
-        });
-      },
-    };
-  }
-  saveSample.pluginName = 'saveSample';
-  await plugins.register(saveSample);
+  //       skeleton.add({
+  //         name: 'saveSample',
+  //         area: 'topArea',
+  //         type: 'Widget',
+  //         props: {
+  //           align: 'right',
+  //         },
+  //         content: (
+  //           <Button onClick={saveSchema}>
+  //             保存到本地
+  //           </Button>
+  //         ),
+  //       });
+  //       skeleton.add({
+  //         name: 'resetSchema',
+  //         area: 'topArea',
+  //         type: 'Widget',
+  //         props: {
+  //           align: 'right',
+  //         },
+  //         content: (
+  //           <Button onClick={resetSchema}>
+  //             重置页面
+  //           </Button>
+  //         ),
+  //       });
+  //       hotkey.bind('command+s', (e) => {
+  //         e.preventDefault();
+  //         saveSchema();
+  //       });
+  //     },
+  //   };
+  // }
+  // saveSample.pluginName = 'saveSample';
+  // await plugins.register(saveSample);
 
   DataSourcePanePlugin.pluginName = 'DataSourcePane';
   await plugins.register(DataSourcePanePlugin);
