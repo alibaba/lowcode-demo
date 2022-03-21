@@ -1,6 +1,7 @@
 import { common, plugins, config } from '@alilc/lowcode-engine';
 import { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import { scenarioSwitcher } from '../../sample-plugins/scenario-switcher';
 import registerPlugins from '../../universal/plugin';
 import '../../universal/global.scss';
 
@@ -18,6 +19,7 @@ preference.set('DataSourcePane', {
 });
 
 (async function main() {
+  await plugins.register(scenarioSwitcher);
   await registerPlugins();
 
   const Workbench = common.skeletonCabin.Workbench;

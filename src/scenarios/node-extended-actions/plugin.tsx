@@ -8,7 +8,7 @@ import {
   Node,
 } from '@alilc/lowcode-engine';
 import AliLowCodeEngineExt from '@alilc/lowcode-engine-ext';
-import { Button } from '@alifd/next';
+import { Icon, Message, Button } from '@alifd/next';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
 import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
 import ZhEnPlugin from '@alilc/lowcode-plugin-zh-en';
@@ -35,7 +35,6 @@ import {
 } from '../../universal/utils';
 import assets from './assets.json';
 import schema from './schema.json';
-import { Icon, Message } from '@alifd/next';
 
 export default async function registerPlugins() {
 
