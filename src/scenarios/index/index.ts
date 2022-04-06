@@ -2,6 +2,7 @@ import { init, plugins } from '@alilc/lowcode-engine';
 import registerPlugins from '../../universal/plugin';
 import { scenarioSwitcher } from '../../sample-plugins/scenario-switcher';
 import '../../universal/global.scss';
+import {registerDefaults} from '../../sample-plugins/set-configure/index'
 
 const preference = new Map();
 preference.set('DataSourcePane', {
@@ -17,8 +18,12 @@ preference.set('DataSourcePane', {
 });
 
 (async function main() {
+
+ 
   await plugins.register(scenarioSwitcher);
+  
   await registerPlugins();
+  registerDefaults()
 
   init(document.getElementById('lce-container')!, {
     // designMode: 'live',
@@ -34,4 +39,5 @@ preference.set('DataSourcePane', {
       'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@latest/dist/js/react-simulator-renderer.js'
     ]
   }, preference);
+  
 })();
