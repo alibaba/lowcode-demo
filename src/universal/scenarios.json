@@ -12,6 +12,10 @@
     "title": "基础 fusion 组件 + 单自定义组件"
   },
   {
+    "name": "basic-antd",
+    "title": "基础 antd 组件"
+  },
+  {
     "name": "custom-initialization",
     "title": "自定义初始化引擎"
   },
