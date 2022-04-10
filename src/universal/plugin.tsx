@@ -24,6 +24,7 @@ import TitleSetter from '@alilc/lowcode-setter-title';
 import BehaviorSetter from '../setters/behavior-setter';
 import CustomSetter from '../setters/custom-setter';
 import Logo from '../sample-plugins/logo';
+import { deleteHiddenTransducer } from '../sample-plugins/delete-hidden-transducer';
 
 import {
   loadIncrementalAssets,
@@ -38,6 +39,8 @@ export default async function registerPlugins() {
   await plugins.register(ManualPlugin);
 
   await plugins.register(Inject);
+
+  await plugins.register(deleteHiddenTransducer);
 
   // plugin API 见 https://yuque.antfin.com/ali-lowcode/docs/cdukce
   SchemaPlugin.pluginName = 'SchemaPlugin';
@@ -59,7 +62,7 @@ export default async function registerPlugins() {
         // 设置物料描述
         const { material, project } = ctx;
 
-        material.setAssets(await injectAssets(assets));
+        await material.setAssets(await injectAssets(assets));
 
         const schema = await getPageSchema();
 

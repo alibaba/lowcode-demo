@@ -1,6 +1,7 @@
 import { material, project } from '@alilc/lowcode-engine';
 import { filterPackages } from '@alilc/lowcode-plugin-inject'
 import { Message, Dialog } from '@alifd/next';
+import { TransformStage } from '@alilc/lowcode-types';
 
 export const loadIncrementalAssets = () => {
   material?.onChangeAssets(() => {
@@ -154,7 +155,7 @@ export const preview = () => {
 export const saveSchema = async () => {
   window.localStorage.setItem(
     'projectSchema',
-    JSON.stringify(project.exportSchema())
+    JSON.stringify(project.exportSchema(TransformStage.Save))
   );
   const packages = await filterPackages(material.getAssets().packages);
   window.localStorage.setItem(
