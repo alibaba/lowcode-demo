@@ -4,6 +4,7 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const scenarioNames = fs.readdirSync(join('./src/scenarios')).filter(name => !name.startsWith('.'));
+const { version } = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
 module.exports = ({ onGetWebpackConfig }) => {
   onGetWebpackConfig((config) => {
@@ -33,7 +34,8 @@ module.exports = ({ onGetWebpackConfig }) => {
             inject: false,
             minify: false,
             templateParameters: {
-              scenario: name
+              scenario: name,
+              version,
             },
             template: require.resolve('./public/index.ejs'),
             filename: `${name}.html`,
