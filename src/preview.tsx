@@ -4,13 +4,22 @@ import { Loading } from '@alifd/next';
 import { buildComponents, assetBundle, AssetLevel, AssetLoader } from '@alilc/lowcode-utils';
 import ReactRenderer from '@alilc/lowcode-react-renderer';
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
+import { getProjectSchemaFromLocalStorage, getPackagesFromLocalStorage } from './universal/utils';
+
+const getScenarioName = function() {
+  if (location.search) {
+   return new URLSearchParams(location.search.slice(1)).get('scenarioName') || 'index'
+  }
+  return 'index';
+}
 
 const SamplePreview = () => {
   const [data, setData] = useState({});
 
   async function init() {
-    const packages = JSON.parse(window.localStorage.getItem('packages') || '');
-    const projectSchema = JSON.parse(window.localStorage.getItem('projectSchema') || '');
+    const scenarioName = getScenarioName();
+    const packages = getPackagesFromLocalStorage(scenarioName);
+    const projectSchema = getProjectSchemaFromLocalStorage(scenarioName);
     const { componentsMap: componentsMapArray, componentsTree } = projectSchema;
     const componentsMap: any = {};
     componentsMapArray.forEach((component: any) => {

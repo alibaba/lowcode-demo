@@ -32,6 +32,7 @@ import {
   saveSchema,
   resetSchema,
   preview,
+  getProjectSchemaFromLocalStorage,
 } from '../../universal/utils';
 import assets from './assets.json';
 import schema from './schema.json';
@@ -99,7 +100,7 @@ export default async function registerPlugins() {
         material.setAssets(await injectAssets(assets));
 
         // 加载 schema
-        project.openDocument(schema);
+        project.openDocument(getProjectSchemaFromLocalStorage('node-extended-actions').componentsTree?.[0] || schema);
       },
     };
   }
@@ -215,47 +216,47 @@ export default async function registerPlugins() {
   await plugins.register(loadAssetsSample);
 
   // 注册保存面板
-  // const saveSample = (ctx: ILowCodePluginContext) => {
-  //   return {
-  //     name: 'saveSample',
-  //     async init() {
-  //       const { skeleton, hotkey } = ctx;
+  const saveSample = (ctx: ILowCodePluginContext) => {
+    return {
+      name: 'saveSample',
+      async init() {
+        const { skeleton, hotkey } = ctx;
 
-  //       skeleton.add({
-  //         name: 'saveSample',
-  //         area: 'topArea',
-  //         type: 'Widget',
-  //         props: {
-  //           align: 'right',
-  //         },
-  //         content: (
-  //           <Button onClick={saveSchema}>
-  //             保存到本地
-  //           </Button>
-  //         ),
-  //       });
-  //       skeleton.add({
-  //         name: 'resetSchema',
-  //         area: 'topArea',
-  //         type: 'Widget',
-  //         props: {
-  //           align: 'right',
-  //         },
-  //         content: (
-  //           <Button onClick={resetSchema}>
-  //             重置页面
-  //           </Button>
-  //         ),
-  //       });
-  //       hotkey.bind('command+s', (e) => {
-  //         e.preventDefault();
-  //         saveSchema();
-  //       });
-  //     },
-  //   };
-  // }
-  // saveSample.pluginName = 'saveSample';
-  // await plugins.register(saveSample);
+        skeleton.add({
+          name: 'saveSample',
+          area: 'topArea',
+          type: 'Widget',
+          props: {
+            align: 'right',
+          },
+          content: (
+            <Button onClick={() => saveSchema('node-extended-actions')}>
+              保存到本地
+            </Button>
+          ),
+        });
+        skeleton.add({
+          name: 'resetSchema',
+          area: 'topArea',
+          type: 'Widget',
+          props: {
+            align: 'right',
+          },
+          content: (
+            <Button onClick={() => resetSchema('node-extended-actions')}>
+              重置页面
+            </Button>
+          ),
+        });
+        hotkey.bind('command+s', (e) => {
+          e.preventDefault();
+          saveSchema();
+        });
+      },
+    };
+  }
+  saveSample.pluginName = 'saveSample';
+  await plugins.register(saveSample);
 
   DataSourcePanePlugin.pluginName = 'DataSourcePane';
   await plugins.register(DataSourcePanePlugin);
@@ -280,7 +281,7 @@ export default async function registerPlugins() {
             align: 'right',
           },
           content: (
-            <Button type="primary" onClick={preview}>
+            <Button type="primary" onClick={() => preview('node-extended-actions')}>
               预览
             </Button>
           ),

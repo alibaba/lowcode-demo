@@ -145,27 +145,31 @@ export const loadIncrementalAssets = () => {
   });
 };
 
-export const preview = () => {
-  saveSchema();
+export const preview = (scenarioName: string) => {
+  saveSchema(scenarioName);
   setTimeout(() => {
-    window.open(`./preview.html${location.search}`);
+    const search = location.search ? `${location.search}&scenarioName=${scenarioName}` : `?scenarioName=${scenarioName}`;
+    window.open(`./preview.html${search}`);
   }, 500);
 };
 
-export const saveSchema = async () => {
-  window.localStorage.setItem(
-    'projectSchema',
-    JSON.stringify(project.exportSchema(TransformStage.Save))
-  );
-  const packages = await filterPackages(material.getAssets().packages);
-  window.localStorage.setItem(
-    'packages',
-    JSON.stringify(packages)
-  );
+export const saveSchema = async (scenarioName: string = 'index') => {
+  setProjectSchemaToLocalStorage(scenarioName);
+
+  await setPackgesToLocalStorage(scenarioName);
+  // window.localStorage.setItem(
+  //   'projectSchema',
+  //   JSON.stringify(project.exportSchema(TransformStage.Save))
+  // );
+  // const packages = await filterPackages(material.getAssets().packages);
+  // window.localStorage.setItem(
+  //   'packages',
+  //   JSON.stringify(packages)
+  // );
   Message.success('成功保存到本地');
 };
 
-export const resetSchema = async () => {
+export const resetSchema = async (scenarioName: string = 'index') => {
   try {
     await new Promise<void>((resolve, reject) => {
       Dialog.confirm({
@@ -182,7 +186,24 @@ export const resetSchema = async () => {
     return
   }
 
-  let schema
+  // 除了「综合场景」，其他场景没有默认 schema.json，这里构造空页面
+  if (scenarioName !== 'index') {
+    window.localStorage.setItem(
+      getLSName(scenarioName),
+      JSON.stringify({
+        componentsTree: [{ componentName: 'Page', fileName: 'sample' }],
+        componentsMap: material.componentsMap,
+        version: '1.0.0',
+        i18n: {},
+      })
+    );
+    project.getCurrentDocument()?.importSchema({ componentName: 'Page', fileName: 'sample' });
+    project.simulatorHost?.rerender();
+    Message.success('成功重置页面');
+    return;
+  }
+
+  let schema;
   try {
     schema = await request('./schema.json')
   } catch(err) {
@@ -193,7 +214,7 @@ export const resetSchema = async () => {
   }
 
   window.localStorage.setItem(
-    'projectSchema',
+    getLSName('index'),
     JSON.stringify({
       componentsTree: [schema],
       componentsMap: material.componentsMap,
@@ -205,6 +226,47 @@ export const resetSchema = async () => {
   project.getCurrentDocument()?.importSchema(schema);
   project.simulatorHost?.rerender();
   Message.success('成功重置页面');
+}
+
+const getLSName = (scenarioName: string, ns: string = 'projectSchema') => `${scenarioName}:${ns}`;
+
+export const getProjectSchemaFromLocalStorage = (scenarioName: string) => {
+  if (!scenarioName) {
+    console.error('scenarioName is required!');
+    return;
+  }
+  return JSON.parse(window.localStorage.getItem(getLSName(scenarioName)) || '{}');
+}
+
+const setProjectSchemaToLocalStorage = (scenarioName: string) => {
+  if (!scenarioName) {
+    console.error('scenarioName is required!');
+    return;
+  }
+  window.localStorage.setItem(
+    getLSName(scenarioName),
+    JSON.stringify(project.exportSchema(TransformStage.Save))
+  );
+}
+
+const setPackgesToLocalStorage = async (scenarioName: string) => {
+  if (!scenarioName) {
+    console.error('scenarioName is required!');
+    return;
+  }
+  const packages = await filterPackages(material.getAssets().packages);
+  window.localStorage.setItem(
+    getLSName(scenarioName, 'packages'),
+    JSON.stringify(packages),
+  );
+}
+
+export const getPackagesFromLocalStorage = (scenarioName: string) => {
+  if (!scenarioName) {
+    console.error('scenarioName is required!');
+    return;
+  }
+  return JSON.parse(window.localStorage.getItem(getLSName(scenarioName, 'packages')) || '{}');
 }
 
 export const getPageSchema = async () => {
