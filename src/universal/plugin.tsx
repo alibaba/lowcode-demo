@@ -197,7 +197,7 @@ export default async function registerPlugins() {
             align: 'right',
           },
           content: (
-            <Button onClick={saveSchema}>
+            <Button onClick={() => saveSchema()}>
               保存到本地
             </Button>
           ),
@@ -210,7 +210,7 @@ export default async function registerPlugins() {
             align: 'right',
           },
           content: (
-            <Button onClick={resetSchema}>
+            <Button onClick={() => resetSchema()}>
               重置页面
             </Button>
           ),
