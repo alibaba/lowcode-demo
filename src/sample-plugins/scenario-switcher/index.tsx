@@ -17,6 +17,7 @@ function Switcher(props: any) {
     id="basic-demo"
     onChange={(val) => location.href = `./${val}.html`}
     defaultValue={getCurrentScenarioName()}
+    style={{ width: 220 }}
   >
     {
       scenarios.map((scenario: any) => <Option value={scenario.name}>{scenario.title}</Option>)
