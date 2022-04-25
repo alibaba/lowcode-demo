@@ -248,7 +248,7 @@ export default async function registerPlugins() {
             align: 'right',
           },
           content: (
-            <Button type="primary" onClick={preview}>
+            <Button type="primary" onClick={() => preview()}>
               预览
             </Button>
           ),
