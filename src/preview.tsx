@@ -27,22 +27,20 @@ const SamplePreview = () => {
     });
     const schema = componentsTree[0];
 
-    const libraryMap = {};
-    const libraryAsset = [];
-    packages.forEach(({ package: _package, library, urls, renderUrls }) => {
-      libraryMap[_package] = library;
-      if (renderUrls) {
-        libraryAsset.push(renderUrls);
-      } else if (urls) {
-        libraryAsset.push(urls);
-      }
-    });
+    const libraryMap: {
+      [packageName: string]: string;
+    } = {};
 
-    const vendors = [assetBundle(libraryAsset, AssetLevel.Library)];
-
-    // TODO asset may cause pollution
     const assetLoader = new AssetLoader();
-    await assetLoader.load(libraryAsset);
+
+    for(let i = 0; i < packages.length; i++) {
+      const { package: _package, library, urls, renderUrls, deps } = packages[i];
+      libraryMap[_package] = library;
+      if (renderUrls || urls) {
+        await assetLoader.load(renderUrls || urls);
+      }
+    }
+
     const components = await injectComponents(buildComponents(libraryMap, componentsMap));
 
     setData({
