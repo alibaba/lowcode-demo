@@ -22,7 +22,7 @@
     "@alilc/lowcode-plugin-datasource-pane": "^1.0.3",
     "@alilc/lowcode-plugin-inject": "^1.0.0",
     "@alilc/lowcode-plugin-manual": "^1.0.3",
-    "@alilc/lowcode-plugin-schema": "^1.0.0",
+    "@alilc/lowcode-plugin-schema": "^1.0.1",
     "@alilc/lowcode-plugin-simulator-select": "^1.0.0",
     "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
     "@alilc/lowcode-plugin-zh-en": "^1.0.0",
