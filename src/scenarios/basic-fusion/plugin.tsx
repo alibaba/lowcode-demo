@@ -214,7 +214,7 @@ export default async function registerPlugins() {
         });
         hotkey.bind('command+s', (e) => {
           e.preventDefault();
-          saveSchema();
+          saveSchema('basic-fusion')
         });
       },
     };
