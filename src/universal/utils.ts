@@ -269,16 +269,13 @@ export const getPackagesFromLocalStorage = (scenarioName: string) => {
   return JSON.parse(window.localStorage.getItem(getLSName(scenarioName, 'packages')) || '{}');
 }
 
-export const getPageSchema = async () => {
-  const schema = JSON.parse(
-    window.localStorage.getItem('projectSchema') || '{}'
-  );
-
-  const pageSchema = schema?.componentsTree?.[0];
+export const getPageSchema = async (scenarioName: string = 'index') => {
+  const pageSchema = getProjectSchemaFromLocalStorage(scenarioName).componentsTree?.[0]
 
   if (pageSchema) {
     return pageSchema;
   }
+
   return await request('./schema.json');
 };
 
