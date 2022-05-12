@@ -34,11 +34,14 @@ import {
   preview,
 } from './utils';
 import assets from './assets.json'
+import { registerRefProp } from 'src/sample-plugins/set-ref-prop';
 
 export default async function registerPlugins() {
   await plugins.register(ManualPlugin);
 
   await plugins.register(Inject);
+
+  await plugins.register(registerRefProp);
 
   await plugins.register(deleteHiddenTransducer);
 
