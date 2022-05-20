@@ -7,6 +7,7 @@
     "hot": false
   },
   "publicPath": "/",
+  "outputDir": "build",
   "externals": {
     "react": "var window.React",
     "react-dom": "var window.ReactDOM",
