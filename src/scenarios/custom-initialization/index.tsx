@@ -1,6 +1,7 @@
 import { common, plugins, config } from '@alilc/lowcode-engine';
 import { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 import { scenarioSwitcher } from '../../sample-plugins/scenario-switcher';
 import registerPlugins from '../../universal/plugin';
 import '../../universal/global.scss';
@@ -48,7 +49,10 @@ preference.set('DataSourcePane', {
     simulatorUrl: [
       'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@latest/dist/css/react-simulator-renderer.css',
       'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@latest/dist/js/react-simulator-renderer.js'
-    ]
+    ],
+    requestHandlersMap: {
+      fetch: createFetchHandler()
+    }
   })
 
   ReactDOM.render(<EditorView />, document.getElementById('lce-container')!);
