@@ -5,7 +5,7 @@ import { buildComponents, assetBundle, AssetLevel, AssetLoader } from '@alilc/lo
 import ReactRenderer from '@alilc/lowcode-react-renderer';
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
 import { getProjectSchemaFromLocalStorage, getPackagesFromLocalStorage } from './universal/utils';
-
+// pull request test
 const getScenarioName = function() {
   if (location.search) {
    return new URLSearchParams(location.search.slice(1)).get('scenarioName') || 'index'
