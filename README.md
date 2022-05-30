@@ -10,10 +10,10 @@
 - [basic-fusion-with-single-component](https://lowcode-engine.cn/demo/basic-fusion-with-single-component.html)
 - [custom-initialization](https://lowcode-engine.cn/demo/custom-initialization.html)
 - [node-extended-actions](https://lowcode-engine.cn/demo/node-extended-actions.html)
+- [next-pro](https://lowcode-engine.cn/demo/next-pro.html)
 
 更多参考资料：
 
 - [马上玩一下](https://lowcode-engine.cn/demo/index.html)
 - [低代码引擎官网](http://lowcode-engine.cn)
 - [引擎主包](https://github.com/alibaba/lowcode-engine)
-
