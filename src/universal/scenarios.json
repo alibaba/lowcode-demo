@@ -22,5 +22,9 @@
   {
     "name": "node-extended-actions",
     "title": "扩展节点操作项"
+  },
+  {
+    "name": "next-pro",
+    "title": "基于next实现的高级表单低代码物料"
   }
 ]

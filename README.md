@@ -10,6 +10,7 @@
 - [basic-fusion-with-single-component](https://lowcode-engine.cn/demo/basic-fusion-with-single-component.html)
 - [custom-initialization](https://lowcode-engine.cn/demo/custom-initialization.html)
 - [node-extended-actions](https://lowcode-engine.cn/demo/node-extended-actions.html)
+- [next-pro](https://lowcode-engine.cn/demo/next-pro.html)
 
 更多参考资料：
 
