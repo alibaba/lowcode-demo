@@ -1,0 +1,82 @@
+{
+  "packages": [
+    {
+      "package": "moment",
+      "version": "2.24.0",
+      "urls": ["https://g.alicdn.com/mylib/moment/2.24.0/min/moment.min.js"],
+      "library": "moment"
+    },
+    {
+      "package": "lodash",
+      "library": "_",
+      "urls": ["https://g.alicdn.com/platform/c/lodash/4.6.1/lodash.min.js"]
+    },
+    {
+      "title": "fusion组件库",
+      "package": "@alifd/next",
+      "version": "1.24.18",
+      "urls": [
+        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next.min.css",
+        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next-with-locales.min.js"
+      ],
+      "library": "Next"
+    },
+    {
+      "package": "@dogtiti/next-pro-lowcode-materials",
+      "version": "0.2.1",
+      "library": "NextProLowcodeMaterials",
+      "urls": [
+        "https://unpkg.com/@dogtiti/next-pro-lowcode-materials@0.2.1/build/lowcode/render/default/view.js",
+        "https://unpkg.com/@dogtiti/next-pro-lowcode-materials@0.2.1/build/lowcode/render/default/view.css"
+      ],
+      "editUrls": [
+        "https://unpkg.com/@dogtiti/next-pro-lowcode-materials@0.2.1/build/lowcode/view.js",
+        "https://unpkg.com/@dogtiti/next-pro-lowcode-materials@0.2.1/build/lowcode/view.css"
+      ],
+      "advancedUrls": {
+        "default": [
+          "https://unpkg.com/@dogtiti/next-pro-lowcode-materials@0.2.1/build/lowcode/render/default/view.js",
+          "https://unpkg.com/@dogtiti/next-pro-lowcode-materials@0.2.1/build/lowcode/render/default/view.css"
+        ]
+      },
+      "advancedEditUrls": {}
+    }
+  ],
+  "components": [
+    {
+      "exportName": "DogtitiNextProLowcodeMaterialsMeta",
+      "npm": {
+        "package": "@dogtiti/next-pro-lowcode-materials",
+        "version": "0.2.1"
+      },
+      "url": "https://unpkg.com/@dogtiti/next-pro-lowcode-materials@0.2.1/build/lowcode/meta.js",
+      "urls": {
+        "default": "https://unpkg.com/@dogtiti/next-pro-lowcode-materials@0.2.1/build/lowcode/meta.js"
+      },
+      "advancedUrls": {
+        "default": [
+          "https://unpkg.com/@dogtiti/next-pro-lowcode-materials@0.2.1/build/lowcode/meta.js"
+        ]
+      }
+    }
+  ],
+  "sort": {
+    "groupList": ["精选组件", "原子组件"],
+    "categoryList": [
+      "基础元素",
+      "布局容器类",
+      "表格类",
+      "表单详情类",
+      "帮助类",
+      "对话框类",
+      "业务类",
+      "通用",
+      "引导",
+      "信息输入",
+      "信息展示",
+      "信息反馈"
+    ]
+  },
+  "groupList": ["精选组件", "原子组件"],
+  "ignoreComponents": {}
+}
