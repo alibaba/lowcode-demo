@@ -77,7 +77,7 @@ export default async function registerPlugins() {
 
   await plugins.register(Inject);
 
-  // plugin API 见 https://yuque.antfin.com/ali-lowcode/docs/cdukce
+  // plugin API 见 https://lowcode-engine.cn/docV2/ibh9fh
   SchemaPlugin.pluginName = 'SchemaPlugin';
   await plugins.register(SchemaPlugin);
 
