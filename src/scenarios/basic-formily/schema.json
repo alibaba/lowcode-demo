@@ -1,0 +1,322 @@
+{
+  "componentName": "Page",
+  "id": "node_dockcviv8fo1",
+  "props": {
+    "ref": "outerView",
+    "style": {
+      "height": "100%"
+    }
+  },
+  "fileName": "/",
+  "dataSource": {
+    "list": [
+      {
+        "type": "fetch",
+        "isInit": true,
+        "options": {
+          "params": {},
+          "method": "GET",
+          "isCors": true,
+          "timeout": 5000,
+          "headers": {},
+          "uri": "mock/info.json"
+        },
+        "id": "info",
+        "shouldFetch": {
+          "type": "JSFunction",
+          "value": "function() { \n  console.log('should fetch.....');\n  return true; \n}"
+        }
+      }
+    ]
+  },
+  "state": {
+    "text": {
+      "type": "JSExpression",
+      "value": "\"outer\""
+    },
+    "isShowDialog": {
+      "type": "JSExpression",
+      "value": "false"
+    }
+  },
+  "css": "body {\n  font-size: 12px;\n}\n\n.button {\n  width: 100px;\n  color: #ff00ff\n}",
+  "lifeCycles": {
+    "componentDidMount": {
+      "type": "JSFunction",
+      "value": "function componentDidMount() {\n  console.log('did mount');\n}"
+    },
+    "componentWillUnmount": {
+      "type": "JSFunction",
+      "value": "function componentWillUnmount() {\n  console.log('will unmount');\n}"
+    }
+  },
+  "methods": {
+    "testFunc": {
+      "type": "JSFunction",
+      "value": "function testFunc() {\n  console.log('test func');\n}"
+    },
+    "onClick": {
+      "type": "JSFunction",
+      "value": "function onClick() {\n  this.setState({\n    isShowDialog: true\n  });\n}"
+    },
+    "closeDialog": {
+      "type": "JSFunction",
+      "value": "function closeDialog() {\n  this.setState({\n    isShowDialog: false\n  });\n}"
+    }
+  },
+  "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    })\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    })\n  }\n}",
+  "hidden": false,
+  "title": "",
+  "isLocked": false,
+  "condition": true,
+  "conditionGroup": "",
+  "children": [
+    {
+      "componentName": "FormilyForm",
+      "id": "node_ocl4p2e02w1",
+      "props": {
+        "componentProps": {
+          "layout": "vertical"
+        },
+        "__component_name": "FormilyForm",
+        "ref": "formily_7eeo00gr8pa"
+      },
+      "title": "FormilyForm",
+      "hidden": false,
+      "isLocked": false,
+      "condition": true,
+      "conditionGroup": "",
+      "children": [
+        {
+          "componentName": "FormilyInput",
+          "id": "node_ocl4p2e02w2",
+          "props": {
+            "__component_name": "FormilyInput",
+            "fieldProps": {
+              "name": "username",
+              "title": "Input",
+              "x-validator": []
+            },
+            "componentProps": {
+              "x-component-props": {}
+            },
+            "decoratorProps": {
+              "x-decorator-props": {}
+            }
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FormilyPassword",
+          "id": "node_ocl4p2e02w3",
+          "props": {
+            "__component_name": "FormilyPassword",
+            "fieldProps": {
+              "name": "password",
+              "title": "Password",
+              "x-validator": []
+            },
+            "componentProps": {
+              "x-component-props": {}
+            },
+            "decoratorProps": {
+              "x-decorator-props": {}
+            }
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FormilyNumberPicker",
+          "id": "node_ocl4p2e02w4",
+          "props": {
+            "__component_name": "FormilyNumberPicker",
+            "fieldProps": {
+              "name": "age",
+              "title": "NumberPicker",
+              "x-validator": []
+            },
+            "componentProps": {
+              "x-component-props": {}
+            },
+            "decoratorProps": {
+              "x-decorator-props": {}
+            }
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FormilySelect",
+          "id": "node_ocl4p2e02w5",
+          "props": {
+            "__component_name": "FormilySelect",
+            "fieldProps": {
+              "name": "habit",
+              "title": "Select",
+              "x-validator": []
+            },
+            "componentProps": {
+              "x-component-props": {}
+            },
+            "decoratorProps": {
+              "x-decorator-props": {}
+            }
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FormilySwitch",
+          "id": "node_ocl4p2e02w6",
+          "props": {
+            "__component_name": "FormilySwitch",
+            "fieldProps": {
+              "name": "switch",
+              "title": "Switch",
+              "x-validator": []
+            },
+            "componentProps": {
+              "x-component-props": {}
+            },
+            "decoratorProps": {
+              "x-decorator-props": {}
+            }
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FormilyCheckbox",
+          "id": "node_ocl4p2e02w7",
+          "props": {
+            "__component_name": "FormilyCheckbox",
+            "fieldProps": {
+              "name": "gender",
+              "title": "Checkbox Group",
+              "enum": [
+                {
+                  "label": "选项1",
+                  "value": 1
+                },
+                {
+                  "label": "选项2",
+                  "value": 2
+                }
+              ],
+              "x-validator": []
+            },
+            "componentProps": {
+              "x-component-props": {}
+            },
+            "decoratorProps": {
+              "x-decorator-props": {}
+            }
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FormilyTextArea",
+          "id": "node_ocl4p2e02w8",
+          "props": {
+            "__component_name": "FormilyTextArea",
+            "fieldProps": {
+              "name": "text",
+              "title": "TextArea",
+              "x-component": "Input.TextArea",
+              "x-validator": []
+            },
+            "componentProps": {
+              "x-component-props": {}
+            },
+            "decoratorProps": {
+              "x-decorator-props": {}
+            }
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FormilyMonacoInput",
+          "id": "node_ocl4p2e02w9",
+          "props": {
+            "__component_name": "FormilyMonacoInput",
+            "fieldProps": {
+              "name": "code",
+              "title": "MonacoInput",
+              "x-validator": []
+            },
+            "componentProps": {
+              "x-component-props": {
+                "defaultLanguage": "text",
+                "height": 160,
+                "readOnly": false,
+                "theme": "vs-dark",
+                "options": {
+                  "lineNumbers": "on"
+                }
+              }
+            },
+            "decoratorProps": {
+              "x-decorator-props": {}
+            }
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        },
+        {
+          "componentName": "FormilyUploadDragger",
+          "id": "node_ocl4p2e02wa",
+          "props": {
+            "__component_name": "FormilyUploadDragger",
+            "fieldProps": {
+              "name": "files",
+              "title": "Drag Upload",
+              "type": "Array<object>",
+              "x-validator": []
+            },
+            "componentProps": {
+              "x-component-props": {
+                "textContent": "Click or drag file to this area to upload"
+              }
+            },
+            "decoratorProps": {
+              "x-decorator-props": {}
+            }
+          },
+          "hidden": false,
+          "title": "",
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": ""
+        }
+      ]
+    }
+  ]
+}
