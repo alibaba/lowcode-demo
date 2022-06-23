@@ -32,6 +32,7 @@
     "@alilc/lowcode-setter-title": "^1.0.2",
     "@formily/core": "^2.1.4",
     "@formily/react": "^2.1.4",
+    "@formily/antd": "^2.1.4",
     "@seada/antd-plugins": "^0.0.1-alpha.8",
     "antd": "^4.21.0",
     "moment": "^2.29.3",
