@@ -59,11 +59,11 @@
       "exportName": "AlilcAntdLowcodeMaterialsMeta",
       "npm": {
         "package": "@alilc/antd-lowcode-materials",
-        "version": "1.0.6"
+        "version": "1.0.9"
       },
-      "url": "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.6/build/lowcode/meta.js",
+      "url": "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.9/build/lowcode/meta.js",
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.6/build/lowcode/meta.js"
+        "default": "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.9/build/lowcode/meta.js"
       }
     }
   ],
