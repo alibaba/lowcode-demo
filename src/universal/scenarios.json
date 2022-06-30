@@ -16,6 +16,10 @@
     "title": "基础 antd 组件"
   },
   {
+    "name": "basic-formily",
+    "title": "formily 表单"
+  },
+  {
     "name": "custom-initialization",
     "title": "自定义初始化引擎"
   },
