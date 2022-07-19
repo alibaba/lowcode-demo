@@ -2,6 +2,7 @@ import { init, plugins } from '@alilc/lowcode-engine';
 import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler';
 import registerPlugins from './plugin';
 import { scenarioSwitcher } from '../../sample-plugins/scenario-switcher';
+import { PluginFormily } from '@seada/antd-plugins';
 import 'antd/dist/antd.css';
 import '../../universal/global.scss';
 
@@ -21,6 +22,7 @@ preference.set('DataSourcePane', {
 (async function main() {
   await plugins.register(scenarioSwitcher);
   await registerPlugins();
+  await plugins.register(PluginFormily);
 
   init(
     document.getElementById('lce-container')!,

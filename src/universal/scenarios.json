@@ -16,6 +16,10 @@
     "title": "基础 antd 组件"
   },
   {
+    "name": "basic-formily",
+    "title": "formily 表单"
+  },
+  {
     "name": "custom-initialization",
     "title": "自定义初始化引擎"
   },
@@ -26,5 +30,9 @@
   {
     "name": "next-pro",
     "title": "基于next实现的高级表单低代码物料"
+  },
+  {
+    "name": "antd-pro-with-formily",
+    "title": "antd 高级组件 + formily 表单组件"
   }
 ]
