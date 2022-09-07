@@ -25,10 +25,10 @@
     },
     {
       "package": "antd",
-      "version": "4.19.5",
+      "version": "4.23.0",
       "urls": [
-        "//g.alicdn.com/code/lib/antd/4.19.4/antd.min.js",
-        "//g.alicdn.com/code/lib/antd/4.19.4/antd.min.css"
+        "//g.alicdn.com/code/lib/antd/4.23.0/antd.min.js",
+        "//g.alicdn.com/code/lib/antd/4.23.0/antd.min.css"
       ],
       "library": "antd"
     },
@@ -57,28 +57,28 @@
     },
     {
       "package": "@seada/antd-materials",
-      "version": "0.1.1",
+      "version": "1.0.0-rc.15",
       "library": "SeadaAntdMaterials",
       "urls": [
-        "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/view.js",
-        "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/view.css"
+        "https://unpkg.com/@seada/antd-materials@1.0.0-rc.15/build/lowcode/view.js",
+        "https://unpkg.com/@seada/antd-materials@1.0.0-rc.15/build/lowcode/view.css"
       ],
       "editUrls": [
-        "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/view.js",
-        "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/view.css"
+        "https://unpkg.com/@seada/antd-materials@1.0.0-rc.15/build/lowcode/view.js",
+        "https://unpkg.com/@seada/antd-materials@1.0.0-rc.15/build/lowcode/view.css"
       ]
     },
     {
       "package": "@seada/formily-materials",
-      "version": "0.1.1",
+      "version": "1.0.0-rc.15",
       "library": "SeadaFormilyMaterials",
       "urls": [
-        "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/view.js",
-        "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/view.css"
+        "https://unpkg.com/@seada/formily-materials@1.0.0-rc.15/build/lowcode/view.js",
+        "https://unpkg.com/@seada/formily-materials@1.0.0-rc.15/build/lowcode/view.css"
       ],
       "editUrls": [
-        "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/view.js",
-        "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/view.css"
+        "https://unpkg.com/@seada/formily-materials@1.0.0-rc.15/build/lowcode/view.js",
+        "https://unpkg.com/@seada/formily-materials@1.0.0-rc.15/build/lowcode/view.css"
       ]
     }
   ],
@@ -98,22 +98,22 @@
       "exportName": "SeadaAntdMaterialsMeta",
       "npm": {
         "package": "@seada/antd-materials",
-        "version": "0.1.1"
+        "version": "1.0.0-rc.15"
       },
-      "url": "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/meta.js",
+      "url": "https://unpkg.com/@seada/antd-materials@1.0.0-rc.15/build/lowcode/meta.js",
       "urls": {
-        "default": "https://unpkg.com/@seada/antd-materials@latest/build/lowcode/meta.js"
+        "default": "https://unpkg.com/@seada/antd-materials@1.0.0-rc.15/build/lowcode/meta.js"
       }
     },
     {
       "exportName": "SeadaFormilyMaterialsMeta",
       "npm": {
         "package": "@seada/formily-materials",
-        "version": "0.1.1"
+        "version": "1.0.0-rc.15"
       },
-      "url": "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/meta.js",
+      "url": "https://unpkg.com/@seada/formily-materials@1.0.0-rc.15/build/lowcode/meta.js",
       "urls": {
-        "default": "https://unpkg.com/@seada/formily-materials@latest/build/lowcode/meta.js"
+        "default": "https://unpkg.com/@seada/formily-materials@1.0.0-rc.15/build/lowcode/meta.js"
       }
     }
   ],
