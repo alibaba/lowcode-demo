@@ -2,9 +2,7 @@ import React from 'react';
 import {
   ILowCodePluginContext,
   plugins,
-  skeleton,
   project,
-  setters,
 } from '@alilc/lowcode-engine';
 import AliLowCodeEngineExt from '@alilc/lowcode-engine-ext';
 import { Button } from '@alifd/next';
