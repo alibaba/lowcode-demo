@@ -253,27 +253,27 @@
               "value": "() => false"
             }
           }
-        ]
-      },
-      "experimental": {
-        "initials": [
-          {
-            "name": "linkType",
-            "initial": {
-              "type": "JSFunction",
-              "value": "() => 'link'"
-            }
-          },
-          {
-            "name": "_pages_",
-            "initial": {
-              "type": "JSFunction",
-              "value": "(target) => {\n          let url = `/uipass/query/formnav/getFormNavigationListByOrder.json${window.location.search}`\n          if (['localhost', '127.0.0.1', 'a7343369-3834-4e55-9f69-e071f489f979-3333.cloud-ide-router.alibaba-inc.com'].includes(window.location.hostname)) {\n            url = 'mock-pages.json';\n          }\n          (AliLowCodeEngine || VisualEngine).editor.utils.get(url)\n            .then((response) => {\n              target.getProps().setPropValue('_pages_', response);\n            });\n        }"
-            }
-          }
         ],
-        "filters": [],
-        "autoruns": []
+        "advanced": {
+          "initials": [
+            {
+              "name": "linkType",
+              "initial": {
+                "type": "JSFunction",
+                "value": "() => 'link'"
+              }
+            },
+            {
+              "name": "_pages_",
+              "initial": {
+                "type": "JSFunction",
+                "value": "(target) => {\n          let url = `/uipass/query/formnav/getFormNavigationListByOrder.json${window.location.search}`\n          if (['localhost', '127.0.0.1', 'a7343369-3834-4e55-9f69-e071f489f979-3333.cloud-ide-router.alibaba-inc.com'].includes(window.location.hostname)) {\n            url = 'mock-pages.json';\n          }\n          (AliLowCodeEngine || VisualEngine).editor.utils.get(url)\n            .then((response) => {\n              target.getProps().setPropValue('_pages_', response);\n            });\n        }"
+              }
+            }
+          ],
+          "filters": [],
+          "autoruns": []
+        }
       },
       "icon": "",
       "category": "常用"
@@ -4432,13 +4432,13 @@
         "supports": {
           "events": ["onOk", "onCancel", "onClose"],
           "style": true
-        }
-      },
-      "experimental": {
-        "callbacks": {
-          "onNodeAdd": {
-            "type": "JSFunction",
-            "value": "(dragment, currentNode) => {\n        \n        \n        if (\n          !dragment ||\n          [\"NextP\", \"NextBlock\", \"Slot\"].includes(dragment.componentName) ||\n          (dragment.isModal && dragment.isModal())\n        ) {\n          console.log(\n            `[${dragment.componentName}] doesn\\'n need to wrap with NextBlock > NextBlockCell`\n          );\n          return;\n        }\n\n        const NextPProps = {\n          wrap: false,\n          type: \"body2\",\n          verAlign: \"middle\",\n          textSpacing: true,\n          align: \"left\"\n        };\n\n        if (\n          [\n            \"Form\",\n            \"ResponsiveGrid\",\n            \"Box\",\n            \"Card\",\n            \"List\",\n            \"Message\",\n            \"Slider\",\n            \"NextTable\"\n          ].includes(dragment.componentName) ||\n          dragment.getPropValue(\"isFillContainer\")\n        ) {\n          NextPProps.full = true;\n        }\n        const layoutPSchema = {\n          componentName: \"NextP\",\n          title: \"段落\",\n          props: NextPProps,\n          children: [dragment.schema]\n        };\n\n        \n        const layoutBlockNode = len =>\n          currentNode.document.createNode({\n            componentName: \"NextBlock\",\n            title: \"区块\",\n            props: {\n              childTotalColumns: len || 12\n            },\n            children: [\n              {\n                componentName: \"NextBlockCell\",\n                title: \"子区块\",\n                props: {\n                  isAutoContainer: true,\n                  colSpan: 12,\n                  rowSpan: 1\n                },\n                children: [layoutPSchema]\n              }\n            ]\n          });\n\n        const dropLocation = dragment.document.designer.dropLocation;\n\n        if (!dropLocation) {\n          \n          return;\n        }\n        const dropTarget = dropLocation.target;\n        const dropTargetName = dropLocation.target.componentName || \"\";\n\n        \n        const targetId = (dropLocation && dropLocation.target.id) || \"\";\n        \n        let slotTarget =\n          currentNode.slots.length > 0 &&\n          currentNode.slots.find(item => item.id === targetId);\n\n        const layoutPNode = currentNode.document.createNode(layoutPSchema);\n\n        \n        const isAsideSlot =\n          slotTarget && [\"aside\"].indexOf(slotTarget._slotFor.key) > -1;\n        \n        const isNeedPSlot =\n          slotTarget &&\n          [\"header\", \"footer\", \"nav\"].indexOf(slotTarget._slotFor.key) > -1;\n\n        const wrapWithBlock = (dragment, node, dropTargetName, blockLen) => {\n          setTimeout(() => {\n            console.log(\n              `[${dragment.componentName}] to [${dropTargetName}] need to wrap with NextBlock > NextBlockCell > NextP [from NextPage2]`\n            );\n            const newNode = node.document.createNode(\n              layoutBlockNode(blockLen).schema\n            );\n            node.insertBefore(newNode, dragment, false);\n            dragment.remove(false);\n            newNode\n              .getChildren()\n              .get(0)\n              .getChildren()\n              .get(0)\n              .getChildren()\n              .get(0)\n              .select();\n          }, 1);\n        };\n\n        const wrapWithP = (dragment, node, dropTargetName) => {\n          setTimeout(() => {\n            \n            \n            if (dropTargetName === \"NextP\") {\n              console.log(\n                `[${dragment.componentName}] to [${dropTargetName}] does't need to wrap with NextP. [from NextPage3]`\n              );\n              return;\n            }\n\n            console.log(\n              `[${dragment.componentName}] to [${dropTargetName}] need to wrap with NextP [from NextPage3]`\n            );\n            const newNode = node.document.createNode(\n              Object.assign(layoutPNode.schema)\n            );\n            node.insertBefore(newNode, dragment, false);\n            dragment.remove(false);\n            newNode\n              .getChildren()\n              .get(0)\n              .select();\n          }, 1);\n        };\n\n        \n        \n        if (\n          [\"NextPage\"].includes(dropTargetName) &&\n          currentNode.getChildren().has(dragment)\n        ) {\n          wrapWithBlock(dragment, currentNode, dropTargetName, 12);\n\n          \n          \n        } else if (\n          isAsideSlot &&\n          slotTarget &&\n          slotTarget.getChildren().has(dragment)\n        ) {\n          wrapWithBlock(dragment, slotTarget, dropTargetName, 1);\n\n          \n          \n          \n        } else if (\n          dropTarget.getPropValue(\"isAutoContainer\") ||\n          dropTargetName === \"Tab.Item\"\n        ) {\n          wrapWithP(dragment, dropTarget, dropTargetName);\n\n          \n          \n        } else if (isNeedPSlot && slotTarget) {\n          wrapWithP(dragment, slotTarget, dropTargetName);\n        }\n\n        \n      }"
+        },
+        "advanced": {
+          "callbacks": {
+            "onNodeAdd": {
+              "type": "JSFunction",
+              "value": "(dragment, currentNode) => {\n        \n        \n        if (\n          !dragment ||\n          [\"NextP\", \"NextBlock\", \"Slot\"].includes(dragment.componentName) ||\n          (dragment.isModal && dragment.isModal())\n        ) {\n          console.log(\n            `[${dragment.componentName}] doesn\\'n need to wrap with NextBlock > NextBlockCell`\n          );\n          return;\n        }\n\n        const NextPProps = {\n          wrap: false,\n          type: \"body2\",\n          verAlign: \"middle\",\n          textSpacing: true,\n          align: \"left\"\n        };\n\n        if (\n          [\n            \"Form\",\n            \"ResponsiveGrid\",\n            \"Box\",\n            \"Card\",\n            \"List\",\n            \"Message\",\n            \"Slider\",\n            \"NextTable\"\n          ].includes(dragment.componentName) ||\n          dragment.getPropValue(\"isFillContainer\")\n        ) {\n          NextPProps.full = true;\n        }\n        const layoutPSchema = {\n          componentName: \"NextP\",\n          title: \"段落\",\n          props: NextPProps,\n          children: [dragment.schema]\n        };\n\n        \n        const layoutBlockNode = len =>\n          currentNode.document.createNode({\n            componentName: \"NextBlock\",\n            title: \"区块\",\n            props: {\n              childTotalColumns: len || 12\n            },\n            children: [\n              {\n                componentName: \"NextBlockCell\",\n                title: \"子区块\",\n                props: {\n                  isAutoContainer: true,\n                  colSpan: 12,\n                  rowSpan: 1\n                },\n                children: [layoutPSchema]\n              }\n            ]\n          });\n\n        const dropLocation = dragment.document.designer.dropLocation;\n\n        if (!dropLocation) {\n          \n          return;\n        }\n        const dropTarget = dropLocation.target;\n        const dropTargetName = dropLocation.target.componentName || \"\";\n\n        \n        const targetId = (dropLocation && dropLocation.target.id) || \"\";\n        \n        let slotTarget =\n          currentNode.slots.length > 0 &&\n          currentNode.slots.find(item => item.id === targetId);\n\n        const layoutPNode = currentNode.document.createNode(layoutPSchema);\n\n        \n        const isAsideSlot =\n          slotTarget && [\"aside\"].indexOf(slotTarget._slotFor.key) > -1;\n        \n        const isNeedPSlot =\n          slotTarget &&\n          [\"header\", \"footer\", \"nav\"].indexOf(slotTarget._slotFor.key) > -1;\n\n        const wrapWithBlock = (dragment, node, dropTargetName, blockLen) => {\n          setTimeout(() => {\n            console.log(\n              `[${dragment.componentName}] to [${dropTargetName}] need to wrap with NextBlock > NextBlockCell > NextP [from NextPage2]`\n            );\n            const newNode = node.document.createNode(\n              layoutBlockNode(blockLen).schema\n            );\n            node.insertBefore(newNode, dragment, false);\n            dragment.remove(false);\n            newNode\n              .getChildren()\n              .get(0)\n              .getChildren()\n              .get(0)\n              .getChildren()\n              .get(0)\n              .select();\n          }, 1);\n        };\n\n        const wrapWithP = (dragment, node, dropTargetName) => {\n          setTimeout(() => {\n            \n            \n            if (dropTargetName === \"NextP\") {\n              console.log(\n                `[${dragment.componentName}] to [${dropTargetName}] does't need to wrap with NextP. [from NextPage3]`\n              );\n              return;\n            }\n\n            console.log(\n              `[${dragment.componentName}] to [${dropTargetName}] need to wrap with NextP [from NextPage3]`\n            );\n            const newNode = node.document.createNode(\n              Object.assign(layoutPNode.schema)\n            );\n            node.insertBefore(newNode, dragment, false);\n            dragment.remove(false);\n            newNode\n              .getChildren()\n              .get(0)\n              .select();\n          }, 1);\n        };\n\n        \n        \n        if (\n          [\"NextPage\"].includes(dropTargetName) &&\n          currentNode.getChildren().has(dragment)\n        ) {\n          wrapWithBlock(dragment, currentNode, dropTargetName, 12);\n\n          \n          \n        } else if (\n          isAsideSlot &&\n          slotTarget &&\n          slotTarget.getChildren().has(dragment)\n        ) {\n          wrapWithBlock(dragment, slotTarget, dropTargetName, 1);\n\n          \n          \n          \n        } else if (\n          dropTarget.getPropValue(\"isAutoContainer\") ||\n          dropTargetName === \"Tab.Item\"\n        ) {\n          wrapWithP(dragment, dropTarget, dropTargetName);\n\n          \n          \n        } else if (isNeedPSlot && slotTarget) {\n          wrapWithP(dragment, slotTarget, dropTargetName);\n        }\n\n        \n      }"
+            }
           }
         }
       },
@@ -4528,16 +4528,18 @@
           "defaultValue": "center"
         }
       ],
-      "experimental": {
-        "filters": [
-          {
-            "name": "",
-            "filter": {
-              "type": "JSFunction",
-              "value": "filters"
+      "configure": {
+        "advanced": {
+          "filters": [
+            {
+              "name": "",
+              "filter": {
+                "type": "JSFunction",
+                "value": "filters"
+              }
             }
-          }
-        ]
+          ]
+        }
       },
       "icon": "",
       "category": "内容"
@@ -4909,13 +4911,13 @@
             "description": "控制对话框关闭的方式，值可以为字符串或者布尔值，其中字符串是由以下值组成：\n**close** 表示点击关闭按钮可以关闭对话框\n**mask** 表示点击遮罩区域可以关闭对话框\n**esc** 表示按下 esc 键可以关闭对话框\n如 'close' 或 'close,esc,mask'\n如果设置为 true，则以上关闭方式全部生效\n如果设置为 false，则以上关闭方式全部失效",
             "defaultValue": true
           }
-        ]
-      },
-      "experimental": {
-        "callbacks": {
-          "onNodeAdd": {
-            "type": "JSFunction",
-            "value": "(dragment, currentNode) => {\n        \n        \n        if (\n          !dragment ||\n          [\"NextP\", \"NextBlock\", \"Slot\"].includes(dragment.componentName) ||\n          (dragment.isModal && dragment.isModal())\n        ) {\n          console.log(\n            `[${dragment.componentName}] doesn\\'n need to wrap with NextBlock > NextBlockCell`\n          );\n          return;\n        }\n\n        const NextPProps = {\n          wrap: false,\n          type: \"body2\",\n          verAlign: \"middle\",\n          textSpacing: true,\n          align: \"left\"\n        };\n\n        if (\n          [\n            \"Form\",\n            \"ResponsiveGrid\",\n            \"Box\",\n            \"Card\",\n            \"List\",\n            \"Message\",\n            \"Slider\",\n            \"NextTable\"\n          ].includes(dragment.componentName) ||\n          dragment.getPropValue(\"isFillContainer\")\n        ) {\n          NextPProps.full = true;\n        }\n        const layoutPSchema = {\n          componentName: \"NextP\",\n          title: \"段落\",\n          props: NextPProps,\n          children: [dragment.schema]\n        };\n\n        \n        const layoutBlockNode = len =>\n          currentNode.document.createNode({\n            componentName: \"NextBlock\",\n            title: \"区块\",\n            props: {\n              childTotalColumns: len || 12\n            },\n            children: [\n              {\n                componentName: \"NextBlockCell\",\n                title: \"子区块\",\n                props: {\n                  isAutoContainer: true,\n                  colSpan: 12,\n                  rowSpan: 1\n                },\n                children: [layoutPSchema]\n              }\n            ]\n          });\n\n        const dropLocation = dragment.document.designer.dropLocation;\n\n        if (!dropLocation) {\n          \n          return;\n        }\n        const dropTarget = dropLocation.target;\n        const dropTargetName = dropLocation.target.componentName || \"\";\n\n        \n        const targetId = (dropLocation && dropLocation.target.id) || \"\";\n        \n        let slotTarget =\n          currentNode.slots.length > 0 &&\n          currentNode.slots.find(item => item.id === targetId);\n\n        const layoutPNode = currentNode.document.createNode(layoutPSchema);\n\n        \n        const isAsideSlot =\n          slotTarget && [\"aside\"].indexOf(slotTarget._slotFor.key) > -1;\n        \n        const isNeedPSlot =\n          slotTarget &&\n          [\"header\", \"footer\", \"nav\"].indexOf(slotTarget._slotFor.key) > -1;\n\n        const wrapWithBlock = (dragment, node, dropTargetName, blockLen) => {\n          setTimeout(() => {\n            console.log(\n              `[${dragment.componentName}] to [${dropTargetName}] need to wrap with NextBlock > NextBlockCell > NextP [from NextPage2]`\n            );\n            const newNode = node.document.createNode(\n              layoutBlockNode(blockLen).schema\n            );\n            node.insertBefore(newNode, dragment, false);\n            dragment.remove(false);\n            newNode\n              .getChildren()\n              .get(0)\n              .getChildren()\n              .get(0)\n              .getChildren()\n              .get(0)\n              .select();\n          }, 1);\n        };\n\n        const wrapWithP = (dragment, node, dropTargetName) => {\n          setTimeout(() => {\n            \n            \n            if (dropTargetName === \"NextP\") {\n              console.log(\n                `[${dragment.componentName}] to [${dropTargetName}] does't need to wrap with NextP. [from NextPage3]`\n              );\n              return;\n            }\n\n            console.log(\n              `[${dragment.componentName}] to [${dropTargetName}] need to wrap with NextP [from NextPage3]`\n            );\n            const newNode = node.document.createNode(\n              Object.assign(layoutPNode.schema)\n            );\n            node.insertBefore(newNode, dragment, false);\n            dragment.remove(false);\n            newNode\n              .getChildren()\n              .get(0)\n              .select();\n          }, 1);\n        };\n\n        \n        \n        if (\n          [\"NextPage\"].includes(dropTargetName) &&\n          currentNode.getChildren().has(dragment)\n        ) {\n          wrapWithBlock(dragment, currentNode, dropTargetName, 12);\n\n          \n          \n        } else if (\n          isAsideSlot &&\n          slotTarget &&\n          slotTarget.getChildren().has(dragment)\n        ) {\n          wrapWithBlock(dragment, slotTarget, dropTargetName, 1);\n\n          \n          \n          \n        } else if (\n          dropTarget.getPropValue(\"isAutoContainer\") ||\n          dropTargetName === \"Tab.Item\"\n        ) {\n          wrapWithP(dragment, dropTarget, dropTargetName);\n\n          \n          \n        } else if (isNeedPSlot && slotTarget) {\n          wrapWithP(dragment, slotTarget, dropTargetName);\n        }\n\n        \n      }"
+        ],
+        "advanced": {
+          "callbacks": {
+            "onNodeAdd": {
+              "type": "JSFunction",
+              "value": "(dragment, currentNode) => {\n        \n        \n        if (\n          !dragment ||\n          [\"NextP\", \"NextBlock\", \"Slot\"].includes(dragment.componentName) ||\n          (dragment.isModal && dragment.isModal())\n        ) {\n          console.log(\n            `[${dragment.componentName}] doesn\\'n need to wrap with NextBlock > NextBlockCell`\n          );\n          return;\n        }\n\n        const NextPProps = {\n          wrap: false,\n          type: \"body2\",\n          verAlign: \"middle\",\n          textSpacing: true,\n          align: \"left\"\n        };\n\n        if (\n          [\n            \"Form\",\n            \"ResponsiveGrid\",\n            \"Box\",\n            \"Card\",\n            \"List\",\n            \"Message\",\n            \"Slider\",\n            \"NextTable\"\n          ].includes(dragment.componentName) ||\n          dragment.getPropValue(\"isFillContainer\")\n        ) {\n          NextPProps.full = true;\n        }\n        const layoutPSchema = {\n          componentName: \"NextP\",\n          title: \"段落\",\n          props: NextPProps,\n          children: [dragment.schema]\n        };\n\n        \n        const layoutBlockNode = len =>\n          currentNode.document.createNode({\n            componentName: \"NextBlock\",\n            title: \"区块\",\n            props: {\n              childTotalColumns: len || 12\n            },\n            children: [\n              {\n                componentName: \"NextBlockCell\",\n                title: \"子区块\",\n                props: {\n                  isAutoContainer: true,\n                  colSpan: 12,\n                  rowSpan: 1\n                },\n                children: [layoutPSchema]\n              }\n            ]\n          });\n\n        const dropLocation = dragment.document.designer.dropLocation;\n\n        if (!dropLocation) {\n          \n          return;\n        }\n        const dropTarget = dropLocation.target;\n        const dropTargetName = dropLocation.target.componentName || \"\";\n\n        \n        const targetId = (dropLocation && dropLocation.target.id) || \"\";\n        \n        let slotTarget =\n          currentNode.slots.length > 0 &&\n          currentNode.slots.find(item => item.id === targetId);\n\n        const layoutPNode = currentNode.document.createNode(layoutPSchema);\n\n        \n        const isAsideSlot =\n          slotTarget && [\"aside\"].indexOf(slotTarget._slotFor.key) > -1;\n        \n        const isNeedPSlot =\n          slotTarget &&\n          [\"header\", \"footer\", \"nav\"].indexOf(slotTarget._slotFor.key) > -1;\n\n        const wrapWithBlock = (dragment, node, dropTargetName, blockLen) => {\n          setTimeout(() => {\n            console.log(\n              `[${dragment.componentName}] to [${dropTargetName}] need to wrap with NextBlock > NextBlockCell > NextP [from NextPage2]`\n            );\n            const newNode = node.document.createNode(\n              layoutBlockNode(blockLen).schema\n            );\n            node.insertBefore(newNode, dragment, false);\n            dragment.remove(false);\n            newNode\n              .getChildren()\n              .get(0)\n              .getChildren()\n              .get(0)\n              .getChildren()\n              .get(0)\n              .select();\n          }, 1);\n        };\n\n        const wrapWithP = (dragment, node, dropTargetName) => {\n          setTimeout(() => {\n            \n            \n            if (dropTargetName === \"NextP\") {\n              console.log(\n                `[${dragment.componentName}] to [${dropTargetName}] does't need to wrap with NextP. [from NextPage3]`\n              );\n              return;\n            }\n\n            console.log(\n              `[${dragment.componentName}] to [${dropTargetName}] need to wrap with NextP [from NextPage3]`\n            );\n            const newNode = node.document.createNode(\n              Object.assign(layoutPNode.schema)\n            );\n            node.insertBefore(newNode, dragment, false);\n            dragment.remove(false);\n            newNode\n              .getChildren()\n              .get(0)\n              .select();\n          }, 1);\n        };\n\n        \n        \n        if (\n          [\"NextPage\"].includes(dropTargetName) &&\n          currentNode.getChildren().has(dragment)\n        ) {\n          wrapWithBlock(dragment, currentNode, dropTargetName, 12);\n\n          \n          \n        } else if (\n          isAsideSlot &&\n          slotTarget &&\n          slotTarget.getChildren().has(dragment)\n        ) {\n          wrapWithBlock(dragment, slotTarget, dropTargetName, 1);\n\n          \n          \n          \n        } else if (\n          dropTarget.getPropValue(\"isAutoContainer\") ||\n          dropTargetName === \"Tab.Item\"\n        ) {\n          wrapWithP(dragment, dropTarget, dropTargetName);\n\n          \n          \n        } else if (isNeedPSlot && slotTarget) {\n          wrapWithP(dragment, slotTarget, dropTargetName);\n        }\n\n        \n      }"
+            }
           }
         }
       },
@@ -5989,13 +5991,13 @@
               }
             ]
           }
-        ]
-      },
-      "experimental": {
-        "callbacks": {
-          "onNodeRemove": {
-            "type": "JSFunction",
-            "value": "(removedNode, currentNode) => {\n        if (!removedNode || !currentNode) {\n          return;\n        }\n        const children = currentNode.children;\n        \n        if (children && children.length === 0) {\n          currentNode.remove();\n        }\n      }"
+        ],
+        "advanced": {
+          "callbacks": {
+            "onNodeRemove": {
+              "type": "JSFunction",
+              "value": "(removedNode, currentNode) => {\n        if (!removedNode || !currentNode) {\n          return;\n        }\n        const children = currentNode.children;\n        \n        if (children && children.length === 0) {\n          currentNode.remove();\n        }\n      }"
+            }
           }
         }
       },
@@ -6339,18 +6341,18 @@
               }
             }
           ]
-        }
-      },
-      "experimental": {
-        "initials": [
-          {
-            "name": "htmlType",
-            "initial": {
-              "type": "JSFunction",
-              "value": "() => \"submit\""
+        },
+        "advanced": {
+          "initials": [
+            {
+              "name": "htmlType",
+              "initial": {
+                "type": "JSFunction",
+                "value": "() => \"submit\""
+              }
             }
-          }
-        ]
+          ]
+        }
       },
       "category": "基础"
     },
@@ -6656,13 +6658,13 @@
         "supports": {
           "style": true,
           "events": ["saveField", "onSubmit", "onChange"]
-        }
-      },
-      "experimental": {
-        "callbacks": {
-          "onNodeAdd": {
-            "type": "JSFunction",
-            "value": "(dragment, currentNode) => {\n        \n        if (!dragment || dragment.componentName === \"Form.Item\") {\n          return;\n        }\n        \n        const layoutPNode = currentNode.document.createNode({\n          componentName: \"Form.Item\",\n          title: \"表单项\",\n          props: {\n            label: \"表单项: \"\n          },\n          children: [dragment.schema]\n        });\n        \n        setTimeout(() => {\n          if (!currentNode.getChildren().has(dragment)) {\n            return;\n          }\n          const newNode = currentNode.document.createNode(Object.assign(layoutPNode.schema));\n          currentNode.insertBefore(newNode, dragment, false);\n          dragment.remove(false);\n          newNode.getChildren().get(0).select();\n        }, 1);\n      }"
+        },
+        "advanced": {
+          "callbacks": {
+            "onNodeAdd": {
+              "type": "JSFunction",
+              "value": "(dragment, currentNode) => {\n        \n        if (!dragment || dragment.componentName === \"Form.Item\") {\n          return;\n        }\n        \n        const layoutPNode = currentNode.document.createNode({\n          componentName: \"Form.Item\",\n          title: \"表单项\",\n          props: {\n            label: \"表单项: \"\n          },\n          children: [dragment.schema]\n        });\n        \n        setTimeout(() => {\n          if (!currentNode.getChildren().has(dragment)) {\n            return;\n          }\n          const newNode = currentNode.document.createNode(Object.assign(layoutPNode.schema));\n          currentNode.insertBefore(newNode, dragment, false);\n          dragment.remove(false);\n          newNode.getChildren().get(0).select();\n        }, 1);\n      }"
+            }
           }
         }
       },
@@ -13284,21 +13286,21 @@
       "configure": {
         "component": {
           "isContainer": true
-        }
-      },
-      "experimental": {
-        "getResizingHandlers": {
-          "type": "JSFunction",
-          "value": "node => {\n      const currentNodeIndex = node.getIndex();\n      const parent = node.getParent();\n      if (!parent) return [];\n      let layout = parent.getPropValue(\"layout\");\n      if (!layout) return [];\n      layout = layout.split(\":\").map(item => parseInt(item, 10));\n      \n      if (currentNodeIndex >= layout.length - 1) {\n        return [];\n      }\n      return [\"e\"];\n    }"
         },
-        "callbacks": {
-          "onResizeStart": {
+        "advanced": {
+          "getResizingHandlers": {
             "type": "JSFunction",
-            "value": "(e, currentNode) => {\n        const { trigger } = e;\n        let nodeIndex = currentNode.getIndex();\n        let startLayout = currentNode.getParent().getPropValue(\"layout\");\n        startLayout = startLayout.split(\":\").map(item => parseInt(item, 10));\n        let eachWidth = currentNode.getRect().width / startLayout[nodeIndex];\n        \n        currentNode.nodeIndex = nodeIndex;\n        currentNode.startLayout = startLayout;\n        currentNode.eachWidth = eachWidth;\n      }"
+            "value": "node => {\n      const currentNodeIndex = node.getIndex();\n      const parent = node.getParent();\n      if (!parent) return [];\n      let layout = parent.getPropValue(\"layout\");\n      if (!layout) return [];\n      layout = layout.split(\":\").map(item => parseInt(item, 10));\n      \n      if (currentNodeIndex >= layout.length - 1) {\n        return [];\n      }\n      return [\"e\"];\n    }"
           },
-          "onResize": {
-            "type": "JSFunction",
-            "value": "(e, currentNode) => {\n        const { trigger, deltaX, deltaY } = e;\n        const { nodeIndex, startLayout, eachWidth } = currentNode;\n        let moveColumn = Math.round(deltaX / eachWidth);\n        const layout = [...startLayout]; \n        if (moveColumn > 0) {\n          moveColumn = Math.min(moveColumn, layout[nodeIndex + 1] - 1);\n        } else {\n          moveColumn = -Math.min(-moveColumn, layout[nodeIndex] - 1);\n        }\n        layout[nodeIndex] += moveColumn;\n        layout[nodeIndex + 1] -= moveColumn;\n        \n        let nextNode = currentNode\n          .getParent()\n          .getChildren()\n          .filter((c, index) => {\n            return index === nodeIndex + 1;\n          });\n        \n        currentNode.setPropValue(\"colSpan\", layout[nodeIndex]);\n        \n        if (nextNode && nextNode[0]) {\n          nextNode[0].setPropValue(\"colSpan\", layout[nodeIndex + 1]);\n        }\n        \n        currentNode.getParent().setPropValue(\"layout\", layout.join(\":\"));\n      }"
+          "callbacks": {
+            "onResizeStart": {
+              "type": "JSFunction",
+              "value": "(e, currentNode) => {\n        const { trigger } = e;\n        let nodeIndex = currentNode.getIndex();\n        let startLayout = currentNode.getParent().getPropValue(\"layout\");\n        startLayout = startLayout.split(\":\").map(item => parseInt(item, 10));\n        let eachWidth = currentNode.getRect().width / startLayout[nodeIndex];\n        \n        currentNode.nodeIndex = nodeIndex;\n        currentNode.startLayout = startLayout;\n        currentNode.eachWidth = eachWidth;\n      }"
+            },
+            "onResize": {
+              "type": "JSFunction",
+              "value": "(e, currentNode) => {\n        const { trigger, deltaX, deltaY } = e;\n        const { nodeIndex, startLayout, eachWidth } = currentNode;\n        let moveColumn = Math.round(deltaX / eachWidth);\n        const layout = [...startLayout]; \n        if (moveColumn > 0) {\n          moveColumn = Math.min(moveColumn, layout[nodeIndex + 1] - 1);\n        } else {\n          moveColumn = -Math.min(-moveColumn, layout[nodeIndex] - 1);\n        }\n        layout[nodeIndex] += moveColumn;\n        layout[nodeIndex + 1] -= moveColumn;\n        \n        let nextNode = currentNode\n          .getParent()\n          .getChildren()\n          .filter((c, index) => {\n            return index === nodeIndex + 1;\n          });\n        \n        currentNode.setPropValue(\"colSpan\", layout[nodeIndex]);\n        \n        if (nextNode && nextNode[0]) {\n          nextNode[0].setPropValue(\"colSpan\", layout[nodeIndex + 1]);\n        }\n        \n        currentNode.getParent().setPropValue(\"layout\", layout.join(\":\"));\n      }"
+            }
           }
         }
       },
@@ -13453,25 +13455,25 @@
               }
             }
           ]
-        }
-      },
-      "experimental": {
-        "getResizingHandlers": {
-          "type": "JSFunction",
-          "value": "() => {\n      return [\"e\"];\n    }"
         },
-        "callbacks": {
-          "onResizeStart": {
+        "advanced": {
+          "getResizingHandlers": {
             "type": "JSFunction",
-            "value": "(e, currentNode) => {\n        const parent = currentNode.getParent();\n        if (parent) {\n          const parentNode = parent.getDOMNode();\n          if (parentNode) {\n            currentNode.parentRect = parentNode.getBoundingClientRect();\n          }\n        }\n        currentNode.beforeSpan = currentNode.getPropValue(\"colSpan\") || 12;\n        currentNode.startRect = currentNode.getRect();\n      }"
+            "value": "() => {\n      return [\"e\"];\n    }"
           },
-          "onResize": {
-            "type": "JSFunction",
-            "value": "(e, currentNode) => {\n        const { deltaX } = e;\n        const startWidth = currentNode.startRect\n          ? currentNode.startRect.width\n          : currentNode.beforeSpan * (currentNode.parentRect.width / 12);\n        let width = startWidth + deltaX;\n        if (!currentNode.startRect) {\n          currentNode.startRect = {\n            width\n          };\n        }\n        width = Math.max(0, width); \n        width = Math.min(width, currentNode.parentRect.width); \n        currentNode.getDOMNode().style[\"width\"] = `${Math.round(width)}px`;\n      }"
-          },
-          "onResizeEnd": {
-            "type": "JSFunction",
-            "value": "(e, currentNode) => {\n        currentNode.setPropValue(\"style.width\", currentNode.getDOMNode().style[\"width\"]);\n      }"
+          "callbacks": {
+            "onResizeStart": {
+              "type": "JSFunction",
+              "value": "(e, currentNode) => {\n        const parent = currentNode.getParent();\n        if (parent) {\n          const parentNode = parent.getDOMNode();\n          if (parentNode) {\n            currentNode.parentRect = parentNode.getBoundingClientRect();\n          }\n        }\n        currentNode.beforeSpan = currentNode.getPropValue(\"colSpan\") || 12;\n        currentNode.startRect = currentNode.getRect();\n      }"
+            },
+            "onResize": {
+              "type": "JSFunction",
+              "value": "(e, currentNode) => {\n        const { deltaX } = e;\n        const startWidth = currentNode.startRect\n          ? currentNode.startRect.width\n          : currentNode.beforeSpan * (currentNode.parentRect.width / 12);\n        let width = startWidth + deltaX;\n        if (!currentNode.startRect) {\n          currentNode.startRect = {\n            width\n          };\n        }\n        width = Math.max(0, width); \n        width = Math.min(width, currentNode.parentRect.width); \n        currentNode.getDOMNode().style[\"width\"] = `${Math.round(width)}px`;\n      }"
+            },
+            "onResizeEnd": {
+              "type": "JSFunction",
+              "value": "(e, currentNode) => {\n        currentNode.setPropValue(\"style.width\", currentNode.getDOMNode().style[\"width\"]);\n      }"
+            }
           }
         }
       },
@@ -13622,18 +13624,18 @@
             "setter": "StringSetter",
             "description": "选择器默认值"
           }
-        ]
-      },
-      "experimental": {
-        "initials": [
-          {
-            "name": "dataSource",
-            "initial": {
-              "type": "JSFunction",
-              "value": "() => [\n          {\n            label: \"Recent\",\n            value: \"Recent\"\n          },\n          {\n            label: \"dress\",\n            value: \"dress\"\n          },\n          {\n            label: \"sunglasses\",\n            value: \"sunglasses\"\n          },\n          {\n            label: \"t-shirt\",\n            value: \"t-shirt\"\n          }\n        ]"
+        ],
+        "advanced": {
+          "initials": [
+            {
+              "name": "dataSource",
+              "initial": {
+                "type": "JSFunction",
+                "value": "() => [\n          {\n            label: \"Recent\",\n            value: \"Recent\"\n          },\n          {\n            label: \"dress\",\n            value: \"dress\"\n          },\n          {\n            label: \"sunglasses\",\n            value: \"sunglasses\"\n          },\n          {\n            label: \"t-shirt\",\n            value: \"t-shirt\"\n          }\n        ]"
+              }
             }
-          }
-        ]
+          ]
+        }
       },
       "icon": "",
       "category": "导航"
@@ -14483,18 +14485,18 @@
               "defaultValue": false
             }
           ]
-        }
-      },
-      "experimental": {
-        "initials": [
-          {
-            "name": "label",
-            "initial": {
-              "type": "JSFunction",
-              "value": "() => \"分隔按钮\""
+        },
+        "advanced": {
+          "initials": [
+            {
+              "name": "label",
+              "initial": {
+                "type": "JSFunction",
+                "value": "() => \"分隔按钮\""
+              }
             }
-          }
-        ]
+          ]
+        }
       },
       "icon": "",
       "category": "常用"
@@ -15619,23 +15621,23 @@
         ],
         "supports": {
           "events": ["onClick", "onChange", "onClose"]
+        },
+        "advanced": {
+          "initialChildren": [
+            {
+              "componentName": "Tab.Item",
+              "props": {
+                "primaryKey": "item1"
+              }
+            },
+            {
+              "componentName": "Tab.Item",
+              "props": {
+                "primaryKey": "item2"
+              }
+            }
+          ]
         }
-      },
-      "experimental": {
-        "initialChildren": [
-          {
-            "componentName": "Tab.Item",
-            "props": {
-              "primaryKey": "item1"
-            }
-          },
-          {
-            "componentName": "Tab.Item",
-            "props": {
-              "primaryKey": "item2"
-            }
-          }
-        ]
       },
       "icon": "",
       "category": "内容"
@@ -18356,46 +18358,46 @@
         "supports": {
           "style": true,
           "events": ["onSelect", "onCheck", "onExpand"]
+        },
+        "advanced": {
+          "initials": [
+            {
+              "name": "showLine",
+              "initial": {
+                "type": "JSFunction",
+                "value": "()=> true"
+              }
+            },
+            {
+              "name": "defaultExpandAll",
+              "initial": {
+                "type": "JSFunction",
+                "value": "()=> true"
+              }
+            },
+            {
+              "name": "defaultExpandedKeys",
+              "initial": {
+                "type": "JSFunction",
+                "value": "()=> [\"1\"]"
+              }
+            },
+            {
+              "name": "defaultSelectedKeys",
+              "initial": {
+                "type": "JSFunction",
+                "value": "()=> [\"2\"]"
+              }
+            },
+            {
+              "name": "dataSource",
+              "initial": {
+                "type": "JSFunction",
+                "value": "() => [\n          {\n            label: \"Component\",\n            key: \"1\",\n            children: [\n              {\n                label: \"Form\",\n                key: \"2\",\n                selectable: false,\n                children: [\n                  {\n                    label: \"Input\",\n                    key: \"4\"\n                  },\n                  {\n                    label: \"Select\",\n                    key: \"5\"\n                  }\n                ]\n              },\n              {\n                label: \"Display\",\n                key: \"3\",\n                children: [\n                  {\n                    label: \"Table\",\n                    key: \"6\"\n                  }\n                ]\n              }\n            ]\n          }\n        ]"
+              }
+            }
+          ]
         }
-      },
-      "experimental": {
-        "initials": [
-          {
-            "name": "showLine",
-            "initial": {
-              "type": "JSFunction",
-              "value": "()=> true"
-            }
-          },
-          {
-            "name": "defaultExpandAll",
-            "initial": {
-              "type": "JSFunction",
-              "value": "()=> true"
-            }
-          },
-          {
-            "name": "defaultExpandedKeys",
-            "initial": {
-              "type": "JSFunction",
-              "value": "()=> [\"1\"]"
-            }
-          },
-          {
-            "name": "defaultSelectedKeys",
-            "initial": {
-              "type": "JSFunction",
-              "value": "()=> [\"2\"]"
-            }
-          },
-          {
-            "name": "dataSource",
-            "initial": {
-              "type": "JSFunction",
-              "value": "() => [\n          {\n            label: \"Component\",\n            key: \"1\",\n            children: [\n              {\n                label: \"Form\",\n                key: \"2\",\n                selectable: false,\n                children: [\n                  {\n                    label: \"Input\",\n                    key: \"4\"\n                  },\n                  {\n                    label: \"Select\",\n                    key: \"5\"\n                  }\n                ]\n              },\n              {\n                label: \"Display\",\n                key: \"3\",\n                children: [\n                  {\n                    label: \"Table\",\n                    key: \"6\"\n                  }\n                ]\n              }\n            ]\n          }\n        ]"
-            }
-          }
-        ]
       },
       "icon": "",
       "category": "内容"
@@ -19064,25 +19066,25 @@
               }
             ]
           }
-        ]
-      },
-      "experimental": {
-        "initials": [
-          {
-            "name": "shape",
-            "initial": {
-              "type": "JSFunction",
-              "value": "() => \"card\""
+        ],
+        "advanced": {
+          "initials": [
+            {
+              "name": "shape",
+              "initial": {
+                "type": "JSFunction",
+                "value": "() => \"card\""
+              }
+            },
+            {
+              "name": "defaultValue",
+              "initial": {
+                "type": "JSFunction",
+                "value": "() => []"
+              }
             }
-          },
-          {
-            "name": "defaultValue",
-            "initial": {
-              "type": "JSFunction",
-              "value": "() => []"
-            }
-          }
-        ]
+          ]
+        }
       },
       "icon": "",
       "category": "内容"

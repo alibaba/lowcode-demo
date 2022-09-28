@@ -19,7 +19,7 @@ function addonCombine(metadata: TransformedComponentMetadata) {
       tip: '用于获取组件实例，调用物料内部方法',
       icon: '',
     },
-    name: "ref",
+    name: 'ref',
     setter: {
       componentName: 'StringSetter',
     },

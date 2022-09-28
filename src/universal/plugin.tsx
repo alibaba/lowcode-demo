@@ -227,7 +227,18 @@ export default async function registerPlugins() {
   await plugins.register(saveSample);
 
   DataSourcePanePlugin.pluginName = 'DataSourcePane';
-  await plugins.register(DataSourcePanePlugin);
+  // 插件参数声明 & 传递，参考：https://www.yuque.com/lce/doc/ibh9fh#peEmG
+  await plugins.register(DataSourcePanePlugin, {
+    importPlugins: [],
+    dataSourceTypes: [
+      {
+        type: 'fetch',
+      },
+      {
+        type: 'jsonp',
+      }
+    ]
+  });
 
   CodeEditor.pluginName = 'CodeEditor';
   await plugins.register(CodeEditor);
