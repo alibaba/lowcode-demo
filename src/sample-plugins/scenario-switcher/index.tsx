@@ -6,17 +6,26 @@ import { Select, Dropdown, Menu } from '@alifd/next';
 import scenarios from '../../universal/scenarios.json';
 const { Option } = Select;
 
+type Scenario = {
+  name: string;
+  title: string;
+  urls: Array<{
+    key: string;
+    value: string;
+  }>
+}
+
 const getCurrentScenarioName = (): string => {
-  const list = location.href.split('/');
+  const list = location.pathname.split('/');
   return list[list.length - 1].replace('.html', '') || 'index';
 }
 
-const getCurrentScenarioUrl = () => {
-  return scenarios.filter(scenario => scenario.name === getCurrentScenarioName())[0]?.urls;
+const getCurrentScenarioUrls = () => {
+  return scenarios.filter((scenario: Scenario) => scenario.name === getCurrentScenarioName())[0]?.urls;
 }
 
 function Switcher(props: any) {
-  const urls = getCurrentScenarioUrl();
+  const urls = getCurrentScenarioUrls();
   return (<>
     <Select
       id="basic-demo"
@@ -25,7 +34,7 @@ function Switcher(props: any) {
       style={{ width: 220 }}
     >
       {
-        scenarios.map((scenario: any) => <Option value={scenario.name}>{scenario.title}</Option>)
+        scenarios.map((scenario: Scenario) => <Option value={scenario.name}>{scenario.title}</Option>)
       }
     </Select>
     {

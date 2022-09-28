@@ -8,9 +8,9 @@ import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 
 import { getProjectSchemaFromLocalStorage, getPackagesFromLocalStorage } from './universal/utils';
 
-const getScenarioName = function() {
+const getScenarioName = function () {
   if (location.search) {
-   return new URLSearchParams(location.search.slice(1)).get('scenarioName') || 'index'
+    return new URLSearchParams(location.search.slice(1)).get('scenarioName') || 'index'
   }
   return 'index';
 }
