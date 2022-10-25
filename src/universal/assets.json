@@ -49,29 +49,29 @@
       ]
     },
     {
-      "package": "@alifd/pro-layout",
-      "version": "1.0.1-beta.6",
-      "library": "AlifdProLayout",
+      "package": "@alifd/layout",
+      "version": "1.0.4",
+      "library": "AlifdLayout",
       "urls": [
-        "https://alifd.alicdn.com/npm/@alifd/pro-layout@1.0.1-beta.6/dist/AlifdProLayout.js",
-        "https://alifd.alicdn.com/npm/@alifd/pro-layout@1.0.1-beta.6/dist/AlifdProLayout.css"
+        "https://unpkg.alibaba-inc.com/@alifd/layout@1.0.4/dist/AlifdLayout.js",
+        "https://unpkg.alibaba-inc.com/@alifd/layout@1.0.4/dist/AlifdLayout.css"
       ],
       "editUrls": [
-        "https://alifd.alicdn.com/npm/@alifd/pro-layout@1.0.1-beta.6/build/lowcode/view.js",
-        "https://alifd.alicdn.com/npm/@alifd/pro-layout@1.0.1-beta.6/build/lowcode/view.css"
+        "https://unpkg.alibaba-inc.com/@alifd/layout@1.0.4/build/lowcode/view.js",
+        "https://unpkg.alibaba-inc.com/@alifd/layout@1.0.4/build/lowcode/view.css"
       ]
     },
     {
       "package": "@alifd/fusion-ui",
-      "version": "1.0.5",
+      "version": "1.0.7",
       "library": "AlifdFusionUi",
       "urls": [
-        "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.5/dist/AlifdFusionUi.js",
-        "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.5/dist/AlifdFusionUi.css"
+        "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.7/dist/AlifdFusionUi.js",
+        "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.7/dist/AlifdFusionUi.css"
       ],
       "editUrls": [
-        "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.5/build/lowcode/view.js",
-        "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.5/build/lowcode/view.css"
+        "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.7/build/lowcode/view.js",
+        "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.7/build/lowcode/view.css"
       ]
     },
     {
@@ -108,15 +108,14 @@
       }
     },
     {
-      "exportName": "AlifdProLayoutMeta",
+      "exportName": "AlifdLayoutMeta",
       "npm": {
-        "package": "@alifd/pro-layout",
-        "version": "1.0.1-beta.6"
+        "package": "@alifd/layout",
+        "version": "1.0.4"
       },
-      "url": "https://alifd.alicdn.com/npm/@alifd/pro-layout@1.0.1-beta.6/build/lowcode/meta.js",
+      "url": "https://unpkg.alibaba-inc.com/@alifd/layout@1.0.4/build/lowcode/meta.js",
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alifd/pro-layout@1.0.1-beta.6/build/lowcode/meta.js",
-        "design": "https://alifd.alicdn.com/npm/@alifd/pro-layout@1.0.1-beta.6/build/lowcode/meta.design.js"
+        "default": "https://unpkg.alibaba-inc.com/@alifd/layout@1.0.4/build/lowcode/meta.js"
       }
     },
     {
@@ -124,10 +123,10 @@
       "npm": {
         "package": "@alifd/fusion-ui"
       },
-      "url": "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.5/build/lowcode/meta.js",
+      "url": "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.7/build/lowcode/meta.js",
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.5/build/lowcode/meta.js",
-        "design": "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.5/build/lowcode/meta.design.js"
+        "default": "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.7/build/lowcode/meta.js",
+        "design": "https://alifd.alicdn.com/npm/@alifd/fusion-ui@1.0.7/build/lowcode/meta.design.js"
       }
     },
     {
