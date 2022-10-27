@@ -356,3 +356,19 @@ function request(
       });
   });
 }
+
+export const getDataSourcePreference = () => {
+	const preference = new Map();
+	preference.set('DataSourcePane', {
+		importPlugins: [],
+		dataSourceTypes: [
+			{
+				type: 'fetch',
+			},
+			{
+				type: 'jsonp',
+			},
+		],
+	});
+	return preference
+}

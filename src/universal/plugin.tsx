@@ -30,6 +30,7 @@ import {
   saveSchema,
   resetSchema,
   preview,
+  getDataSourcePreference,
 } from './utils';
 import assets from './assets.json'
 import { registerRefProp } from 'src/sample-plugins/set-ref-prop';

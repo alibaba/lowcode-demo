@@ -4,6 +4,7 @@ import registerPlugins from './plugin';
 import { scenarioSwitcher } from '../../sample-plugins/scenario-switcher';
 import 'antd/dist/antd.css';
 import '../../universal/global.scss';
+import { getDataSourcePreference } from 'src/universal/utils';
 
 (async function main() {
   await plugins.register(scenarioSwitcher);
@@ -20,5 +21,6 @@ import '../../universal/global.scss';
         fetch: createFetchHandler(),
       },
     },
+    getDataSourcePreference(),
   );
 })();
