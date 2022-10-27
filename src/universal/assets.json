@@ -18,10 +18,10 @@
     {
       "title": "fusion组件库",
       "package": "@alifd/next",
-      "version": "1.24.18",
+      "version": "1.26.4",
       "urls": [
-        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next.min.css",
-        "https://g.alicdn.com/code/lib/alifd__next/1.24.18/next-with-locales.min.js"
+        "https://g.alicdn.com/code/lib/alifd__next/1.26.4/next.min.css",
+        "https://g.alicdn.com/code/lib/alifd__next/1.26.4/next-with-locales.min.js"
       ],
       "library": "Next"
     },
@@ -37,15 +37,15 @@
     },
     {
       "package": "@alilc/lowcode-materials",
-      "version": "1.0.2",
+      "version": "1.0.4",
       "library": "AlilcLowcodeMaterials",
       "urls": [
-        "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/dist/AlilcLowcodeMaterials.js",
-        "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/dist/AlilcLowcodeMaterials.css"
+        "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/dist/AlilcLowcodeMaterials.js",
+        "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/dist/AlilcLowcodeMaterials.css"
       ],
       "editUrls": [
-        "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/view.js",
-        "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/view.css"
+        "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/view.js",
+        "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/view.css"
       ]
     },
     {
@@ -101,10 +101,10 @@
       "npm": {
         "package": "@alilc/lowcode-materials"
       },
-      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/meta.js",
+      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.js",
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/meta.js",
-        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/meta.design.js"
+        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.js",
+        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.design.js"
       }
     },
     {
