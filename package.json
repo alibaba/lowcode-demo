@@ -9,7 +9,8 @@
     "start": "build-scripts start --disable-reload --port 5556",
     "build": "build-scripts build",
     "prepublishOnly": "npm run build",
-    "pub": "node ./scripts/watchdog.js && npm pub"
+    "pub": "node ./scripts/watchdog.js && npm pub",
+    "sync": "tnpm sync alilc/lowcode-demo"
   },
   "files": [
     "build"
