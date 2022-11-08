@@ -22,7 +22,6 @@ import TitleSetter from '@alilc/lowcode-setter-title';
 import BehaviorSetter from '../setters/behavior-setter';
 import CustomSetter from '../setters/custom-setter';
 import Logo from '../sample-plugins/logo';
-import { deleteHiddenTransducer } from '../sample-plugins/delete-hidden-transducer';
 
 import {
   loadIncrementalAssets,
@@ -40,8 +39,6 @@ export default async function registerPlugins() {
   await plugins.register(Inject);
 
   await plugins.register(registerRefProp);
-
-  await plugins.register(deleteHiddenTransducer);
 
   // plugin API 见 https://lowcode-engine.cn/docV2/ibh9fh
   SchemaPlugin.pluginName = 'SchemaPlugin';
