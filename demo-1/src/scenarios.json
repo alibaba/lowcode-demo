@@ -1,0 +1,102 @@
+[
+  {
+    "name": "index",
+    "title": "综合场景",
+    "urls": [
+      {
+        "key": "设计器",
+        "value": "https://github.com/alibaba/lowcode-demo/blob/main/src/scenarios/index"
+      },
+      {
+        "key": "fusion-ui 物料",
+        "value": "https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-ui"
+      },
+      {
+        "key":"fusion 物料",
+        "value": "https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-lowcode-materials"
+      }
+    ]
+  },
+  {
+    "name": "basic-fusion",
+    "title": "基础 fusion 组件",
+    "urls": [
+      {
+        "key": "设计器",
+        "value": "https://github.com/alibaba/lowcode-demo/blob/main/src/scenarios/basic-fusion"
+      }
+    ]
+  },
+  {
+    "name": "basic-fusion-with-single-component",
+    "title": "基础 fusion 组件 + 单自定义组件",
+    "urls": [
+      {
+        "key": "设计器",
+        "value": "https://github.com/alibaba/lowcode-demo/tree/main/src/scenarios/basic-fusion-with-single-component"
+      }
+    ]
+  },
+  {
+    "name": "basic-antd",
+    "title": "基础 antd 组件",
+    "urls": [
+      {
+        "key": "设计器",
+        "value": "https://github.com/alibaba/lowcode-demo/tree/main/src/scenarios/basic-antd"
+      },
+      {
+        "key": "antd 物料",
+        "value": "https://github.com/alibaba/lowcode-materials/tree/main/packages/antd-lowcode-materials"
+      }
+    ]
+  },
+  {
+    "name": "custom-initialization",
+    "title": "自定义初始化引擎",
+    "urls": [
+      {
+        "key": "设计器",
+        "value": "https://github.com/alibaba/lowcode-demo/tree/main/src/scenarios/custom-initialization"
+      }
+    ]
+  },
+  {
+    "name": "node-extended-actions",
+    "title": "扩展节点操作项",
+    "urls": [
+      {
+        "key": "设计器",
+        "value": "https://github.com/alibaba/lowcode-demo/tree/main/src/scenarios/node-extended-actions"
+      }
+    ]
+  },
+  {
+    "name": "next-pro",
+    "title": "基于next实现的高级表单低代码物料",
+    "urls": [
+      {
+        "key": "设计器",
+        "value": "https://github.com/alibaba/lowcode-demo/tree/main/src/scenarios/next-pro"
+      },
+      {
+        "key": "next-pro 物料",
+        "value": "https://github.com/Dogtiti/next-pro-lowcode-materials"
+      }
+    ]
+  },
+  {
+    "name": "antd-pro-with-formily",
+    "title": "antd 高级组件 + formily 表单组件",
+    "urls": [
+      {
+        "key": "设计器",
+        "value": "https://github.com/alibaba/lowcode-demo/tree/main/src/scenarios/antd-pro-with-formily"
+      },
+      {
+        "key": "formily 物料",
+        "value": "https://github.com/seada-low-code/lowcode-ecology/tree/main/packages/formily-materials"
+      }
+    ]
+  }
+]
