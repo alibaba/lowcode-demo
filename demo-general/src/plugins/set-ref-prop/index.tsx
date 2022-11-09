@@ -67,7 +67,7 @@ function addonCombine(metadata: TransformedComponentMetadata) {
   };
 }
 
-export const registerRefProp = () => {
+const RegisterRefProp = () => {
   return {
     init() {
       material.registerMetadataTransducer(addonCombine, 110, 'register-ref-prop')
@@ -75,4 +75,5 @@ export const registerRefProp = () => {
   };
 };
 
-registerRefProp.pluginName = 'register-ref-prop';
+RegisterRefProp.pluginName = 'register-ref-prop';
+export default RegisterRefProp;

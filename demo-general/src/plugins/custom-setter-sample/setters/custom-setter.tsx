@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; // import classNames from 'classnames';
+import React, { Component } from 'react';
+// import classNames from 'classnames';
 
 class CustomSetter extends Component<any, any> {
   render() {

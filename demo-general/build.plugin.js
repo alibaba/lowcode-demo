@@ -1,10 +1,8 @@
-const { join } = require('path');
 const fs = require('fs-extra');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const scenarioNames = fs.readdirSync(join('./src/scenarios')).filter(name => !name.startsWith('.'));
-const { version } = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+const { version, scenarioName } = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
 module.exports = ({ onGetWebpackConfig }) => {
   onGetWebpackConfig((config) => {
@@ -20,29 +18,6 @@ module.exports = ({ onGetWebpackConfig }) => {
       },
     });
 
-    // scenarioNames.forEach(name => {
-    //   const hasTsx = fs.existsSync(join(`./src/scenarios/${name}/index.tsx`));
-    //   config.merge({
-    //     entry: {
-    //       [name]: hasTsx ? require.resolve(`./src/scenarios/${name}/index.tsx`) : require.resolve(`./src/scenarios/${name}/index.ts`),
-    //     },
-    //   });
-    //   config
-    //     .plugin(name)
-    //     .use(HtmlWebpackPlugin, [
-    //       {
-    //         inject: false,
-    //         minify: false,
-    //         templateParameters: {
-    //           scenario: name,
-    //           version,
-    //         },
-    //         template: require.resolve('./public/index.ejs'),
-    //         filename: `${name}.html`,
-    //       },
-    //     ]);
-    // })
-
     config
     .plugin('index')
     .use(HtmlWebpackPlugin, [
@@ -50,7 +25,7 @@ module.exports = ({ onGetWebpackConfig }) => {
         inject: false,
         minify: false,
         templateParameters: {
-          scenario: 'index',
+          scenarioName,
           version,
         },
         template: require.resolve('./public/index.ejs'),
@@ -63,6 +38,7 @@ module.exports = ({ onGetWebpackConfig }) => {
         {
           inject: false,
           templateParameters: {
+            scenarioName,
           },
           template: require.resolve('./public/preview.html'),
           filename: 'preview.html',

@@ -1,10 +1,11 @@
 {
-  "name": "@alilc/lowcode-demo",
+  "name": "@alilc/lowcode-demo-general",
   "version": "1.0.28",
-  "description": "Low-Code Engine 低代码搭建引擎 Demo 项目",
+  "description": "Low-Code Engine 低代码搭建引擎 Demo 项目 - 一般场景",
   "repository": "git@github.com:alibaba/lowcode-demo.git",
   "license": "MIT",
   "main": "index.js",
+  "scenarioName": "general",
   "scripts": {
     "start": "build-scripts start --disable-reload --port 5556",
     "build": "build-scripts build",
@@ -24,7 +25,7 @@
     "@alilc/lowcode-plugin-inject": "^1.0.0",
     "@alilc/lowcode-plugin-manual": "^1.0.3",
     "@alilc/lowcode-plugin-schema": "^1.0.1",
-    "@alilc/lowcode-plugin-simulator-select": "^1.0.0",
+    "@alilc/lowcode-plugin-simulator-select": "^1.0.2",
     "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
     "@alilc/lowcode-plugin-zh-en": "^1.0.0",
     "@alilc/lowcode-react-renderer": "^1.0.0",
