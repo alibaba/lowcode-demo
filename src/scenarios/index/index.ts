@@ -22,6 +22,8 @@ import '../../universal/global.scss';
     ],
     requestHandlersMap: {
       fetch: createFetchHandler()
-    }
+    },
+    // @ts-ignore
+    enableWorkspaceMode: true,
   });
 })();
