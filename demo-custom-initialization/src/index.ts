@@ -1,4 +1,7 @@
-import { init, plugins } from '@alilc/lowcode-engine';
+
+import { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
+import { common, plugins, config } from '@alilc/lowcode-engine';
 import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 import EditorInitPlugin from './plugins/plugin-editor-init';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
@@ -47,7 +50,7 @@ async function registerPlugins() {
 
   await plugins.register(LoadIncrementalAssetsWidgetPlugin);
 
-  await plugins.register(SaveSamplePlugin, { scenarioName: 'general' });
+  await plugins.register(SaveSamplePlugin, { scenarioName: 'custom-initialization' });
 
   // 插件参数声明 & 传递，参考：https://www.yuque.com/lce/doc/ibh9fh#peEmG
   await plugins.register(DataSourcePanePlugin, {
@@ -75,20 +78,28 @@ async function registerPlugins() {
 (async function main() {
   await registerPlugins();
 
-  init(document.getElementById('lce-container')!, {
-    // locale: 'zh-CN',
+  const Workbench = common.skeletonCabin.Workbench;
+  function EditorView() {
+    /** 插件是否已初始化成功，因为必须要等插件初始化后才能渲染 Workbench */
+    const [hasPluginInited, setHasPluginInited] = useState(false);
+
+    useEffect(() => {
+      plugins.init().then(() => {
+        setHasPluginInited(true);
+      }).catch(err => console.error(err));
+    }, []);
+
+    return hasPluginInited && <Workbench />;
+  }
+  config.setConfig({
     enableCondition: true,
     enableCanvasLock: true,
     // 默认绑定变量
     supportVariableGlobally: true,
-    // simulatorUrl 在当 engine-core.js 同一个父路径下时是不需要配置的！！！
-    // 这里因为用的是 alifd cdn，在不同 npm 包，engine-core.js 和 react-simulator-renderer.js 是不同路径
-    simulatorUrl: [
-      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@latest/dist/css/react-simulator-renderer.css',
-      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@latest/dist/js/react-simulator-renderer.js'
-    ],
     requestHandlersMap: {
       fetch: createFetchHandler()
-    },
+    }
   });
+
+  ReactDOM.render(<EditorView />, document.getElementById('lce-container')!);
 })();
