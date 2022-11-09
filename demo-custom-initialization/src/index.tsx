@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { common, plugins, config } from '@alilc/lowcode-engine';
@@ -19,7 +18,7 @@ import LoadIncrementalAssetsWidgetPlugin from './plugins/plugin-load-incremental
 import SaveSamplePlugin from './plugins/plugin-save-sample';
 import PreviewSamplePlugin from './plugins/plugin-preview-sample';
 import CustomSetterSamplePlugin from './plugins/plugin-custom-setter-sample';
-import SetRefPropPlugin from 'src/plugins/plugin-set-ref-prop';
+import SetRefPropPlugin from './plugins/plugin-set-ref-prop';
 import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import './global.scss';
 
@@ -75,22 +74,25 @@ async function registerPlugins() {
   await plugins.register(CustomSetterSamplePlugin);
 };
 
+function EditorView() {
+  /** 插件是否已初始化成功，因为必须要等插件初始化后才能渲染 Workbench */
+  const [hasPluginInited, setHasPluginInited] = useState(false);
+
+  useEffect(() => {
+    plugins.init().then(() => {
+      setHasPluginInited(true);
+    }).catch(err => console.error(err));
+  }, []);
+
+  if (!hasPluginInited) {
+    return null;
+  }
+  const Workbench = common.skeletonCabin.Workbench;
+  return <Workbench />;
+}
+
 (async function main() {
   await registerPlugins();
-
-  const Workbench = common.skeletonCabin.Workbench;
-  function EditorView() {
-    /** 插件是否已初始化成功，因为必须要等插件初始化后才能渲染 Workbench */
-    const [hasPluginInited, setHasPluginInited] = useState(false);
-
-    useEffect(() => {
-      plugins.init().then(() => {
-        setHasPluginInited(true);
-      }).catch(err => console.error(err));
-    }, []);
-
-    return hasPluginInited && <Workbench />;
-  }
   config.setConfig({
     enableCondition: true,
     enableCanvasLock: true,

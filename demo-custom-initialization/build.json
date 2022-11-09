@@ -1,7 +1,7 @@
 {
   "entry": {
     "preview": "./src/preview.tsx",
-    "index": "./src/index.ts"
+    "index": "./src/index.tsx"
   },
   "vendor": false,
   "devServer": {
