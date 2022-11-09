@@ -5,7 +5,6 @@
   "repository": "git@github.com:alibaba/lowcode-demo.git",
   "license": "MIT",
   "main": "index.js",
-  "scenarioName": "general",
   "scripts": {
     "start": "build-scripts start --disable-reload --port 5556",
     "build": "build-scripts build",

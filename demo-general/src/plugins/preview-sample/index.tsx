@@ -8,20 +8,25 @@ import {
 const PreviewSample = (ctx: ILowCodePluginContext) => {
   return {
     async init() {
-      const { skeleton } = ctx;
-        skeleton.add({
-          name: 'previewSample',
-          area: 'topArea',
-          type: 'Widget',
-          props: {
-            align: 'right',
-          },
-          content: (
-            <Button type="primary" onClick={() => preview()}>
-              预览
-            </Button>
-          ),
-        });
+      const { skeleton, config } = ctx;
+      const doPreview = () => {
+        const scenarioName = config.get('scenarioName');
+        console.log('go preview with scenarioName:',scenarioName )
+        preview(scenarioName);
+      };
+      skeleton.add({
+        name: 'previewSample',
+        area: 'topArea',
+        type: 'Widget',
+        props: {
+          align: 'right',
+        },
+        content: (
+          <Button type="primary" onClick={() => doPreview()}>
+            预览
+          </Button>
+        ),
+      });
     },
   };
 }

@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const { version, scenarioName } = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+const { version } = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
 module.exports = ({ onGetWebpackConfig }) => {
   onGetWebpackConfig((config) => {
@@ -25,7 +25,6 @@ module.exports = ({ onGetWebpackConfig }) => {
         inject: false,
         minify: false,
         templateParameters: {
-          scenarioName,
           version,
         },
         template: require.resolve('./public/index.ejs'),
@@ -38,7 +37,6 @@ module.exports = ({ onGetWebpackConfig }) => {
         {
           inject: false,
           templateParameters: {
-            scenarioName,
           },
           template: require.resolve('./public/preview.html'),
           filename: 'preview.html',
