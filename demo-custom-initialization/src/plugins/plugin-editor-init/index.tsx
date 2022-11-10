@@ -4,17 +4,13 @@ import assets from '../../assets.json';
 import {
   getPageSchema,
 } from '../../utils';
-const EditorInitPlugin = (ctx: ILowCodePluginContext) => {
+const EditorInitPlugin = (ctx: ILowCodePluginContext, options: any) => {
   return {
     async init() {
-      // 修改面包屑组件的分隔符属性setter
-      // const assets = await (
-      //   await fetch(
-      //     `https://alifd.alicdn.com/npm/@alilc/lowcode-materials/build/lowcode/assets-prod.json`
-      //   )
-      // ).json();
-      // 设置物料描述
-      const { material, project } = ctx;
+      const { material, project, config } = ctx;
+      const scenarioName = options['scenarioName'];
+      // 保存在config中用于引擎范围其他插件使用
+      config.set('scenarioName', scenarioName);
 
       await material.setAssets(await injectAssets(assets));
 
@@ -26,4 +22,16 @@ const EditorInitPlugin = (ctx: ILowCodePluginContext) => {
   };
 }
 EditorInitPlugin.pluginName = 'EditorInitPlugin';
+EditorInitPlugin.meta = {
+  preferenceDeclaration: {
+    title: '保存插件配置',
+    properties: [
+      {
+        key: 'scenarioName',
+        type: 'string',
+        description: '用于localstorage存储key',
+      }
+    ],
+  },
+}
 export default EditorInitPlugin;

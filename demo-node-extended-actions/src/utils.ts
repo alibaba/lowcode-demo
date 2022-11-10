@@ -2,6 +2,7 @@ import { material, project } from '@alilc/lowcode-engine';
 import { filterPackages } from '@alilc/lowcode-plugin-inject'
 import { Message, Dialog } from '@alifd/next';
 import { TransformStage } from '@alilc/lowcode-types';
+import schema from './schema.json';
 
 export const loadIncrementalAssets = () => {
   material?.onChangeAssets(() => {
@@ -270,13 +271,14 @@ export const getPackagesFromLocalStorage = (scenarioName: string) => {
 }
 
 export const getPageSchema = async (scenarioName: string = 'index') => {
-  const pageSchema = getProjectSchemaFromLocalStorage(scenarioName).componentsTree?.[0]
+  const pageSchema = getProjectSchemaFromLocalStorage(scenarioName).componentsTree?.[0];
 
   if (pageSchema) {
     return pageSchema;
   }
 
-  return await request('./schema.json');
+  console.log(`failed to get schema for scenarioName ${scenarioName} from localstorage, trying default schema`);
+  return schema;
 };
 
 function request(

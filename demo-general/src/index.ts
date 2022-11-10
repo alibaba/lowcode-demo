@@ -21,7 +21,7 @@ import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import './global.scss';
 
 async function registerPlugins() {
-  await plugins.register(EditorInitPlugin);
+  await plugins.register(EditorInitPlugin, { scenarioName: 'general' });
 
   // 设置内置 setter 和事件绑定、插件绑定面板
   await plugins.register(DefaultSettersRegistryPlugin);
@@ -47,7 +47,7 @@ async function registerPlugins() {
 
   await plugins.register(LoadIncrementalAssetsWidgetPlugin);
 
-  await plugins.register(SaveSamplePlugin, { scenarioName: 'general' });
+  await plugins.register(SaveSamplePlugin);
 
   // 插件参数声明 & 传递，参考：https://www.yuque.com/lce/doc/ibh9fh#peEmG
   await plugins.register(DataSourcePanePlugin, {

@@ -6,13 +6,11 @@ import {
 } from '../../utils';
 
 // 保存功能示例
-const SaveSamplePlugin = (ctx: ILowCodePluginContext, options: any) => {
+const SaveSamplePlugin = (ctx: ILowCodePluginContext) => {
   return {
     async init() {
       const { skeleton, hotkey, config } = ctx;
-      const scenarioName = options['scenarioName'];
-      // 保存在config中用于引擎范围其他插件使用
-      config.set('scenarioName', scenarioName);
+      const scenarioName = config.get('scenarioName');
 
       skeleton.add({
         name: 'saveSample',
@@ -48,16 +46,4 @@ const SaveSamplePlugin = (ctx: ILowCodePluginContext, options: any) => {
   };
 }
 SaveSamplePlugin.pluginName = 'SaveSamplePlugin';
-SaveSamplePlugin.meta = {
-  preferenceDeclaration: {
-    title: '保存插件配置',
-    properties: [
-      {
-        key: 'scenarioName',
-        type: 'string',
-        description: '用于localstorage存储key',
-      }
-    ],
-  },
-}
 export default SaveSamplePlugin;
