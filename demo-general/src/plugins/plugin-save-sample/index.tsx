@@ -46,4 +46,7 @@ const SaveSamplePlugin = (ctx: ILowCodePluginContext) => {
   };
 }
 SaveSamplePlugin.pluginName = 'SaveSamplePlugin';
+SaveSamplePlugin.meta = {
+  dependencies: ['EditorInitPlugin'],
+};
 export default SaveSamplePlugin;

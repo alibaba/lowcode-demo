@@ -68,4 +68,7 @@ const LogoSamplePlugin = (ctx: ILowCodePluginContext) => {
   };
 }
 LogoSamplePlugin.pluginName = 'LogoSamplePlugin';
+LogoSamplePlugin.meta = {
+  dependencies: ['EditorInitPlugin'],
+};
 export default LogoSamplePlugin;

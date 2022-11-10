@@ -22,22 +22,14 @@ import './global.scss';
 
 async function registerPlugins() {
   await plugins.register(EditorInitPlugin, {
-    scenarioName: 'general',
-    displayName: '综合场景',
+    scenarioName: 'basic-fusion',
+    displayName: '基础Fusion组件',
     info: {
       urls: [
         {
           key: '设计器',
-          value: 'https://github.com/alibaba/lowcode-demo/tree/main/demo-general',
+          value: 'https://github.com/alibaba/lowcode-demo/tree/main/demo-basic-fusion',
         },
-        {
-          key: 'fusion-ui 物料',
-          value: 'https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-ui',
-        },
-        {
-          key: 'fusion 物料',
-          value: 'https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-lowcode-materials',
-        }
       ],
     },
   });
