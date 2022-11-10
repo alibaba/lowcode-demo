@@ -16,7 +16,7 @@ import LoadIncrementalAssetsWidgetPlugin from './plugins/plugin-load-incremental
 import SaveSamplePlugin from './plugins/plugin-save-sample';
 import PreviewSamplePlugin from './plugins/plugin-preview-sample';
 import CustomSetterSamplePlugin from './plugins/plugin-custom-setter-sample';
-import SetRefPropPlugin from './plugins/plugin-set-ref-prop';
+import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop';
 import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import AddHelloActionPlugin from './plugins/plugin-add-hello-action';
 import RemoveCopyActionPlugin from './plugins/plugin-remove-copy-action';
