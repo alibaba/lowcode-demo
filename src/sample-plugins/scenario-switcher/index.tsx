@@ -1,8 +1,10 @@
 import React from 'react';
 import {
   ILowCodePluginContext,
+  // @ts-ignore
+  workSpace,
 } from '@alilc/lowcode-engine';
-import { Select, Dropdown, Menu } from '@alifd/next';
+import { Select, Dropdown, Menu, Button } from '@alifd/next';
 import scenarios from '../../universal/scenarios.json';
 const { Option } = Select;
 
@@ -79,6 +81,38 @@ export const scenarioSwitcher = (ctx: ILowCodePluginContext) => {
           width: 80,
         },
         content: Switcher,
+      });
+    },
+  };
+};
+
+export const viewSwitcher = (ctx: ILowCodePluginContext) => {
+  return {
+    name: 'viewSwitcher',
+    async init() {
+      const { skeleton } = ctx;
+
+      skeleton.add({
+        name: 'viewSwitcher',
+        area: 'topArea',
+        type: 'Widget',
+        props: {
+          align: 'right',
+          width: 80,
+        },
+        content: (
+          <>
+            <Button onClick={() => {
+              // debugger;
+              workSpace.window.changeViewType('editorViewA')
+            }}>change view type A</Button>
+
+            <Button onClick={() => {
+              // debugger;
+              workSpace.window.changeViewType('editorViewB')
+            }}>change view type B</Button>
+          </>
+        ),
       });
     },
   };

@@ -1,12 +1,60 @@
-import { init, plugins } from '@alilc/lowcode-engine';
+// @ts-ignore
+import { init, plugins, workSpace } from '@alilc/lowcode-engine';
 import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 import registerPlugins from '../../universal/plugin';
-import { scenarioSwitcher } from '../../sample-plugins/scenario-switcher';
+import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
+import { scenarioSwitcher, viewSwitcher } from '../../sample-plugins/scenario-switcher';
+// import Logo from '../sample-plugins/logo';
+import ZhEnPlugin from '@alilc/lowcode-plugin-zh-en';
+import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
 import '../../universal/global.scss';
 
 (async function main() {
-  await plugins.register(scenarioSwitcher);
-  await registerPlugins();
+  // await plugins.register(scenarioSwitcher);
+  // await registerPlugins();
+
+  const ViewA = {
+    name: 'editorViewA',
+    // 资源初始化
+    async init(ctx: any) {
+      // 注册 plugin
+      ctx.plugins.register(UndoRedoPlugin);
+      ctx.plugins.register(viewSwitcher, {
+        switchTo: 'editorViewB'
+      });
+    },
+    async save(resource: any) {},
+  }
+
+  const ViewB = {
+    name: 'editorViewB',
+    // 资源初始化
+    async init(ctx: any) {
+      // 注册 plugin
+      // ctx.plugins.register(saveButton);
+      ctx.plugins.register(scenarioSwitcher);
+      ctx.plugins.register(viewSwitcher, {
+        switchTo: 'editorViewA'
+      });
+    },
+    async save(resource: any) {},
+  }
+
+  workSpace.registerResourceType('page', 'editor', {
+    name: 'page',
+    description: '',
+    // 默认视图类型
+    defaultViewType: 'editorViewA',
+    // 当前资源视图
+    editorViews: [ViewA, ViewB],
+    // 资源初始化
+    async init(ctx: any) {
+      // 注册 plugin
+      ctx.plugins.register(ComponentsPane);
+      ctx.skeleton.add()
+    },
+    async dispose() {},
+  });
 
   init(document.getElementById('lce-container')!, {
     // locale: 'zh-CN',
