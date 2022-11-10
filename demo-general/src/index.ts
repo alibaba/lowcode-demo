@@ -21,7 +21,26 @@ import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import './global.scss';
 
 async function registerPlugins() {
-  await plugins.register(EditorInitPlugin, { scenarioName: 'general' });
+  await plugins.register(EditorInitPlugin, {
+    scenarioName: 'general',
+    displayName: '综合场景',
+    info: {
+      urls: [
+        {
+          key: '设计器',
+          value: 'https://github.com/alibaba/lowcode-demo/tree/main/demo-general',
+        },
+        {
+          key: 'fusion-ui 物料',
+          value: 'https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-ui',
+        },
+        {
+          key: 'fusion 物料',
+          value: 'https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-lowcode-materials',
+        }
+      ],
+    },
+  });
 
   // 设置内置 setter 和事件绑定、插件绑定面板
   await plugins.register(DefaultSettersRegistryPlugin);

@@ -23,7 +23,18 @@ import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import './global.scss';
 
 async function registerPlugins() {
-  await plugins.register(EditorInitPlugin, { scenarioName: 'custom-initialization' });
+  await plugins.register(EditorInitPlugin, {
+    scenarioName: 'custom-initialization',
+    displayName: '自定义初始化',
+    info: {
+      urls: [
+        {
+          key: '设计器',
+          "value": "https://github.com/alibaba/lowcode-demo/tree/main/demo-custom-initialization"
+        },
+      ],
+    },
+  });
 
   // 设置内置 setter 和事件绑定、插件绑定面板
   await plugins.register(DefaultSettersRegistryPlugin);

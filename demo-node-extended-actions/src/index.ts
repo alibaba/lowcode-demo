@@ -25,7 +25,18 @@ import './global.scss';
 
 async function registerPlugins() {
 
-  await plugins.register(EditorInitPlugin, { scenarioName: 'node-extended-actions' });
+  await plugins.register(EditorInitPlugin, {
+    scenarioName: 'node-extended-actions',
+    displayName: '扩展节点操作项',
+    info: {
+      urls: [
+        {
+          key: '设计器',
+          value: 'https://github.com/alibaba/lowcode-demo/tree/main/demo-node-extended-actions',
+        },
+      ],
+    },
+  });
 
   // 设置内置 setter 和事件绑定、插件绑定面板
   await plugins.register(DefaultSettersRegistryPlugin);
