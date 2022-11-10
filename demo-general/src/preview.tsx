@@ -6,7 +6,7 @@ import ReactRenderer from '@alilc/lowcode-react-renderer';
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
 import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 
-import { getProjectSchemaFromLocalStorage, getPackagesFromLocalStorage } from './utils';
+import { getProjectSchemaFromLocalStorage, getPackagesFromLocalStorage } from './mockService';
 
 const getScenarioName = function () {
   if (location.search) {

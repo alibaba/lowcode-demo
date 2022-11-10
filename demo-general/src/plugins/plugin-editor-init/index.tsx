@@ -3,7 +3,7 @@ import { injectAssets } from '@alilc/lowcode-plugin-inject';
 import assets from '../../assets.json';
 import {
   getPageSchema,
-} from '../../utils';
+} from '../../mockService';
 const EditorInitPlugin = (ctx: ILowCodePluginContext, options: any) => {
   return {
     async init() {

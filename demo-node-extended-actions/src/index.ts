@@ -1,5 +1,4 @@
-import React from 'react';
-import { init, plugins, ILowCodePluginContext, Node } from '@alilc/lowcode-engine';
+import { init, plugins } from '@alilc/lowcode-engine';
 import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 import EditorInitPlugin from './plugins/plugin-editor-init';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';

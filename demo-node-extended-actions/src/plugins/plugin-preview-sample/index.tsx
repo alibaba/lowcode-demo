@@ -1,8 +1,8 @@
 import { ILowCodePluginContext } from '@alilc/lowcode-engine';
 import { Button } from '@alifd/next';
 import {
-  preview,
-} from '../../utils';
+  saveSchema,
+} from '../../mockService';
 
 // 保存功能示例
 const PreviewSamplePlugin = (ctx: ILowCodePluginContext) => {
@@ -11,8 +11,12 @@ const PreviewSamplePlugin = (ctx: ILowCodePluginContext) => {
       const { skeleton, config } = ctx;
       const doPreview = () => {
         const scenarioName = config.get('scenarioName');
-        console.log('go preview with scenarioName:',scenarioName )
-        preview(scenarioName);
+        console.log('go preview with scenarioName:',scenarioName );
+        saveSchema(scenarioName);;
+        setTimeout(() => {
+          const search = location.search ? `${location.search}&scenarioName=${scenarioName}` : `?scenarioName=${scenarioName}`;
+          window.open(`./preview.html${search}`);
+        }, 500);
       };
       skeleton.add({
         name: 'previewSample',
