@@ -1,9 +1,7 @@
 import { ILowCodePluginContext } from '@alilc/lowcode-engine';
 import { injectAssets } from '@alilc/lowcode-plugin-inject';
-import assets from '../../assets.json';
-import {
-  getPageSchema,
-} from '../../mockService';
+import assets from '../../services/assets.json';
+import { getPageSchema } from '../../services/mockService';
 const EditorInitPlugin = (ctx: ILowCodePluginContext, options: any) => {
   return {
     async init() {

@@ -3,7 +3,7 @@ import { Button } from '@alifd/next';
 import {
   saveSchema,
   resetSchema,
-} from '../../mockService';
+} from '../../services/mockService';
 
 // 保存功能示例
 const SaveSamplePlugin = (ctx: ILowCodePluginContext) => {

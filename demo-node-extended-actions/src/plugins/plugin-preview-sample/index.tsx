@@ -2,7 +2,7 @@ import { ILowCodePluginContext } from '@alilc/lowcode-engine';
 import { Button } from '@alifd/next';
 import {
   saveSchema,
-} from '../../mockService';
+} from '../../services/mockService';
 
 // 保存功能示例
 const PreviewSamplePlugin = (ctx: ILowCodePluginContext) => {
