@@ -1,7 +1,28 @@
 {
   "entry": {
-    "demo-general/preview": "./demo-general/src/preview.tsx",
-    "demo-general/index": "./demo-general/src/preview.tsx"
+    "demo-general/index" : "./demo-general/src/index.ts",
+    "demo-general/preview" : "./demo-general/src/preview.tsx",
+
+    "demo-antd-pro-with-formily/index" : "./demo-antd-pro-with-formily/src/index.ts",
+    "demo-antd-pro-with-formily/preview" : "./demo-antd-pro-with-formily/src/preview.tsx",
+
+    "demo-basic-antd/index" : "./demo-basic-antd/src/index.ts",
+    "demo-basic-antd/preview" : "./demo-basic-antd/src/preview.tsx",
+
+    "demo-basic-fusion/index" : "./demo-basic-fusion/src/index.ts",
+    "demo-basic-fusion/preview" : "./demo-basic-fusion/src/preview.tsx",
+
+    "demo-basic-fusion-with-single-component/index" : "./demo-basic-fusion-with-single-component/src/index.ts",
+    "demo-basic-fusion-with-single-component/preview" : "./demo-basic-fusion-with-single-component/src/preview.tsx",
+
+    "demo-custom-initialization/index" : "./demo-custom-initialization/src/index.tsx",
+    "demo-custom-initialization/preview" : "./demo-custom-initialization/src/preview.tsx",
+
+    "demo-next-pro/index" : "./demo-next-pro/src/index.ts",
+    "demo-next-pro/preview" : "./demo-next-pro/src/preview.tsx",
+
+    "demo-node-extended-actions/index" : "./demo-node-extended-actions/src/index.ts",
+    "demo-node-extended-actions/preview" : "./demo-node-extended-actions/src/preview.tsx"
   },
   "vendor": false,
   "devServer": {
