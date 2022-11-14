@@ -72,6 +72,6 @@ import '../../universal/global.scss';
       fetch: createFetchHandler()
     },
     // @ts-ignore
-    enableWorkspaceMode: true,
+    // enableWorkspaceMode: true,
   });
 })();
