@@ -2,7 +2,7 @@
 demo是一个组合内核、setter、插件、物料的示范工程，因为未经长期生产环境打磨，可能还会有一些各个模块间结合的 bug，希望大家理解~
 
 ## 如何使用
-目前包含多个独立demo工程目录，每个demo目录都是一个独立的工程, 代表一个特定的demo场景，可以选择其一单独使用。
+目前包含多个独立 demo 工程目录，每个 demo 目录都是一个独立的工程, 代表一个特定的 demo 场景，可以选择其一单独使用。
 
 ```bash
 git clone git@github.com:alibaba/lowcode-demo.git

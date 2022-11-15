@@ -55,31 +55,6 @@ module.exports = ({ onGetWebpackConfig }) => {
       }
     })
 
-    // config
-    // .plugin('demo-general/index')
-    // .use(HtmlWebpackPlugin, [
-    //   {
-    //     inject: false,
-    //     minify: false,
-    //     templateParameters: {
-    //       version,
-    //     },
-    //     template: require.resolve('./demo-general/public/index.ejs'),
-    //     filename: 'demo-general/index.html',
-    //   },
-    // ]);
-    // config
-    //   .plugin('demo-general/preview')
-    //   .use(HtmlWebpackPlugin, [
-    //     {
-    //       inject: false,
-    //       templateParameters: {
-    //       },
-    //       template: require.resolve('./demo-general/public/preview.html'),
-    //       filename: 'demo-general/preview.html',
-    //     },
-    //   ]);
-
     config.plugins.delete('hot');
     config.devServer.hot(false);
 
