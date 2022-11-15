@@ -1,7 +1,7 @@
 # project custom
 build
 dist
-
+*.package-lock.json
 
 # IDE
 .vscode
