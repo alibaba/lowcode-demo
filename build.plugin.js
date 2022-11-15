@@ -1,8 +1,9 @@
+const { join } = require('path');
 const fs = require('fs-extra');
-const configuration = require('./build.json');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const scenarioNames = fs.readdirSync(join('./src/scenarios')).filter(name => !name.startsWith('.'));
 const { version } = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 
 module.exports = ({ onGetWebpackConfig }) => {
@@ -18,67 +19,41 @@ module.exports = ({ onGetWebpackConfig }) => {
         fs: 'empty',
       },
     });
-    const entries = Object.keys(configuration.entry) || [];
-    entries.map((entry) => {
-      const [scenarioName, page] = entry.split('/');
-      if (page === 'index') {
-        config
-          .plugin(entry)
-          .use(HtmlWebpackPlugin, [
-            {
-              inject: false,
-              minify: false,
-              templateParameters: {
-                version,
-                scenarioName
-              },
-              template: require.resolve('./public/index.ejs'),
-              filename: `${scenarioName}/index.html`,
-            },
-          ]);
-      }
-      if (page === 'preview') {
-        config
-          .plugin(entry)
-          .use(HtmlWebpackPlugin, [
-            {
-              inject: false,
-              minify: false,
-              templateParameters: {
-                scenarioName,
-              },
-              template: require.resolve('./public/preview.html'),
-              filename: `${scenarioName}/preview.html`,
-            },
-          ]);
 
-      }
+    scenarioNames.forEach(name => {
+      const hasTsx = fs.existsSync(join(`./src/scenarios/${name}/index.tsx`));
+      config.merge({
+        entry: {
+          [name]: hasTsx ? require.resolve(`./src/scenarios/${name}/index.tsx`) : require.resolve(`./src/scenarios/${name}/index.ts`),
+        },
+      });
+      config
+        .plugin(name)
+        .use(HtmlWebpackPlugin, [
+          {
+            inject: false,
+            minify: false,
+            templateParameters: {
+              scenario: name,
+              version,
+            },
+            template: require.resolve('./public/index.ejs'),
+            filename: `${name}.html`,
+          },
+        ]);
     })
 
-    // config
-    // .plugin('demo-general/index')
-    // .use(HtmlWebpackPlugin, [
-    //   {
-    //     inject: false,
-    //     minify: false,
-    //     templateParameters: {
-    //       version,
-    //     },
-    //     template: require.resolve('./demo-general/public/index.ejs'),
-    //     filename: 'demo-general/index.html',
-    //   },
-    // ]);
-    // config
-    //   .plugin('demo-general/preview')
-    //   .use(HtmlWebpackPlugin, [
-    //     {
-    //       inject: false,
-    //       templateParameters: {
-    //       },
-    //       template: require.resolve('./demo-general/public/preview.html'),
-    //       filename: 'demo-general/preview.html',
-    //     },
-    //   ]);
+    config
+      .plugin('preview')
+      .use(HtmlWebpackPlugin, [
+        {
+          inject: false,
+          templateParameters: {
+          },
+          template: require.resolve('./public/preview.html'),
+          filename: 'preview.html',
+        },
+      ]);
 
     config.plugins.delete('hot');
     config.devServer.hot(false);
