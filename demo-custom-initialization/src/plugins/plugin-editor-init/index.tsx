@@ -18,7 +18,7 @@ const EditorInitPlugin = (ctx: ILowCodePluginContext, options: any) => {
 
       await material.setAssets(await injectAssets(assets));
 
-      const schema = await getPageSchema();
+      const schema = await getPageSchema(scenarioName);
 
       // 加载 schema
       project.openDocument(schema);
