@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   ILowCodePluginContext,
-  plugins,
-  project,
+  // plugins,
+  // project,
 } from '@alilc/lowcode-engine';
 import AliLowCodeEngineExt from '@alilc/lowcode-engine-ext';
 import { Button } from '@alifd/next';
@@ -34,7 +34,9 @@ import {
 import assets from './assets.json'
 import { registerRefProp } from 'src/sample-plugins/set-ref-prop';
 
-export default async function registerPlugins() {
+export default async function registerPlugins(ctx: any) {
+  const project = ctx.project;
+  const plugins = ctx.plugins;
   await plugins.register(ManualPlugin);
 
   await plugins.register(Inject);

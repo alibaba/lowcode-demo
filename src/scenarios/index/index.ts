@@ -2,26 +2,26 @@
 import { init, plugins, workSpace } from '@alilc/lowcode-engine';
 import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 import registerPlugins from '../../universal/plugin';
-import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
+// import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
 import { scenarioSwitcher, viewSwitcher } from '../../sample-plugins/scenario-switcher';
 // import Logo from '../sample-plugins/logo';
-import ZhEnPlugin from '@alilc/lowcode-plugin-zh-en';
-import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
+// import ZhEnPlugin from '@alilc/lowcode-plugin-zh-en';
+// import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
 import '../../universal/global.scss';
 
 (async function main() {
-  // await plugins.register(scenarioSwitcher);
-  // await registerPlugins();
-
   const ViewA = {
     name: 'editorViewA',
     // 资源初始化
     async init(ctx: any) {
       // 注册 plugin
-      ctx.plugins.register(UndoRedoPlugin);
+      // ctx.plugins.register(UndoRedoPlugin);
       ctx.plugins.register(viewSwitcher, {
         switchTo: 'editorViewB'
       });
+      await ctx.plugins.register(scenarioSwitcher);
+      await registerPlugins(ctx);
+      // ctx.plugins.register(scenarioSwitcher);
     },
     async save(resource: any) {},
   }
@@ -36,6 +36,7 @@ import '../../universal/global.scss';
       ctx.plugins.register(viewSwitcher, {
         switchTo: 'editorViewA'
       });
+      await registerPlugins(ctx);
     },
     async save(resource: any) {},
   }
@@ -50,8 +51,8 @@ import '../../universal/global.scss';
     // 资源初始化
     async init(ctx: any) {
       // 注册 plugin
-      ctx.plugins.register(ComponentsPane);
-      ctx.skeleton.add()
+      // ctx.plugins.register(ComponentsPane);
+      // ctx.skeleton.add()
     },
     async dispose() {},
   });
@@ -72,6 +73,6 @@ import '../../universal/global.scss';
       fetch: createFetchHandler()
     },
     // @ts-ignore
-    // enableWorkspaceMode: true,
+    enableWorkspaceMode: true,
   });
 })();
