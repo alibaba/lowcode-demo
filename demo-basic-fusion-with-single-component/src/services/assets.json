@@ -11275,10 +11275,7 @@
         },
         "component": {
           "isContainer": true,
-          "disableBehaviors": "*",
-          "nestingRule": {
-            "childWhitelist": ["NextPage"]
-          }
+          "disableBehaviors": "*"
         }
       },
       "category": "基础"
