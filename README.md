@@ -14,17 +14,17 @@ npm run start
 
 场景列表：
 
-- [general](https://lowcode-engine.cn/demo/demo-general)
-- [basic-fusion](https://lowcode-engine.cn/demo/demo-basic-fusion)（此 fusion 的元数据描述是很老的版本，只为了示意描述结构，请勿用于生产环境）
-- [basic-antd](https://lowcode-engine.cn/demo/demo-basic-antd)
-- [basic-fusion-with-single-component](https://lowcode-engine.cn/demo/demo-basic-fusion-with-single-component)
-- [custom-initialization](https://lowcode-engine.cn/demo/demo-custom-initialization)
-- [node-extended-actions](https://lowcode-engine.cn/demo/demo-node-extended-actions)
-- [next-pro](https://lowcode-engine.cn/demo/demo-next-pro)
-- [antd-pro-with-formily](https://lowcode-engine.cn/demo/demo-antd-pro-with-formily)
+- [general](https://lowcode-engine.cn/demo/demo-general/index.html)
+- [basic-fusion](https://lowcode-engine.cn/demo/demo-basic-fusion/index.html)（此 fusion 的元数据描述是很老的版本，只为了示意描述结构，请勿用于生产环境）
+- [basic-antd](https://lowcode-engine.cn/demo/demo-basic-antd/index.html)
+- [basic-fusion-with-single-component](https://lowcode-engine.cn/demo/demo-basic-fusion-with-single-component/index.html)
+- [custom-initialization](https://lowcode-engine.cn/demo/demo-custom-initialization/index.html)
+- [node-extended-actions](https://lowcode-engine.cn/demo/demo-node-extended-actions/index.html)
+- [next-pro](https://lowcode-engine.cn/demo/demo-next-pro/index.html)
+- [antd-pro-with-formily](https://lowcode-engine.cn/demo/demo-antd-pro-with-formily/index.html)
 
 更多参考资料：
 
-- [马上玩一下](https://lowcode-engine.cn/demo/demo-general)
+- [马上玩一下](https://lowcode-engine.cn/demo/demo-general/index.html)
 - [低代码引擎官网](http://lowcode-engine.cn)
 - [引擎主包](https://github.com/alibaba/lowcode-engine)
