@@ -18,6 +18,7 @@ import PreviewSamplePlugin from './plugins/plugin-preview-sample';
 import CustomSetterSamplePlugin from './plugins/plugin-custom-setter-sample';
 import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop';
 import LogoSamplePlugin from './plugins/plugin-logo-sample';
+import appHelper from './appHelper';
 import './global.scss';
 
 async function registerPlugins() {
@@ -110,5 +111,6 @@ async function registerPlugins() {
     requestHandlersMap: {
       fetch: createFetchHandler()
     },
+    appHelper,
   });
 })();
