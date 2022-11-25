@@ -18,6 +18,7 @@ import PreviewSamplePlugin from './plugins/plugin-preview-sample';
 import CustomSetterSamplePlugin from './plugins/plugin-custom-setter-sample';
 import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop';
 import LogoSamplePlugin from './plugins/plugin-logo-sample';
+import { PluginFormily } from '@seada/antd-plugins'
 import './global.scss';
 
 async function registerPlugins() {
@@ -62,6 +63,7 @@ async function registerPlugins() {
 
   await plugins.register(LoadIncrementalAssetsWidgetPlugin);
 
+  await plugins.register(PluginFormily)
 
   // 插件参数声明 & 传递，参考：https://www.yuque.com/lce/doc/ibh9fh#peEmG
   await plugins.register(DataSourcePanePlugin, {
