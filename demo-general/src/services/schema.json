@@ -102,140 +102,106 @@
               "header": {
                   "type": "JSSlot",
                   "value": {
-                      "componentName": "Slot",
-                      "id": "node_oclat87b8r1",
-                      "docId": "doclat87b8r",
-                      "props": {},
-                      "children": [
-                          {
-                              "componentName": "Slot",
-                              "id": "node_oclarv56xh1",
-                              "docId": "doclarv56xh",
-                              "props": {},
-                              "hidden": false,
-                              "title": "",
-                              "isLocked": false,
-                              "condition": true,
-                              "conditionGroup": "",
-                              "children": [
-                                  {
-                                      "componentName": "Slot",
-                                      "id": "node_oclaqkk3b91",
-                                      "docId": "doclaqkk3b9",
-                                      "props": {},
-                                      "title": "header",
-                                      "hidden": false,
-                                      "isLocked": false,
-                                      "condition": true,
-                                      "conditionGroup": "",
-                                      "children": [
-                                          {
-                                              "componentName": "NextPageHeader",
-                                              "id": "node_ockzs2vw433",
-                                              "docId": "doclaqkk3b9",
-                                              "props": {},
-                                              "title": "页面头部",
-                                              "hidden": false,
-                                              "isLocked": false,
-                                              "condition": true,
-                                              "conditionGroup": "",
-                                              "children": [
-                                                  {
-                                                      "componentName": "NextRowColContainer",
-                                                      "id": "node_ockzs2vw434",
-                                                      "docId": "doclaqkk3b9",
-                                                      "props": {
-                                                          "rowGap": 20,
-                                                          "colGap": 20
-                                                      },
-                                                      "title": "行列容器",
-                                                      "hidden": false,
-                                                      "isLocked": false,
-                                                      "condition": true,
-                                                      "conditionGroup": "",
-                                                      "children": [
-                                                          {
-                                                              "componentName": "NextRow",
-                                                              "id": "node_ockzs2vw435",
-                                                              "docId": "doclaqkk3b9",
-                                                              "props": {},
-                                                              "title": "行",
-                                                              "hidden": false,
-                                                              "isLocked": false,
-                                                              "condition": true,
-                                                              "conditionGroup": "",
-                                                              "children": [
-                                                                  {
-                                                                      "componentName": "NextCol",
-                                                                      "id": "node_ockzs2vw436",
-                                                                      "docId": "doclaqkk3b9",
-                                                                      "props": {
-                                                                          "colSpan": 1
-                                                                      },
-                                                                      "title": "列",
-                                                                      "hidden": false,
-                                                                      "isLocked": false,
-                                                                      "condition": true,
-                                                                      "conditionGroup": "",
-                                                                      "children": [
-                                                                          {
-                                                                              "componentName": "NextP",
-                                                                              "id": "node_ockzvfoetv17",
-                                                                              "docId": "dockzvfoetv",
-                                                                              "props": {
-                                                                                  "wrap": false,
-                                                                                  "type": "body2",
-                                                                                  "verAlign": "middle",
-                                                                                  "textSpacing": true,
-                                                                                  "align": "left"
-                                                                              },
-                                                                              "title": "段落",
-                                                                              "hidden": false,
-                                                                              "isLocked": false,
-                                                                              "condition": true,
-                                                                              "conditionGroup": "",
-                                                                              "children": [
-                                                                                  {
-                                                                                      "componentName": "NextText",
-                                                                                      "id": "node_ockzvfoetv18",
-                                                                                      "docId": "dockzvfoetv",
-                                                                                      "props": {
-                                                                                          "type": "h5",
-                                                                                          "children": {
-                                                                                              "type": "JSExpression",
-                                                                                              "value": "this.state.info?.info",
-                                                                                              "mock": "标题标题"
-                                                                                          },
-                                                                                          "mark": false,
-                                                                                          "code": false,
-                                                                                          "delete": false,
-                                                                                          "underline": false,
-                                                                                          "strong": false,
-                                                                                          "prefix": "",
-                                                                                          "classname": "",
-                                                                                          "ref": "nexttext-3a39ea8b"
-                                                                                      },
-                                                                                      "hidden": false,
-                                                                                      "title": "",
-                                                                                      "isLocked": false,
-                                                                                      "condition": true,
-                                                                                      "conditionGroup": ""
-                                                                                  }
-                                                                              ]
-                                                                          }
-                                                                      ]
-                                                                  }
-                                                              ]
-                                                          }
-                                                      ]
-                                                  }
-                                              ]
-                                          }
-                                      ]
-                                  }
-                              ]
-                          }
-                      ]
+                    "componentName": "NextPageHeader",
+                    "id": "node_ockzs2vw433",
+                    "docId": "doclaqkk3b9",
+                    "props": {},
+                    "title": "页面头部",
+                    "hidden": false,
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                        {
+                            "componentName": "NextRowColContainer",
+                            "id": "node_ockzs2vw434",
+                            "docId": "doclaqkk3b9",
+                            "props": {
+                                "rowGap": 20,
+                                "colGap": 20
+                            },
+                            "title": "行列容器",
+                            "hidden": false,
+                            "isLocked": false,
+                            "condition": true,
+                            "conditionGroup": "",
+                            "children": [
+                                {
+                                    "componentName": "NextRow",
+                                    "id": "node_ockzs2vw435",
+                                    "docId": "doclaqkk3b9",
+                                    "props": {},
+                                    "title": "行",
+                                    "hidden": false,
+                                    "isLocked": false,
+                                    "condition": true,
+                                    "conditionGroup": "",
+                                    "children": [
+                                        {
+                                            "componentName": "NextCol",
+                                            "id": "node_ockzs2vw436",
+                                            "docId": "doclaqkk3b9",
+                                            "props": {
+                                                "colSpan": 1
+                                            },
+                                            "title": "列",
+                                            "hidden": false,
+                                            "isLocked": false,
+                                            "condition": true,
+                                            "conditionGroup": "",
+                                            "children": [
+                                                {
+                                                    "componentName": "NextP",
+                                                    "id": "node_ockzvfoetv17",
+                                                    "docId": "dockzvfoetv",
+                                                    "props": {
+                                                        "wrap": false,
+                                                        "type": "body2",
+                                                        "verAlign": "middle",
+                                                        "textSpacing": true,
+                                                        "align": "left"
+                                                    },
+                                                    "title": "段落",
+                                                    "hidden": false,
+                                                    "isLocked": false,
+                                                    "condition": true,
+                                                    "conditionGroup": "",
+                                                    "children": [
+                                                        {
+                                                            "componentName": "NextText",
+                                                            "id": "node_ockzvfoetv18",
+                                                            "docId": "dockzvfoetv",
+                                                            "props": {
+                                                                "type": "h5",
+                                                                "children": {
+                                                                    "type": "JSExpression",
+                                                                    "value": "this.state.info?.info",
+                                                                    "mock": "标题标题"
+                                                                },
+                                                                "mark": false,
+                                                                "code": false,
+                                                                "delete": false,
+                                                                "underline": false,
+                                                                "strong": false,
+                                                                "prefix": "",
+                                                                "classname": "",
+                                                                "ref": "nexttext-3a39ea8b"
+                                                            },
+                                                            "hidden": false,
+                                                            "title": "",
+                                                            "isLocked": false,
+                                                            "condition": true,
+                                                            "conditionGroup": ""
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                   }
               },
               "isTab": false,
