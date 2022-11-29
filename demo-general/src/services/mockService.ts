@@ -1,8 +1,19 @@
 import { material, project } from '@alilc/lowcode-engine';
 import { filterPackages } from '@alilc/lowcode-plugin-inject'
 import { Message, Dialog } from '@alifd/next';
-import { TransformStage } from '@alilc/lowcode-types';
-import schema from './schema.json';
+import { ProjectSchema, TransformStage } from '@alilc/lowcode-types';
+import DefaultPageSchema from './defaultPageSchema.json';
+import DefaultI18nSchema from './defaultI18nSchema.json';
+
+const generateProjectSchema = (pageSchema: any, i18nSchema: any): ProjectSchema => {
+  return {
+    componentsTree: [pageSchema],
+    componentsMap: material.componentsMap as any,
+    version: '1.0.0',
+    i18n: i18nSchema,
+  };
+}
+
 
 export const saveSchema = async (scenarioName: string = 'unknown') => {
   setProjectSchemaToLocalStorage(scenarioName);
@@ -26,15 +37,9 @@ export const resetSchema = async (scenarioName: string = 'unknown') => {
   } catch(err) {
     return;
   }
+  const defaultSchema = generateProjectSchema(DefaultPageSchema, DefaultI18nSchema);
 
-  let defaultSchema = schema || {
-    componentsTree: [{ componentName: 'Page', fileName: 'sample' }],
-    componentsMap: material.componentsMap,
-    version: '1.0.0',
-    i18n: {},
-  };
-
-  project.getCurrentDocument()?.importSchema(defaultSchema as any);
+  project.importSchema(defaultSchema as any);
   project.simulatorHost?.rerender();
 
   setProjectSchemaToLocalStorage(scenarioName);
@@ -49,7 +54,11 @@ export const getProjectSchemaFromLocalStorage = (scenarioName: string) => {
     console.error('scenarioName is required!');
     return;
   }
-  return JSON.parse(window.localStorage.getItem(getLSName(scenarioName)) || '{}');
+  const localValue = window.localStorage.getItem(getLSName(scenarioName));
+  if (localValue) {
+    return JSON.parse(localValue);
+  }
+  return undefined;
 }
 
 const setProjectSchemaToLocalStorage = (scenarioName: string) => {
@@ -83,13 +92,28 @@ export const getPackagesFromLocalStorage = (scenarioName: string) => {
   return JSON.parse(window.localStorage.getItem(getLSName(scenarioName, 'packages')) || '{}');
 }
 
-export const getPageSchema = async (scenarioName: string = 'unknown') => {
-  const pageSchema = getProjectSchemaFromLocalStorage(scenarioName).componentsTree?.[0];
+export const getProjectSchema = async (scenarioName: string = 'unknown') : Promise<ProjectSchema> => {
+  const pageSchema = await getPageSchema(scenarioName);
+  return generateProjectSchema(pageSchema, DefaultI18nSchema);
+};
 
+export const getPageSchema = async (scenarioName: string = 'unknown') => {
+  const pageSchema = getProjectSchemaFromLocalStorage(scenarioName)?.componentsTree?.[0];
   if (pageSchema) {
     return pageSchema;
   }
 
-  console.log(`failed to get schema for scenarioName ${scenarioName} from localstorage, use default schema`, schema);
-  return schema;
+  console.log(`failed to get page schema for scenarioName ${scenarioName} from localstorage, use default page schema`, DefaultPageSchema);
+  return DefaultPageSchema;
 };
+
+export const getPreviewLocale = (scenarioName: string) => {
+  const key = getLSName(scenarioName, 'previewLocale');
+  return window.localStorage.getItem(key) || 'zh-CN';
+}
+
+export const setPreviewLocale = (scenarioName: string, locale: string) => {
+  const key = getLSName(scenarioName, 'previewLocale');
+  window.localStorage.setItem(key, locale || 'zh-CN');
+  window.location.reload();
+}

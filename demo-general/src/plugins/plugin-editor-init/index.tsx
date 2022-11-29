@@ -1,7 +1,7 @@
 import { ILowCodePluginContext } from '@alilc/lowcode-engine';
 import { injectAssets } from '@alilc/lowcode-plugin-inject';
 import assets from '../../services/assets.json';
-import { getPageSchema } from '../../services/mockService';
+import { getProjectSchema } from '../../services/mockService';
 const EditorInitPlugin = (ctx: ILowCodePluginContext, options: any) => {
   return {
     async init() {
@@ -18,10 +18,9 @@ const EditorInitPlugin = (ctx: ILowCodePluginContext, options: any) => {
 
       await material.setAssets(await injectAssets(assets));
 
-      const schema = await getPageSchema(scenarioName);
-
+      const schema = await getProjectSchema(scenarioName);
       // 加载 schema
-      project.openDocument(schema);
+      project.importSchema(schema as any);
     },
   };
 }

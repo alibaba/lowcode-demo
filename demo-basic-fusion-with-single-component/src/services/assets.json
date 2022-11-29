@@ -85,13 +85,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "超链接",
-              "en_US": "Link"
+              "zh-CN": "超链接",
+              "en-US": "Link"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性：href | 说明：超链接地址",
-              "en_US": "prop: href | description: link address"
+              "zh-CN": "属性：href | 说明：超链接地址",
+              "en-US": "prop: href | description: link address"
             }
           },
           "propType": "string",
@@ -102,13 +102,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "链接文案",
-              "en_US": "Text"
+              "zh-CN": "链接文案",
+              "en-US": "Text"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性：children | 说明：超链接文案",
-              "en_US": "prop: children | description: text of the link"
+              "zh-CN": "属性：children | 说明：超链接文案",
+              "en-US": "prop: children | description: text of the link"
             }
           },
           "propType": {
@@ -126,13 +126,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "页面目标",
-              "en_US": "Target"
+              "zh-CN": "页面目标",
+              "en-US": "Target"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性：target | 说明：跳转页面目标",
-              "en_US": "prop: target | description: target of new page"
+              "zh-CN": "属性：target | 说明：跳转页面目标",
+              "en-US": "prop: target | description: target of new page"
             }
           },
           "propType": {
@@ -155,13 +155,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "链接文案",
-                "en_US": "Text"
+                "zh-CN": "链接文案",
+                "en-US": "Text"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性：children | 说明：超链接文案",
-                "en_US": "prop: children | description: text of the link"
+                "zh-CN": "属性：children | 说明：超链接文案",
+                "en-US": "prop: children | description: text of the link"
               }
             },
             "setter": "StringSetter",
@@ -206,7 +206,7 @@
             },
             "setter": {
               "type": "JSFunction",
-              "value": "(target) => {\n          const data = ((target.getProps().getPropValue('_pages_') || {}).content || []).map(item => {\n            return {\n              title: item.title.zh_CN,\n              value: `#/${item.relateUuid}`,\n            };\n          });\n          return {\n            componentName: 'SelectSetter',\n            props: {\n              options: data\n            },\n          };\n        }"
+              "value": "(target) => {\n          const data = ((target.getProps().getPropValue('_pages_') || {}).content || []).map(item => {\n            return {\n              title: item.title.zh-CN,\n              value: `#/${item.relateUuid}`,\n            };\n          });\n          return {\n            componentName: 'SelectSetter',\n            props: {\n              options: data\n            },\n          };\n        }"
             },
             "condition": {
               "type": "JSFunction",
@@ -218,13 +218,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "跳转链接",
-                "en_US": "Link"
+                "zh-CN": "跳转链接",
+                "en-US": "Link"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性：href | 说明：超链接地址",
-                "en_US": "prop: href | description: link address"
+                "zh-CN": "属性：href | 说明：超链接地址",
+                "en-US": "prop: href | description: link address"
               }
             },
             "setter": "StringSetter",
@@ -238,13 +238,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "页面目标",
-                "en_US": "Target"
+                "zh-CN": "页面目标",
+                "en-US": "Target"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性：target | 说明：跳转页面目标",
-                "en_US": "prop: target | description: target of new page"
+                "zh-CN": "属性：target | 说明：跳转页面目标",
+                "en-US": "prop: target | description: target of new page"
               }
             },
             "setter": {
@@ -322,13 +322,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标题",
-              "en_US": "Title"
+              "zh-CN": "标题",
+              "en-US": "Title"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: title | 说明: 标题",
-              "en_US": "prop: title | description: Title"
+              "zh-CN": "属性: title | 说明: 标题",
+              "en-US": "prop: title | description: Title"
             }
           },
           "propType": "string",
@@ -340,13 +340,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "类型",
-              "en_US": "Type"
+              "zh-CN": "类型",
+              "en-US": "Type"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: type | 说明: 反馈类型",
-              "en_US": "prop: type | description: message type"
+              "zh-CN": "属性: type | 说明: 反馈类型",
+              "en-US": "prop: type | description: message type"
             }
           },
           "propType": {
@@ -361,13 +361,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "形状",
-              "en_US": "Shape"
+              "zh-CN": "形状",
+              "en-US": "Shape"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: shape | 说明: 外观",
-              "en_US": "prop: shape | description: message shape"
+              "zh-CN": "属性: shape | 说明: 外观",
+              "en-US": "prop: shape | description: message shape"
             }
           },
           "propType": {
@@ -382,13 +382,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "尺寸",
-              "en_US": "Size"
+              "zh-CN": "尺寸",
+              "en-US": "Size"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: size | 说明: 尺寸",
-              "en_US": "prop: size | description: message size"
+              "zh-CN": "属性: size | 说明: 尺寸",
+              "en-US": "prop: size | description: message size"
             }
           },
           "propType": {
@@ -403,13 +403,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "文本",
-              "en_US": "Content"
+              "zh-CN": "文本",
+              "en-US": "Content"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: children | 说明: 文本内容",
-              "en_US": "prop: children | description: message content"
+              "zh-CN": "属性: children | 说明: 文本内容",
+              "en-US": "prop: children | description: message content"
             }
           },
           "propType": {
@@ -423,13 +423,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "是否显示",
-              "en_US": "Visible"
+              "zh-CN": "是否显示",
+              "en-US": "Visible"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: visible | 说明: 当前是否显示",
-              "en_US": "prop: visible | description: visible"
+              "zh-CN": "属性: visible | 说明: 当前是否显示",
+              "en-US": "prop: visible | description: visible"
             }
           },
           "propType": "bool",
@@ -445,13 +445,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "显示 Close",
-              "en_US": "Show Close"
+              "zh-CN": "显示 Close",
+              "en-US": "Show Close"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: closeable | 说明: 显示关闭按钮",
-              "en_US": "prop: closeable | description: show close button"
+              "zh-CN": "属性: closeable | 说明: 显示关闭按钮",
+              "en-US": "prop: closeable | description: show close button"
             }
           },
           "propType": "bool",
@@ -473,13 +473,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "开启动效",
-              "en_US": "Animation"
+              "zh-CN": "开启动效",
+              "en-US": "Animation"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: animation | 说明: 是否开启动效",
-              "en_US": "prop: animation | description: enable animation"
+              "zh-CN": "属性: animation | 说明: 是否开启动效",
+              "en-US": "prop: animation | description: enable animation"
             }
           },
           "propType": "bool",
@@ -496,13 +496,13 @@
               "title": {
                 "label": {
                   "type": "i18n",
-                  "zh_CN": "图标",
-                  "en_US": "Icon"
+                  "zh-CN": "图标",
+                  "en-US": "Icon"
                 },
                 "tip": {
                   "type": "i18n",
-                  "zh_CN": "属性: iconType | 说明: 显示的图标类型",
-                  "en_US": "prop: iconType | description: icon type"
+                  "zh-CN": "属性: iconType | 说明: 显示的图标类型",
+                  "en-US": "prop: iconType | description: icon type"
                 }
               },
               "setter": {
@@ -534,13 +534,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "文本内容",
-              "en_US": "Content"
+              "zh-CN": "文本内容",
+              "en-US": "Content"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: children | 说明: 文本内容",
-              "en_US": "prop: children | description: avatar content"
+              "zh-CN": "属性: children | 说明: 文本内容",
+              "en-US": "prop: children | description: avatar content"
             }
           },
           "propType": "string"
@@ -554,13 +554,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "头像尺寸",
-              "en_US": "Size"
+              "zh-CN": "头像尺寸",
+              "en-US": "Size"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: size | 说明: 头像的大小",
-              "en_US": "prop: size | description: avatar size"
+              "zh-CN": "属性: size | 说明: 头像的大小",
+              "en-US": "prop: size | description: avatar size"
             }
           },
           "propType": {
@@ -581,13 +581,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "头像形状",
-              "en_US": "Shape"
+              "zh-CN": "头像形状",
+              "en-US": "Shape"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: shape | 说明: 头像的形状",
-              "en_US": "prop: shape | description: avatar shape"
+              "zh-CN": "属性: shape | 说明: 头像的形状",
+              "en-US": "prop: shape | description: avatar shape"
             }
           },
           "propType": {
@@ -608,13 +608,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "头像地址",
-              "en_US": "Src"
+              "zh-CN": "头像地址",
+              "en-US": "Src"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: src | 说明: 图片类头像的资源地址",
-              "en_US": "prop: src | description: resource address"
+              "zh-CN": "属性: src | 说明: 图片类头像的资源地址",
+              "en-US": "prop: src | description: resource address"
             }
           },
           "propType": "string",
@@ -642,13 +642,13 @@
               "title": {
                 "label": {
                   "type": "i18n",
-                  "zh_CN": "图标",
-                  "en_US": "Icon"
+                  "zh-CN": "图标",
+                  "en-US": "Icon"
                 },
                 "tip": {
                   "type": "i18n",
-                  "zh_CN": "属性: icon | 说明: 图标类型",
-                  "en_US": "prop: icon | description: icon type"
+                  "zh-CN": "属性: icon | 说明: 图标类型",
+                  "en-US": "prop: icon | description: icon type"
                 }
               },
               "setter": {
@@ -1600,8 +1600,8 @@
                           "name": "children",
                           "title": "标题",
                           "initialValue": {
-                            "zh_CN": "",
-                            "en_US": "",
+                            "zh-CN": "",
+                            "en-US": "",
                             "type": "i18n"
                           },
                           "setter": "StringSetter"
@@ -1610,8 +1610,8 @@
                           "name": "link",
                           "title": "链接",
                           "initialValue": {
-                            "zh_CN": "",
-                            "en_US": "",
+                            "zh-CN": "",
+                            "en-US": "",
                             "type": "i18n"
                           },
                           "setter": "StringSetter"
@@ -1620,8 +1620,8 @@
                           "name": "target",
                           "title": "打开方式",
                           "initialValue": {
-                            "zh_CN": "",
-                            "en_US": "",
+                            "zh-CN": "",
+                            "en-US": "",
                             "type": "i18n"
                           },
                           "setter": {
@@ -1738,13 +1738,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "统一设置子按钮的尺寸",
-                "en_US": "Button Size"
+                "zh-CN": "统一设置子按钮的尺寸",
+                "en-US": "Button Size"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: size | 说明: 统一设置子按钮的尺寸",
-                "en_US": "prop: size | description: button size"
+                "zh-CN": "属性: size | 说明: 统一设置子按钮的尺寸",
+                "en-US": "prop: size | description: button size"
               }
             },
             "setter": {
@@ -1790,13 +1790,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "按钮类型",
-              "en_US": "Button Type"
+              "zh-CN": "按钮类型",
+              "en-US": "Button Type"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: type | 说明: 按钮类型",
-              "en_US": "prop: type | description: button type"
+              "zh-CN": "属性: type | 说明: 按钮类型",
+              "en-US": "prop: type | description: button type"
             }
           },
           "propType": {
@@ -1811,13 +1811,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "按钮尺寸",
-              "en_US": "Button Size"
+              "zh-CN": "按钮尺寸",
+              "en-US": "Button Size"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: size | 说明: 按钮尺寸",
-              "en_US": "prop: size | description: button size"
+              "zh-CN": "属性: size | 说明: 按钮尺寸",
+              "en-US": "prop: size | description: button size"
             }
           },
           "propType": {
@@ -1832,13 +1832,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "图标尺寸",
-              "en_US": "Icon Size"
+              "zh-CN": "图标尺寸",
+              "en-US": "Icon Size"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: iconSize | 说明: 图标尺寸",
-              "en_US": "prop: iconSize | description: icon size"
+              "zh-CN": "属性: iconSize | 说明: 图标尺寸",
+              "en-US": "prop: iconSize | description: icon size"
             }
           },
           "propType": {
@@ -1852,8 +1852,8 @@
           "name": "ghost",
           "title": {
             "type": "i18n",
-            "zh_CN": "幽灵按钮",
-            "en_US": "ghost"
+            "zh-CN": "幽灵按钮",
+            "en-US": "ghost"
           },
           "propType": {
             "type": "oneOf",
@@ -1873,8 +1873,8 @@
           "name": "text",
           "title": {
             "type": "i18n",
-            "zh_CN": "文本按钮",
-            "en_US": "text"
+            "zh-CN": "文本按钮",
+            "en-US": "text"
           },
           "propType": "bool",
           "description": "是否为文本按钮",
@@ -1891,8 +1891,8 @@
           "name": "disabled",
           "title": {
             "type": "i18n",
-            "zh_CN": "禁用",
-            "en_US": "disabled"
+            "zh-CN": "禁用",
+            "en-US": "disabled"
           },
           "propType": "bool",
           "description": "是否禁用",
@@ -1927,13 +1927,13 @@
               "title": {
                 "label": {
                   "type": "i18n",
-                  "zh_CN": "图标",
-                  "en_US": "Icon"
+                  "zh-CN": "图标",
+                  "en-US": "Icon"
                 },
                 "tip": {
                   "type": "i18n",
-                  "zh_CN": "属性: icon | 说明: 图标类型",
-                  "en_US": "prop: icon | description: icon type"
+                  "zh-CN": "属性: icon | 说明: 图标类型",
+                  "en-US": "prop: icon | description: icon type"
                 }
               },
               "setter": "IconSetter",
@@ -1946,8 +1946,8 @@
               "name": "ghost",
               "title": {
                 "type": "i18n",
-                "zh_CN": "幽灵按钮",
-                "en_US": "ghost"
+                "zh-CN": "幽灵按钮",
+                "en-US": "ghost"
               },
               "setter": {
                 "componentName": "RadioGroupSetter",
@@ -1980,13 +1980,13 @@
               "title": {
                 "label": {
                   "type": "i18n",
-                  "zh_CN": "按钮内容",
-                  "en_US": "Content"
+                  "zh-CN": "按钮内容",
+                  "en-US": "Content"
                 },
                 "tip": {
                   "type": "i18n",
-                  "zh_CN": "属性: children | 说明: 按钮文本",
-                  "en_US": "prop: children | description: button content"
+                  "zh-CN": "属性: children | 说明: 按钮文本",
+                  "en-US": "prop: children | description: button content"
                 }
               },
               "setter": {
@@ -2999,13 +2999,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -3015,13 +3015,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -3429,13 +3429,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -3445,13 +3445,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -3675,13 +3675,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -3691,13 +3691,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -4162,13 +4162,13 @@
                   "title": {
                     "label": {
                       "type": "i18n",
-                      "zh_CN": "唯一标识",
-                      "en_US": "ID"
+                      "zh-CN": "唯一标识",
+                      "en-US": "ID"
                     },
                     "tip": {
                       "type": "i18n",
-                      "zh_CN": "属性: id | 说明: 唯一标识",
-                      "en_US": "prop: id | description: switch id"
+                      "zh-CN": "属性: id | 说明: 唯一标识",
+                      "en-US": "prop: id | description: switch id"
                     }
                   },
                   "setter": "StringSetter"
@@ -4178,13 +4178,13 @@
                   "title": {
                     "label": {
                       "type": "i18n",
-                      "zh_CN": "表单标识",
-                      "en_US": "Name"
+                      "zh-CN": "表单标识",
+                      "en-US": "Name"
                     },
                     "tip": {
                       "type": "i18n",
-                      "zh_CN": "属性: name | 说明: 表单标识",
-                      "en_US": "prop: name | description: switch name"
+                      "zh-CN": "属性: name | 说明: 表单标识",
+                      "en-US": "prop: name | description: switch name"
                     }
                   },
                   "setter": "StringSetter"
@@ -4502,8 +4502,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "是否虚线",
-              "en_US": "Dashed"
+              "zh-CN": "是否虚线",
+              "en-US": "Dashed"
             }
           },
           "propType": {
@@ -4517,8 +4517,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "朝向",
-              "en_US": "Direction"
+              "zh-CN": "朝向",
+              "en-US": "Direction"
             }
           },
           "propType": {
@@ -4533,8 +4533,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标题位置",
-              "en_US": "Orientation"
+              "zh-CN": "标题位置",
+              "en-US": "Orientation"
             }
           },
           "propType": {
@@ -4665,8 +4665,8 @@
           "name": "prefix",
           "title": {
             "type": "i18n",
-            "zh_CN": "前缀",
-            "en_US": "prefix"
+            "zh-CN": "前缀",
+            "en-US": "prefix"
           },
           "propType": "string",
           "defaultValue": "next-"
@@ -4683,8 +4683,8 @@
           "name": "width",
           "title": {
             "type": "i18n",
-            "zh_CN": "宽度",
-            "en_US": "width",
+            "zh-CN": "宽度",
+            "en-US": "width",
             "tip": "width|仅在 placement是 left right 的时候生效"
           },
           "propType": {
@@ -4697,8 +4697,8 @@
           "name": "height",
           "title": {
             "type": "i18n",
-            "zh_CN": "高度",
-            "en_US": "height",
+            "zh-CN": "高度",
+            "en-US": "height",
             "tip": "height|仅在 placement是 top bottom 的时候生效"
           },
           "propType": {
@@ -4796,13 +4796,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "标题",
-                "en_US": "Title"
+                "zh-CN": "标题",
+                "en-US": "Title"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: title | 说明: 标题",
-                "en_US": "prop: title | description: title"
+                "zh-CN": "属性: title | 说明: 标题",
+                "en-US": "prop: title | description: title"
               }
             },
             "setter": {
@@ -4815,13 +4815,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "宽度",
-                "en_US": "width"
+                "zh-CN": "宽度",
+                "en-US": "width"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: width | 说明: 宽度",
-                "en_US": "prop: width | description: 仅在 placement是 left right 的时候生效"
+                "zh-CN": "属性: width | 说明: 宽度",
+                "en-US": "prop: width | description: 仅在 placement是 left right 的时候生效"
               }
             },
             "setter": {
@@ -4834,13 +4834,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "高度",
-                "en_US": "height"
+                "zh-CN": "高度",
+                "en-US": "height"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: height | 说明: 高度",
-                "en_US": "prop: height | description: 仅在 placement是 top bottom 的时候生效"
+                "zh-CN": "属性: height | 说明: 高度",
+                "en-US": "prop: height | description: 仅在 placement是 top bottom 的时候生效"
               }
             },
             "setter": {
@@ -4853,13 +4853,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "弹出位置",
-                "en_US": "height"
+                "zh-CN": "弹出位置",
+                "en-US": "height"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: placement | 说明: 位于页面的位置",
-                "en_US": "prop: placement | description: drawer placement"
+                "zh-CN": "属性: placement | 说明: 位于页面的位置",
+                "en-US": "prop: placement | description: drawer placement"
               }
             },
             "setter": {
@@ -4876,13 +4876,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否显示",
-                "en_US": "visible"
+                "zh-CN": "是否显示",
+                "en-US": "visible"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: visible | 说明: 是否显示",
-                "en_US": "prop: visible | description: drawer visible"
+                "zh-CN": "属性: visible | 说明: 是否显示",
+                "en-US": "prop: visible | description: drawer visible"
               }
             },
             "setter": "BoolSetter",
@@ -4893,13 +4893,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "显示遮罩",
-                "en_US": "hasMask"
+                "zh-CN": "显示遮罩",
+                "en-US": "hasMask"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hasMask | 说明: 是否显示遮罩",
-                "en_US": "prop: hasMask | description: drawer hasMask"
+                "zh-CN": "属性: hasMask | 说明: 是否显示遮罩",
+                "en-US": "prop: hasMask | description: drawer hasMask"
               }
             },
             "setter": {
@@ -4913,13 +4913,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "显示遮罩",
-                "en_US": "closeable"
+                "zh-CN": "显示遮罩",
+                "en-US": "closeable"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: closeable | 说明: 控制对话框关闭的方式，值可以为字符串或者布尔值，其中字符串是由以下值组成：\n**close** 表示点击关闭按钮可以关闭对话框\n**mask** 表示点击遮罩区域可以关闭对话框\n**esc** 表示按下 esc 键可以关闭对话框\n如 'close' 或 'close,esc,mask'\n如果设置为 true，则以上关闭方式全部生效\n如果设置为 false，则以上关闭方式全部失效",
-                "en_US": "prop: closeable | description: drawer closeable"
+                "zh-CN": "属性: closeable | 说明: 控制对话框关闭的方式，值可以为字符串或者布尔值，其中字符串是由以下值组成：\n**close** 表示点击关闭按钮可以关闭对话框\n**mask** 表示点击遮罩区域可以关闭对话框\n**esc** 表示按下 esc 键可以关闭对话框\n如 'close' 或 'close,esc,mask'\n如果设置为 true，则以上关闭方式全部生效\n如果设置为 false，则以上关闭方式全部失效",
+                "en-US": "prop: closeable | description: drawer closeable"
               }
             },
             "setter": {
@@ -5588,13 +5588,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "标签文本",
-                "en_US": "Label"
+                "zh-CN": "标签文本",
+                "en-US": "Label"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: label | 说明: 标签文本内容",
-                "en_US": "prop: label | description: label content"
+                "zh-CN": "属性: label | 说明: 标签文本内容",
+                "en-US": "prop: label | description: label content"
               }
             },
             "setter": "StringSetter",
@@ -5605,13 +5605,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "错误提示",
-                "en_US": "Help Info"
+                "zh-CN": "错误提示",
+                "en-US": "Help Info"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: help | 说明: 自定义提示信息, 如不设置，则会根据校验规则自动生成.",
-                "en_US": "prop: help | description: help infomation"
+                "zh-CN": "属性: help | 说明: 自定义提示信息, 如不设置，则会根据校验规则自动生成.",
+                "en-US": "prop: help | description: help infomation"
               }
             },
             "setter": "StringSetter",
@@ -5622,13 +5622,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "帮助提示",
-                "en_US": "Extra Info"
+                "zh-CN": "帮助提示",
+                "en-US": "Extra Info"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: extra | 说明: 额外的提示信息, 和 help 类似，当需要错误信息和提示文案同时出现时，可以使用这个。 位于错误信息后面",
-                "en_US": "prop: extra | description: extra infomation"
+                "zh-CN": "属性: extra | 说明: 额外的提示信息, 和 help 类似，当需要错误信息和提示文案同时出现时，可以使用这个。 位于错误信息后面",
+                "en-US": "prop: extra | description: extra infomation"
               }
             },
             "setter": "StringSetter"
@@ -5979,13 +5979,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -5995,13 +5995,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -6158,8 +6158,8 @@
               "title": {
                 "label": {
                   "type": "i18n",
-                  "zh_CN": "文本内容",
-                  "en_US": "content"
+                  "zh-CN": "文本内容",
+                  "en-US": "content"
                 },
                 "tip": "按钮文本内容"
               },
@@ -6253,13 +6253,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "是否校验",
-              "en_US": "Validate"
+              "zh-CN": "是否校验",
+              "en-US": "Validate"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: validate | 说明: 是否校验/需要校验的 name 数组",
-              "en_US": "prop: validate | description: validate or validate array"
+              "zh-CN": "属性: validate | 说明: 是否校验/需要校验的 name 数组",
+              "en-US": "prop: validate | description: validate or validate array"
             }
           },
           "propType": {
@@ -6345,8 +6345,8 @@
               "title": {
                 "label": {
                   "type": "i18n",
-                  "zh_CN": "文本内容",
-                  "en_US": "content"
+                  "zh-CN": "文本内容",
+                  "en-US": "content"
                 },
                 "tip": "按钮文本内容"
               },
@@ -6498,13 +6498,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "内联表单",
-                "en_US": "Inline"
+                "zh-CN": "内联表单",
+                "en-US": "Inline"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: inline | 说明: 内联表单",
-                "en_US": "prop: inline | description: inline form"
+                "zh-CN": "属性: inline | 说明: 内联表单",
+                "en-US": "prop: inline | description: inline form"
               }
             },
             "setter": "BoolSetter"
@@ -6514,13 +6514,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "宽度占满",
-                "en_US": "FullWidth"
+                "zh-CN": "宽度占满",
+                "en-US": "FullWidth"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: fullWidth | 说明: 单个 Item 中表单类组件宽度是否是100%",
-                "en_US": "prop: fullWidth | description: full width"
+                "zh-CN": "属性: fullWidth | 说明: 单个 Item 中表单类组件宽度是否是100%",
+                "en-US": "prop: fullWidth | description: full width"
               }
             },
             "setter": "BoolSetter"
@@ -6530,13 +6530,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "预览态",
-                "en_US": "Preview Mode"
+                "zh-CN": "预览态",
+                "en-US": "Preview Mode"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: isPreview | 说明: 是否开启预览态",
-                "en_US": "prop: isPreview | description: preview mode"
+                "zh-CN": "属性: isPreview | 说明: 是否开启预览态",
+                "en-US": "prop: isPreview | description: preview mode"
               }
             },
             "setter": "BoolSetter",
@@ -6547,13 +6547,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "Field 实例",
-                "en_US": "Field"
+                "zh-CN": "Field 实例",
+                "en-US": "Field"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: field | 说明: 传入 Field 实例",
-                "en_US": "prop: field | description: field instance"
+                "zh-CN": "属性: field | 说明: 传入 Field 实例",
+                "en-US": "prop: field | description: field instance"
               },
               "docUrl": "https://fusion.alibaba-inc.com/pc/component/basic/form#%E5%A4%8D%E6%9D%82%E5%8A%9F%E8%83%BD(Field)"
             },
@@ -6566,13 +6566,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "表单值",
-                "en_US": "value"
+                "zh-CN": "表单值",
+                "en-US": "value"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: value | 说明: 表单值",
-                "en_US": "prop: value | description: value instance"
+                "zh-CN": "属性: value | 说明: 表单值",
+                "en-US": "prop: value | description: value instance"
               }
             },
             "setter": {
@@ -6587,13 +6587,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "尺寸",
-                "en_US": "Size"
+                "zh-CN": "尺寸",
+                "en-US": "Size"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: size | 说明: 单个 Item 的 size 自定义，优先级高于 Form 的 size, 并且当组件与 Item 一起使用时，组件自身设置 size 属性无效。\n@enumdesc 大, 中, 小",
-                "en_US": "prop: size | description: size"
+                "zh-CN": "属性: size | 说明: 单个 Item 的 size 自定义，优先级高于 Form 的 size, 并且当组件与 Item 一起使用时，组件自身设置 size 属性无效。\n@enumdesc 大, 中, 小",
+                "en-US": "prop: size | description: size"
               }
             },
             "setter": {
@@ -6610,13 +6610,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "标签位置",
-                "en_US": "Label Align"
+                "zh-CN": "标签位置",
+                "en-US": "Label Align"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: labelAlign | 说明: 标签的位置\n@enumdesc 上, 左, 内",
-                "en_US": "prop: labelAlign | description: label align"
+                "zh-CN": "属性: labelAlign | 说明: 标签的位置\n@enumdesc 上, 左, 内",
+                "en-US": "prop: labelAlign | description: label align"
               }
             },
             "setter": {
@@ -6632,13 +6632,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "标签对齐",
-                "en_US": "Text Align"
+                "zh-CN": "标签对齐",
+                "en-US": "Text Align"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: labelTextAlign | 说明: 标签的左右对齐方式\n@enumdesc 左, 右",
-                "en_US": "prop: labelTextAlign | description: label text align"
+                "zh-CN": "属性: labelTextAlign | 说明: 标签的左右对齐方式\n@enumdesc 左, 右",
+                "en-US": "prop: labelTextAlign | description: label text align"
               }
             },
             "setter": {
@@ -6654,13 +6654,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "设备",
-                "en_US": "Device"
+                "zh-CN": "设备",
+                "en-US": "Device"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: device | 说明: 预设屏幕宽度",
-                "en_US": "prop: device | description: device"
+                "zh-CN": "属性: device | 说明: 预设屏幕宽度",
+                "en-US": "prop: device | description: device"
               }
             },
             "setter": {
@@ -6754,13 +6754,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "图标尺寸",
-              "en_US": "Icon Size"
+              "zh-CN": "图标尺寸",
+              "en-US": "Icon Size"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: size | 说明: 指定图标大小",
-              "en_US": "prop: size | description: icon size"
+              "zh-CN": "属性: size | 说明: 指定图标大小",
+              "en-US": "prop: size | description: icon size"
             }
           },
           "propType": {
@@ -6794,13 +6794,13 @@
               "title": {
                 "label": {
                   "type": "i18n",
-                  "zh_CN": "图标类型",
-                  "en_US": "Icon"
+                  "zh-CN": "图标类型",
+                  "en-US": "Icon"
                 },
                 "tip": {
                   "type": "i18n",
-                  "zh_CN": "属性: type | 说明: 图标类型",
-                  "en_US": "prop: type | description: icon type"
+                  "zh-CN": "属性: type | 说明: 图标类型",
+                  "en-US": "prop: type | description: icon type"
                 }
               },
               "setter": {
@@ -6833,13 +6833,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "图片链接",
-              "en_US": "Image Address"
+              "zh-CN": "图片链接",
+              "en-US": "Image Address"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: src | 说明: 图片链接",
-              "en_US": "prop: src | description: image address"
+              "zh-CN": "属性: src | 说明: 图片链接",
+              "en-US": "prop: src | description: image address"
             }
           },
           "propType": "string",
@@ -6850,8 +6850,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标题",
-              "en_US": "Title"
+              "zh-CN": "标题",
+              "en-US": "Title"
             }
           },
           "propType": "string"
@@ -6861,8 +6861,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "代替文本",
-              "en_US": "Alt"
+              "zh-CN": "代替文本",
+              "en-US": "Alt"
             }
           },
           "propType": "string"
@@ -7232,13 +7232,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "标签文本",
-                "en_US": "Label"
+                "zh-CN": "标签文本",
+                "en-US": "Label"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: label | 说明: 标签文本内容",
-                "en_US": "prop: label | description: label content"
+                "zh-CN": "属性: label | 说明: 标签文本内容",
+                "en-US": "prop: label | description: label content"
               }
             },
             "description": "label"
@@ -7248,13 +7248,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "最大长度",
-                "en_US": "MaxLength"
+                "zh-CN": "最大长度",
+                "en-US": "MaxLength"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: maxLength | 说明: 最大长度",
-                "en_US": "prop: maxLength | description: max length"
+                "zh-CN": "属性: maxLength | 说明: 最大长度",
+                "en-US": "prop: maxLength | description: max length"
               }
             },
             "setter": "NumberSetter",
@@ -7265,13 +7265,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入提示",
-                "en_US": "Placeholder"
+                "zh-CN": "输入提示",
+                "en-US": "Placeholder"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: placeholder | 说明: 输入提示",
-                "en_US": "prop: placeholder | description: placeholder"
+                "zh-CN": "属性: placeholder | 说明: 输入提示",
+                "en-US": "prop: placeholder | description: placeholder"
               }
             },
             "setter": "StringSetter"
@@ -7281,13 +7281,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "状态",
-                "en_US": "State"
+                "zh-CN": "状态",
+                "en-US": "State"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: state | 说明: 状态\n@enumdesc 错误, 校验中, 成功, 警告",
-                "en_US": "prop: state | description: input state"
+                "zh-CN": "属性: state | 说明: 状态\n@enumdesc 错误, 校验中, 成功, 警告",
+                "en-US": "prop: state | description: input state"
               }
             },
             "setter": {
@@ -7302,13 +7302,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "尺寸",
-                "en_US": "Size"
+                "zh-CN": "尺寸",
+                "en-US": "Size"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
-                "en_US": "prop: size | description: size"
+                "zh-CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
+                "en-US": "prop: size | description: size"
               }
             },
             "setter": {
@@ -7324,13 +7324,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "显示切换",
-                "en_US": "Show Togger"
+                "zh-CN": "显示切换",
+                "en-US": "Show Togger"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: showToggle | 说明: 是否展示切换按钮",
-                "en_US": "prop: showToggle | description: show togger icon"
+                "zh-CN": "属性: showToggle | 说明: 是否展示切换按钮",
+                "en-US": "prop: showToggle | description: show togger icon"
               }
             },
             "setter": "BoolSetter",
@@ -7341,13 +7341,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "显示清除",
-                "en_US": "Show Clear"
+                "zh-CN": "显示清除",
+                "en-US": "Show Clear"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hasClear | 说明: 是否出现清除按钮",
-                "en_US": "prop: hasClear | description: show clear icon"
+                "zh-CN": "属性: hasClear | 说明: 是否出现清除按钮",
+                "en-US": "prop: hasClear | description: show clear icon"
               }
             },
             "setter": "BoolSetter",
@@ -7358,13 +7358,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否禁用",
-                "en_US": "Disabled"
+                "zh-CN": "是否禁用",
+                "en-US": "Disabled"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: disabled | 说明: 是否被禁用",
-                "en_US": "prop: disabled | description: disabled"
+                "zh-CN": "属性: disabled | 说明: 是否被禁用",
+                "en-US": "prop: disabled | description: disabled"
               }
             },
             "setter": "BoolSetter",
@@ -7375,13 +7375,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "展示限制",
-                "en_US": "ShowLimit"
+                "zh-CN": "展示限制",
+                "en-US": "ShowLimit"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hasLimitHint | 说明: 是否展现最大长度样式",
-                "en_US": "prop: hasLimitHint | description: hasLimitHint"
+                "zh-CN": "属性: hasLimitHint | 说明: 是否展现最大长度样式",
+                "en-US": "prop: hasLimitHint | description: hasLimitHint"
               }
             },
             "setter": "BoolSetter",
@@ -7392,13 +7392,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否截断",
-                "en_US": "Cut Off"
+                "zh-CN": "是否截断",
+                "en-US": "Cut Off"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: cutString | 说明: 是否截断超出字符串",
-                "en_US": "prop: cutString | description: whether cut off string"
+                "zh-CN": "属性: cutString | 说明: 是否截断超出字符串",
+                "en-US": "prop: cutString | description: whether cut off string"
               }
             },
             "setter": "BoolSetter",
@@ -7409,13 +7409,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否只读",
-                "en_US": "ReadOnly"
+                "zh-CN": "是否只读",
+                "en-US": "ReadOnly"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: readOnly | 说明: 是否只读",
-                "en_US": "prop: readOnly | description: ReadOnly"
+                "zh-CN": "属性: readOnly | 说明: 是否只读",
+                "en-US": "prop: readOnly | description: ReadOnly"
               }
             },
             "setter": "BoolSetter",
@@ -7426,13 +7426,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否 Trim",
-                "en_US": "Trim"
+                "zh-CN": "是否 Trim",
+                "en-US": "Trim"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: trim | 说明: onChange返回会自动去除头尾空字符",
-                "en_US": "prop: trim | description: whether trim when onChange called"
+                "zh-CN": "属性: trim | 说明: onChange返回会自动去除头尾空字符",
+                "en-US": "prop: trim | description: whether trim when onChange called"
               }
             },
             "setter": "BoolSetter"
@@ -7442,13 +7442,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "显示边框",
-                "en_US": "ShowBorder"
+                "zh-CN": "显示边框",
+                "en-US": "ShowBorder"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hasBorder | 说明: 是否有边框",
-                "en_US": "prop: hasBorder | description: HasBorder"
+                "zh-CN": "属性: hasBorder | 说明: 是否有边框",
+                "en-US": "prop: hasBorder | description: HasBorder"
               }
             },
             "setter": "BoolSetter"
@@ -7458,13 +7458,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "自动聚焦",
-                "en_US": "Auto Focus"
+                "zh-CN": "自动聚焦",
+                "en-US": "Auto Focus"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: autoFocus | 说明: 自动聚焦",
-                "en_US": "prop: autoFocus | description: autoFocus"
+                "zh-CN": "属性: autoFocus | 说明: 自动聚焦",
+                "en-US": "prop: autoFocus | description: autoFocus"
               }
             },
             "setter": "BoolSetter",
@@ -7475,13 +7475,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "Icon 水印",
-                "en_US": "IconHint"
+                "zh-CN": "Icon 水印",
+                "en-US": "IconHint"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hint | 说明: Icon 水印",
-                "en_US": "prop: hint | description: Icon hint"
+                "zh-CN": "属性: hint | 说明: Icon 水印",
+                "en-US": "prop: hint | description: Icon hint"
               }
             },
             "setter": {
@@ -7494,13 +7494,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "文字前附加内容",
-                "en_US": "Inner Before"
+                "zh-CN": "文字前附加内容",
+                "en-US": "Inner Before"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: innerBefore | 说明: 文字前附加内容",
-                "en_US": "prop: innerBefore | description: innerBefore"
+                "zh-CN": "属性: innerBefore | 说明: 文字前附加内容",
+                "en-US": "prop: innerBefore | description: innerBefore"
               }
             },
             "setter": "StringSetter"
@@ -7511,13 +7511,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "文字后附加内容",
-                "en_US": "Inner After"
+                "zh-CN": "文字后附加内容",
+                "en-US": "Inner After"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: innerAfter | 说明: 文字后附加内容",
-                "en_US": "prop: innerAfter | description: innerAfter"
+                "zh-CN": "属性: innerAfter | 说明: 文字后附加内容",
+                "en-US": "prop: innerAfter | description: innerAfter"
               }
             },
             "setter": "StringSetter"
@@ -7528,13 +7528,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入框前附加内容",
-                "en_US": "Addon Before"
+                "zh-CN": "输入框前附加内容",
+                "en-US": "Addon Before"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: addonBefore | 说明: 输入框前附加内容",
-                "en_US": "prop: addonBefore | description: addonBefore"
+                "zh-CN": "属性: addonBefore | 说明: 输入框前附加内容",
+                "en-US": "prop: addonBefore | description: addonBefore"
               }
             },
             "setter": "StringSetter"
@@ -7545,13 +7545,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入框后附加内容",
-                "en_US": "Addon After"
+                "zh-CN": "输入框后附加内容",
+                "en-US": "Addon After"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: addonAfter | 说明: 输入框后附加内容",
-                "en_US": "prop: addonAfter | description: addonAfter"
+                "zh-CN": "属性: addonAfter | 说明: 输入框后附加内容",
+                "en-US": "prop: addonAfter | description: addonAfter"
               }
             },
             "setter": "StringSetter"
@@ -7562,13 +7562,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入框前附加文字",
-                "en_US": "Text Before"
+                "zh-CN": "输入框前附加文字",
+                "en-US": "Text Before"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: addonTextBefore | 说明: 输入框前附加文字",
-                "en_US": "prop: addonTextBefore | description: addonTextBefore"
+                "zh-CN": "属性: addonTextBefore | 说明: 输入框前附加文字",
+                "en-US": "prop: addonTextBefore | description: addonTextBefore"
               }
             },
             "setter": "StringSetter"
@@ -7579,13 +7579,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入框后附加文字",
-                "en_US": "Text After"
+                "zh-CN": "输入框后附加文字",
+                "en-US": "Text After"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: addonTextAfter | 说明: 输入框后附加文字",
-                "en_US": "prop: addonTextAfter | description: addonTextAfter"
+                "zh-CN": "属性: addonTextAfter | 说明: 输入框后附加文字",
+                "en-US": "prop: addonTextAfter | description: addonTextAfter"
               }
             },
             "setter": "StringSetter"
@@ -7600,13 +7600,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -7616,13 +7616,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -7715,13 +7715,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "行数",
-                "en_US": "Rows"
+                "zh-CN": "行数",
+                "en-US": "Rows"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: rows | 说明: 多行文本框高度 <br />(不要直接用height设置多行文本框的高度, ie9 10会有兼容性问题)",
-                "en_US": "prop: rows | description: row numbers"
+                "zh-CN": "属性: rows | 说明: 多行文本框高度 <br />(不要直接用height设置多行文本框的高度, ie9 10会有兼容性问题)",
+                "en-US": "prop: rows | description: row numbers"
               }
             },
             "setter": "NumberSetter",
@@ -7732,13 +7732,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "最大长度",
-                "en_US": "MaxLength"
+                "zh-CN": "最大长度",
+                "en-US": "MaxLength"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: maxLength | 说明: 最大长度",
-                "en_US": "prop: maxLength | description: max length"
+                "zh-CN": "属性: maxLength | 说明: 最大长度",
+                "en-US": "prop: maxLength | description: max length"
               }
             },
             "setter": "NumberSetter",
@@ -7749,13 +7749,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入提示",
-                "en_US": "Placeholder"
+                "zh-CN": "输入提示",
+                "en-US": "Placeholder"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: placeholder | 说明: 输入提示",
-                "en_US": "prop: placeholder | description: placeholder"
+                "zh-CN": "属性: placeholder | 说明: 输入提示",
+                "en-US": "prop: placeholder | description: placeholder"
               }
             },
             "setter": "StringSetter"
@@ -7765,13 +7765,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "状态",
-                "en_US": "State"
+                "zh-CN": "状态",
+                "en-US": "State"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: state | 说明: 状态\n@enumdesc 错误",
-                "en_US": "prop: state | description: input state"
+                "zh-CN": "属性: state | 说明: 状态\n@enumdesc 错误",
+                "en-US": "prop: state | description: input state"
               }
             },
             "setter": {
@@ -7786,13 +7786,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "自动高度",
-                "en_US": "Auto Height"
+                "zh-CN": "自动高度",
+                "en-US": "Auto Height"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: autoHeight | 说明: 自动高度 true / {minRows: 2, maxRows: 4}",
-                "en_US": "prop: autoHeight | description: auto height"
+                "zh-CN": "属性: autoHeight | 说明: 自动高度 true / {minRows: 2, maxRows: 4}",
+                "en-US": "prop: autoHeight | description: auto height"
               }
             },
             "setter": "BoolSetter",
@@ -7803,13 +7803,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "预览态",
-                "en_US": "Preview"
+                "zh-CN": "预览态",
+                "en-US": "Preview"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: isPreview | 说明: 是否为预览态",
-                "en_US": "prop: isPreview | description: preview"
+                "zh-CN": "属性: isPreview | 说明: 是否为预览态",
+                "en-US": "prop: isPreview | description: preview"
               }
             },
             "setter": "BoolSetter",
@@ -7820,13 +7820,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否禁用",
-                "en_US": "Disabled"
+                "zh-CN": "是否禁用",
+                "en-US": "Disabled"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: disabled | 说明: 是否被禁用",
-                "en_US": "prop: disabled | description: disabled"
+                "zh-CN": "属性: disabled | 说明: 是否被禁用",
+                "en-US": "prop: disabled | description: disabled"
               }
             },
             "setter": "BoolSetter",
@@ -7837,13 +7837,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "展示限制",
-                "en_US": "ShowLimit"
+                "zh-CN": "展示限制",
+                "en-US": "ShowLimit"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hasLimitHint | 说明: 是否展现最大长度样式",
-                "en_US": "prop: hasLimitHint | description: hasLimitHint"
+                "zh-CN": "属性: hasLimitHint | 说明: 是否展现最大长度样式",
+                "en-US": "prop: hasLimitHint | description: hasLimitHint"
               }
             },
             "setter": "BoolSetter",
@@ -7854,13 +7854,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否截断",
-                "en_US": "Cut Off"
+                "zh-CN": "是否截断",
+                "en-US": "Cut Off"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: cutString | 说明: 是否截断超出字符串",
-                "en_US": "prop: cutString | description: whether cut off string"
+                "zh-CN": "属性: cutString | 说明: 是否截断超出字符串",
+                "en-US": "prop: cutString | description: whether cut off string"
               }
             },
             "setter": "BoolSetter",
@@ -7871,13 +7871,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否只读",
-                "en_US": "ReadOnly"
+                "zh-CN": "是否只读",
+                "en-US": "ReadOnly"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: readOnly | 说明: 是否只读",
-                "en_US": "prop: readOnly | description: ReadOnly"
+                "zh-CN": "属性: readOnly | 说明: 是否只读",
+                "en-US": "prop: readOnly | description: ReadOnly"
               }
             },
             "setter": "BoolSetter",
@@ -7888,13 +7888,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否 Trim",
-                "en_US": "Trim"
+                "zh-CN": "是否 Trim",
+                "en-US": "Trim"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: trim | 说明: onChange返回会自动去除头尾空字符",
-                "en_US": "prop: trim | description: whether trim when onChange called"
+                "zh-CN": "属性: trim | 说明: onChange返回会自动去除头尾空字符",
+                "en-US": "prop: trim | description: whether trim when onChange called"
               }
             },
             "setter": "BoolSetter"
@@ -7904,13 +7904,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "显示边框",
-                "en_US": "ShowBorder"
+                "zh-CN": "显示边框",
+                "en-US": "ShowBorder"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hasBorder | 说明: 是否有边框",
-                "en_US": "prop: hasBorder | description: HasBorder"
+                "zh-CN": "属性: hasBorder | 说明: 是否有边框",
+                "en-US": "prop: hasBorder | description: HasBorder"
               }
             },
             "setter": "BoolSetter"
@@ -7920,13 +7920,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "自动聚焦",
-                "en_US": "Auto Focus"
+                "zh-CN": "自动聚焦",
+                "en-US": "Auto Focus"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: autoFocus | 说明: 自动聚焦",
-                "en_US": "prop: autoFocus | description: autoFocus"
+                "zh-CN": "属性: autoFocus | 说明: 自动聚焦",
+                "en-US": "prop: autoFocus | description: autoFocus"
               }
             },
             "setter": "BoolSetter",
@@ -7942,13 +7942,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -7958,13 +7958,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -8151,13 +8151,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "标签文本",
-                "en_US": "Label"
+                "zh-CN": "标签文本",
+                "en-US": "Label"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: label | 说明: 标签文本内容",
-                "en_US": "prop: label | description: label content"
+                "zh-CN": "属性: label | 说明: 标签文本内容",
+                "en-US": "prop: label | description: label content"
               }
             },
             "description": "label"
@@ -8167,13 +8167,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入提示",
-                "en_US": "Placeholder"
+                "zh-CN": "输入提示",
+                "en-US": "Placeholder"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: placeholder | 说明: 输入提示",
-                "en_US": "prop: placeholder | description: placeholder"
+                "zh-CN": "属性: placeholder | 说明: 输入提示",
+                "en-US": "prop: placeholder | description: placeholder"
               }
             },
             "setter": "StringSetter"
@@ -8183,13 +8183,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "状态",
-                "en_US": "State"
+                "zh-CN": "状态",
+                "en-US": "State"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: state | 说明: 状态\n@enumdesc 错误, 校验中, 成功, 警告",
-                "en_US": "prop: state | description: input state"
+                "zh-CN": "属性: state | 说明: 状态\n@enumdesc 错误, 校验中, 成功, 警告",
+                "en-US": "prop: state | description: input state"
               }
             },
             "setter": {
@@ -8204,13 +8204,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "尺寸",
-                "en_US": "Size"
+                "zh-CN": "尺寸",
+                "en-US": "Size"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
-                "en_US": "prop: size | description: size"
+                "zh-CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
+                "en-US": "prop: size | description: size"
               }
             },
             "setter": {
@@ -8226,13 +8226,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "最大长度",
-                "en_US": "MaxLength"
+                "zh-CN": "最大长度",
+                "en-US": "MaxLength"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: maxLength | 说明: 最大长度",
-                "en_US": "prop: maxLength | description: max length"
+                "zh-CN": "属性: maxLength | 说明: 最大长度",
+                "en-US": "prop: maxLength | description: max length"
               }
             },
             "setter": "NumberSetter",
@@ -8243,13 +8243,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "显示清除",
-                "en_US": "Show Clear"
+                "zh-CN": "显示清除",
+                "en-US": "Show Clear"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hasClear | 说明: 是否出现清除按钮",
-                "en_US": "prop: hasClear | description: show clear icon"
+                "zh-CN": "属性: hasClear | 说明: 是否出现清除按钮",
+                "en-US": "prop: hasClear | description: show clear icon"
               }
             },
             "setter": "BoolSetter",
@@ -8260,13 +8260,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否禁用",
-                "en_US": "Disabled"
+                "zh-CN": "是否禁用",
+                "en-US": "Disabled"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: disabled | 说明: 是否被禁用",
-                "en_US": "prop: disabled | description: disabled"
+                "zh-CN": "属性: disabled | 说明: 是否被禁用",
+                "en-US": "prop: disabled | description: disabled"
               }
             },
             "setter": "BoolSetter",
@@ -8277,13 +8277,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "展示限制",
-                "en_US": "ShowLimit"
+                "zh-CN": "展示限制",
+                "en-US": "ShowLimit"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hasLimitHint | 说明: 是否展现最大长度样式",
-                "en_US": "prop: hasLimitHint | description: hasLimitHint"
+                "zh-CN": "属性: hasLimitHint | 说明: 是否展现最大长度样式",
+                "en-US": "prop: hasLimitHint | description: hasLimitHint"
               }
             },
             "setter": "BoolSetter",
@@ -8294,13 +8294,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否截断",
-                "en_US": "Cut Off"
+                "zh-CN": "是否截断",
+                "en-US": "Cut Off"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: cutString | 说明: 是否截断超出字符串",
-                "en_US": "prop: cutString | description: whether cut off string"
+                "zh-CN": "属性: cutString | 说明: 是否截断超出字符串",
+                "en-US": "prop: cutString | description: whether cut off string"
               }
             },
             "setter": "BoolSetter",
@@ -8311,13 +8311,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否只读",
-                "en_US": "ReadOnly"
+                "zh-CN": "是否只读",
+                "en-US": "ReadOnly"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: readOnly | 说明: 是否只读",
-                "en_US": "prop: readOnly | description: ReadOnly"
+                "zh-CN": "属性: readOnly | 说明: 是否只读",
+                "en-US": "prop: readOnly | description: ReadOnly"
               }
             },
             "setter": "BoolSetter",
@@ -8328,13 +8328,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否 Trim",
-                "en_US": "Trim"
+                "zh-CN": "是否 Trim",
+                "en-US": "Trim"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: trim | 说明: onChange返回会自动去除头尾空字符",
-                "en_US": "prop: trim | description: whether trim when onChange called"
+                "zh-CN": "属性: trim | 说明: onChange返回会自动去除头尾空字符",
+                "en-US": "prop: trim | description: whether trim when onChange called"
               }
             },
             "setter": "BoolSetter"
@@ -8344,13 +8344,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "显示边框",
-                "en_US": "ShowBorder"
+                "zh-CN": "显示边框",
+                "en-US": "ShowBorder"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hasBorder | 说明: 是否有边框",
-                "en_US": "prop: hasBorder | description: HasBorder"
+                "zh-CN": "属性: hasBorder | 说明: 是否有边框",
+                "en-US": "prop: hasBorder | description: HasBorder"
               }
             },
             "setter": "BoolSetter"
@@ -8360,13 +8360,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "自动聚焦",
-                "en_US": "Auto Focus"
+                "zh-CN": "自动聚焦",
+                "en-US": "Auto Focus"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: autoFocus | 说明: 自动聚焦",
-                "en_US": "prop: autoFocus | description: autoFocus"
+                "zh-CN": "属性: autoFocus | 说明: 自动聚焦",
+                "en-US": "prop: autoFocus | description: autoFocus"
               }
             },
             "setter": "BoolSetter",
@@ -8377,13 +8377,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "Icon 水印",
-                "en_US": "IconHint"
+                "zh-CN": "Icon 水印",
+                "en-US": "IconHint"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: hint | 说明: Icon 水印",
-                "en_US": "prop: hint | description: Icon hint"
+                "zh-CN": "属性: hint | 说明: Icon 水印",
+                "en-US": "prop: hint | description: Icon hint"
               }
             },
             "setter": {
@@ -8396,13 +8396,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "文字前附加内容",
-                "en_US": "Inner Before"
+                "zh-CN": "文字前附加内容",
+                "en-US": "Inner Before"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: innerBefore | 说明: 文字前附加内容",
-                "en_US": "prop: innerBefore | description: innerBefore"
+                "zh-CN": "属性: innerBefore | 说明: 文字前附加内容",
+                "en-US": "prop: innerBefore | description: innerBefore"
               }
             },
             "setter": "StringSetter"
@@ -8413,13 +8413,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "文字后附加内容",
-                "en_US": "Inner After"
+                "zh-CN": "文字后附加内容",
+                "en-US": "Inner After"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: innerAfter | 说明: 文字后附加内容",
-                "en_US": "prop: innerAfter | description: innerAfter"
+                "zh-CN": "属性: innerAfter | 说明: 文字后附加内容",
+                "en-US": "prop: innerAfter | description: innerAfter"
               }
             },
             "setter": "StringSetter"
@@ -8430,13 +8430,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入框前附加内容",
-                "en_US": "Addon Before"
+                "zh-CN": "输入框前附加内容",
+                "en-US": "Addon Before"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: addonBefore | 说明: 输入框前附加内容",
-                "en_US": "prop: addonBefore | description: addonBefore"
+                "zh-CN": "属性: addonBefore | 说明: 输入框前附加内容",
+                "en-US": "prop: addonBefore | description: addonBefore"
               }
             },
             "setter": "StringSetter"
@@ -8447,13 +8447,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入框后附加内容",
-                "en_US": "Addon After"
+                "zh-CN": "输入框后附加内容",
+                "en-US": "Addon After"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: addonAfter | 说明: 输入框后附加内容",
-                "en_US": "prop: addonAfter | description: addonAfter"
+                "zh-CN": "属性: addonAfter | 说明: 输入框后附加内容",
+                "en-US": "prop: addonAfter | description: addonAfter"
               }
             },
             "setter": "StringSetter"
@@ -8464,13 +8464,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入框前附加文字",
-                "en_US": "Text Before"
+                "zh-CN": "输入框前附加文字",
+                "en-US": "Text Before"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: addonTextBefore | 说明: 输入框前附加文字",
-                "en_US": "prop: addonTextBefore | description: addonTextBefore"
+                "zh-CN": "属性: addonTextBefore | 说明: 输入框前附加文字",
+                "en-US": "prop: addonTextBefore | description: addonTextBefore"
               }
             },
             "setter": "StringSetter"
@@ -8481,13 +8481,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "输入框后附加文字",
-                "en_US": "Text After"
+                "zh-CN": "输入框后附加文字",
+                "en-US": "Text After"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: addonTextAfter | 说明: 输入框后附加文字",
-                "en_US": "prop: addonTextAfter | description: addonTextAfter"
+                "zh-CN": "属性: addonTextAfter | 说明: 输入框后附加文字",
+                "en-US": "prop: addonTextAfter | description: addonTextAfter"
               }
             },
             "setter": "StringSetter"
@@ -8502,13 +8502,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -8518,13 +8518,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -11118,13 +11118,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "尺寸",
-                "en_US": "Size"
+                "zh-CN": "尺寸",
+                "en-US": "Size"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
-                "en_US": "prop: size | description: size"
+                "zh-CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
+                "en-US": "prop: size | description: size"
               }
             },
             "setter": {
@@ -11214,13 +11214,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -11230,13 +11230,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -12107,13 +12107,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -12123,13 +12123,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -12701,13 +12701,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -12717,13 +12717,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -13017,13 +13017,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -13033,13 +13033,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -13175,13 +13175,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "尺寸",
-                "en_US": "Size"
+                "zh-CN": "尺寸",
+                "en-US": "Size"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
-                "en_US": "prop: size | description: size"
+                "zh-CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
+                "en-US": "prop: size | description: size"
               }
             },
             "setter": {
@@ -13225,13 +13225,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -13241,13 +13241,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -15068,13 +15068,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "当前状态",
-                "en_US": "Checked"
+                "zh-CN": "当前状态",
+                "en-US": "Checked"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: checked | 说明: 当前状态",
-                "en_US": "prop: checked | description: current status"
+                "zh-CN": "属性: checked | 说明: 当前状态",
+                "en-US": "prop: checked | description: current status"
               }
             },
             "setter": "BoolSetter"
@@ -15084,13 +15084,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "是否禁用",
-                "en_US": "Disabled"
+                "zh-CN": "是否禁用",
+                "en-US": "Disabled"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: disabled | 说明: 是否被禁用",
-                "en_US": "prop: disabled | description: disabled"
+                "zh-CN": "属性: disabled | 说明: 是否被禁用",
+                "en-US": "prop: disabled | description: disabled"
               }
             },
             "setter": "BoolSetter",
@@ -15102,13 +15102,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "尺寸",
-                "en_US": "Size"
+                "zh-CN": "尺寸",
+                "en-US": "Size"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: size | 说明: 尺寸",
-                "en_US": "prop: size | description: size"
+                "zh-CN": "属性: size | 说明: 尺寸",
+                "en-US": "prop: size | description: size"
               }
             },
             "setter": {
@@ -15124,13 +15124,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "开启内容",
-                "en_US": "Checked Content"
+                "zh-CN": "开启内容",
+                "en-US": "Checked Content"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: checkedChildren | 说明: 打开时的内容",
-                "en_US": "prop: checkedChildren | description: checked content"
+                "zh-CN": "属性: checkedChildren | 说明: 打开时的内容",
+                "en-US": "prop: checkedChildren | description: checked content"
               }
             },
             "setter": "StringSetter",
@@ -15141,13 +15141,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "关闭内容",
-                "en_US": "UnChecked Content"
+                "zh-CN": "关闭内容",
+                "en-US": "UnChecked Content"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: unCheckedChildren | 说明: 关闭时的内容",
-                "en_US": "prop: unCheckedChildren | description: unchecked content"
+                "zh-CN": "属性: unCheckedChildren | 说明: 关闭时的内容",
+                "en-US": "prop: unCheckedChildren | description: unchecked content"
               }
             },
             "setter": "StringSetter"
@@ -15162,13 +15162,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -15178,13 +15178,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -16035,13 +16035,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "关闭区域",
-              "en_US": "Close Area"
+              "zh-CN": "关闭区域",
+              "en-US": "Close Area"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: closeArea | 说明: closeable 标签的 onClose 响应区域, tag: 标签体, tail(默认): 关闭按钮",
-              "en_US": "prop: closeArea | description: close area"
+              "zh-CN": "属性: closeArea | 说明: closeable 标签的 onClose 响应区域, tag: 标签体, tail(默认): 关闭按钮",
+              "en-US": "prop: closeArea | description: close area"
             }
           },
           "propType": {
@@ -16055,13 +16055,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标签尺寸",
-              "en_US": "Tag Size"
+              "zh-CN": "标签尺寸",
+              "en-US": "Tag Size"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: size | 说明: 标签的尺寸（large 尺寸为兼容表单场景 large = medium）",
-              "en_US": "prop: size | description: tag size"
+              "zh-CN": "属性: size | 说明: 标签的尺寸（large 尺寸为兼容表单场景 large = medium）",
+              "en-US": "prop: size | description: tag size"
             }
           },
           "propType": {
@@ -16090,13 +16090,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标签文本",
-              "en_US": "Content"
+              "zh-CN": "标签文本",
+              "en-US": "Content"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: children | 说明: 标签文本内容",
-              "en_US": "prop: children | description: tag content"
+              "zh-CN": "属性: children | 说明: 标签文本内容",
+              "en-US": "prop: children | description: tag content"
             }
           },
           "propType": "string",
@@ -16130,13 +16130,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "是否选中",
-              "en_US": "Checked"
+              "zh-CN": "是否选中",
+              "en-US": "Checked"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: checked | 说明: 标签是否被选中，受控用法",
-              "en_US": "prop: checked | description: tag checked"
+              "zh-CN": "属性: checked | 说明: 标签是否被选中，受控用法",
+              "en-US": "prop: checked | description: tag checked"
             }
           },
           "propType": "bool",
@@ -16147,13 +16147,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "默认选中",
-              "en_US": "Default Checked"
+              "zh-CN": "默认选中",
+              "en-US": "Default Checked"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: defaultChecked | 说明: 标签是否默认被选中，非受控用法",
-              "en_US": "prop: defaultChecked | description: tag default checked"
+              "zh-CN": "属性: defaultChecked | 说明: 标签是否默认被选中，非受控用法",
+              "en-US": "prop: defaultChecked | description: tag default checked"
             }
           },
           "propType": "bool",
@@ -16164,13 +16164,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "是否禁用",
-              "en_US": "Disabled"
+              "zh-CN": "是否禁用",
+              "en-US": "Disabled"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: disabled | 说明: 标签是否被禁用",
-              "en_US": "prop: disabled | description: tag disabled"
+              "zh-CN": "属性: disabled | 说明: 标签是否被禁用",
+              "en-US": "prop: disabled | description: tag disabled"
             }
           },
           "propType": "bool",
@@ -16186,13 +16186,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标签文本",
-              "en_US": "Content"
+              "zh-CN": "标签文本",
+              "en-US": "Content"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: children | 说明: 标签文本内容",
-              "en_US": "prop: children | description: tag content"
+              "zh-CN": "属性: children | 说明: 标签文本内容",
+              "en-US": "prop: children | description: tag content"
             }
           },
           "propType": "string",
@@ -16225,13 +16225,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标签类型",
-              "en_US": "Tag Type"
+              "zh-CN": "标签类型",
+              "en-US": "Tag Type"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: type | 说明: 标签的类型",
-              "en_US": "prop: type | description: tag type"
+              "zh-CN": "属性: type | 说明: 标签的类型",
+              "en-US": "prop: type | description: tag type"
             }
           },
           "propType": {
@@ -16245,13 +16245,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标签尺寸",
-              "en_US": "Tag Size"
+              "zh-CN": "标签尺寸",
+              "en-US": "Tag Size"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: size | 说明: 标签的尺寸（large 尺寸为兼容表单场景 large = medium）",
-              "en_US": "prop: size | description: tag size"
+              "zh-CN": "属性: size | 说明: 标签的尺寸（large 尺寸为兼容表单场景 large = medium）",
+              "en-US": "prop: size | description: tag size"
             }
           },
           "propType": {
@@ -16270,13 +16270,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "开启动效",
-              "en_US": "Animation"
+              "zh-CN": "开启动效",
+              "en-US": "Animation"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: animation | 说明: 是否开启动效",
-              "en_US": "prop: animation | description: enable animation"
+              "zh-CN": "属性: animation | 说明: 是否开启动效",
+              "en-US": "prop: animation | description: enable animation"
             }
           },
           "propType": "bool",
@@ -16297,13 +16297,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标签文本",
-              "en_US": "Content"
+              "zh-CN": "标签文本",
+              "en-US": "Content"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: children | 说明: 标签文本内容",
-              "en_US": "prop: children | description: tag content"
+              "zh-CN": "属性: children | 说明: 标签文本内容",
+              "en-US": "prop: children | description: tag content"
             }
           },
           "propType": "string",
@@ -16323,13 +16323,13 @@
               "title": {
                 "label": {
                   "type": "i18n",
-                  "zh_CN": "标签颜色",
-                  "en_US": "Tag Color"
+                  "zh-CN": "标签颜色",
+                  "en-US": "Tag Color"
                 },
                 "tip": {
                   "type": "i18n",
-                  "zh_CN": "属性: color | 说明: 是否开启动效",
-                  "en_US": "prop: color | description: 目前支持：blue、 green、 orange、red、 turquoise、 yellow 和 hex 颜色值 （`color keywords`作为 Tag 组件的保留字，请勿直接使用 ）, `1.19.0` 以上版本生效"
+                  "zh-CN": "属性: color | 说明: 是否开启动效",
+                  "en-US": "prop: color | description: 目前支持：blue、 green、 orange、red、 turquoise、 yellow 和 hex 颜色值 （`color keywords`作为 Tag 组件的保留字，请勿直接使用 ）, `1.19.0` 以上版本生效"
                 }
               },
               "setter": {
@@ -16502,13 +16502,13 @@
             "title": {
               "label": {
                 "type": "i18n",
-                "zh_CN": "尺寸",
-                "en_US": "Size"
+                "zh-CN": "尺寸",
+                "en-US": "Size"
               },
               "tip": {
                 "type": "i18n",
-                "zh_CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
-                "en_US": "prop: size | description: size"
+                "zh-CN": "属性: size | 说明: 尺寸\n@enumdesc 小, 中, 大",
+                "en-US": "prop: size | description: size"
               }
             },
             "setter": {
@@ -16609,13 +16609,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -16625,13 +16625,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -16936,13 +16936,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "标题",
-              "en_US": "Title"
+              "zh-CN": "标题",
+              "en-US": "Title"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: title | 说明: 标题",
-              "en_US": "prop: title | description: Title"
+              "zh-CN": "属性: title | 说明: 标题",
+              "en-US": "prop: title | description: Title"
             }
           },
           "propType": "string",
@@ -16954,13 +16954,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "类型",
-              "en_US": "Type"
+              "zh-CN": "类型",
+              "en-US": "Type"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: type | 说明: 反馈类型",
-              "en_US": "prop: type | description: message type"
+              "zh-CN": "属性: type | 说明: 反馈类型",
+              "en-US": "prop: type | description: message type"
             }
           },
           "propType": {
@@ -16975,13 +16975,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "形状",
-              "en_US": "Shape"
+              "zh-CN": "形状",
+              "en-US": "Shape"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: shape | 说明: 外观",
-              "en_US": "prop: shape | description: message shape"
+              "zh-CN": "属性: shape | 说明: 外观",
+              "en-US": "prop: shape | description: message shape"
             }
           },
           "propType": {
@@ -16996,13 +16996,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "尺寸",
-              "en_US": "Size"
+              "zh-CN": "尺寸",
+              "en-US": "Size"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: size | 说明: 尺寸",
-              "en_US": "prop: size | description: message size"
+              "zh-CN": "属性: size | 说明: 尺寸",
+              "en-US": "prop: size | description: message size"
             }
           },
           "propType": {
@@ -17017,13 +17017,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "文本",
-              "en_US": "Content"
+              "zh-CN": "文本",
+              "en-US": "Content"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: children | 说明: 文本内容",
-              "en_US": "prop: children | description: message content"
+              "zh-CN": "属性: children | 说明: 文本内容",
+              "en-US": "prop: children | description: message content"
             }
           },
           "propType": {
@@ -17037,13 +17037,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "是否显示",
-              "en_US": "Visible"
+              "zh-CN": "是否显示",
+              "en-US": "Visible"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: visible | 说明: 当前是否显示",
-              "en_US": "prop: visible | description: visible"
+              "zh-CN": "属性: visible | 说明: 当前是否显示",
+              "en-US": "prop: visible | description: visible"
             }
           },
           "propType": "bool",
@@ -17059,13 +17059,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "显示 Close",
-              "en_US": "Show Close"
+              "zh-CN": "显示 Close",
+              "en-US": "Show Close"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: closeable | 说明: 显示关闭按钮",
-              "en_US": "prop: closeable | description: show close button"
+              "zh-CN": "属性: closeable | 说明: 显示关闭按钮",
+              "en-US": "prop: closeable | description: show close button"
             }
           },
           "propType": "bool",
@@ -17087,13 +17087,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "开启动效",
-              "en_US": "Animation"
+              "zh-CN": "开启动效",
+              "en-US": "Animation"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: animation | 说明: 是否开启动效",
-              "en_US": "prop: animation | description: enable animation"
+              "zh-CN": "属性: animation | 说明: 是否开启动效",
+              "en-US": "prop: animation | description: enable animation"
             }
           },
           "propType": "bool",
@@ -17110,13 +17110,13 @@
               "title": {
                 "label": {
                   "type": "i18n",
-                  "zh_CN": "图标",
-                  "en_US": "Icon"
+                  "zh-CN": "图标",
+                  "en-US": "Icon"
                 },
                 "tip": {
                   "type": "i18n",
-                  "zh_CN": "属性: iconType | 说明: 显示的图标类型",
-                  "en_US": "prop: iconType | description: icon type"
+                  "zh-CN": "属性: iconType | 说明: 显示的图标类型",
+                  "en-US": "prop: iconType | description: icon type"
                 }
               },
               "setter": {
@@ -17610,13 +17610,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -17626,13 +17626,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -19051,13 +19051,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "唯一标识",
-                    "en_US": "ID"
+                    "zh-CN": "唯一标识",
+                    "en-US": "ID"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: id | 说明: 唯一标识",
-                    "en_US": "prop: id | description: switch id"
+                    "zh-CN": "属性: id | 说明: 唯一标识",
+                    "en-US": "prop: id | description: switch id"
                   }
                 },
                 "setter": "StringSetter"
@@ -19067,13 +19067,13 @@
                 "title": {
                   "label": {
                     "type": "i18n",
-                    "zh_CN": "表单标识",
-                    "en_US": "Name"
+                    "zh-CN": "表单标识",
+                    "en-US": "Name"
                   },
                   "tip": {
                     "type": "i18n",
-                    "zh_CN": "属性: name | 说明: 表单标识",
-                    "en_US": "prop: name | description: switch name"
+                    "zh-CN": "属性: name | 说明: 表单标识",
+                    "en-US": "prop: name | description: switch name"
                   }
                 },
                 "setter": "StringSetter"
@@ -19120,13 +19120,13 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "视频链接",
-              "en_US": "Video Address"
+              "zh-CN": "视频链接",
+              "en-US": "Video Address"
             },
             "tip": {
               "type": "i18n",
-              "zh_CN": "属性: src | 说明: 视频链接",
-              "en_US": "prop: src | description: Video address"
+              "zh-CN": "属性: src | 说明: 视频链接",
+              "en-US": "prop: src | description: Video address"
             }
           },
           "propType": "string",
@@ -19137,8 +19137,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "自动播放",
-              "en_US": "autoPlay"
+              "zh-CN": "自动播放",
+              "en-US": "autoPlay"
             }
           },
           "propType": "bool",
@@ -19151,8 +19151,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "循环播放",
-              "en_US": "loop"
+              "zh-CN": "循环播放",
+              "en-US": "loop"
             }
           },
           "propType": "bool"
@@ -19162,8 +19162,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "静音",
-              "en_US": "muted"
+              "zh-CN": "静音",
+              "en-US": "muted"
             }
           },
           "propType": "bool"
@@ -19173,8 +19173,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "控制条",
-              "en_US": "controls"
+              "zh-CN": "控制条",
+              "en-US": "controls"
             }
           },
           "propType": "bool"
@@ -19184,8 +19184,8 @@
           "title": {
             "label": {
               "type": "i18n",
-              "zh_CN": "默认图URL",
-              "en_US": "poster"
+              "zh-CN": "默认图URL",
+              "en-US": "poster"
             }
           },
           "propType": "string"
