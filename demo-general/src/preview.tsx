@@ -5,13 +5,13 @@ import { buildComponents, assetBundle, AssetLevel, AssetLoader } from '@alilc/lo
 import ReactRenderer from '@alilc/lowcode-react-renderer';
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
 import appHelper from './appHelper';
-import { getProjectSchemaFromLocalStorage, getPackagesFromLocalStorage } from './services/mockService';
+import { getProjectSchemaFromLocalStorage, getPackagesFromLocalStorage, getPreviewLocale, setPreviewLocale } from './services/mockService';
 
 const getScenarioName = function () {
   if (location.search) {
-    return new URLSearchParams(location.search.slice(1)).get('scenarioName') || 'index';
+    return new URLSearchParams(location.search.slice(1)).get('scenarioName') || 'general';
   }
-  return 'index';
+  return 'general';
 }
 
 const SamplePreview = () => {
@@ -21,12 +21,12 @@ const SamplePreview = () => {
     const scenarioName = getScenarioName();
     const packages = getPackagesFromLocalStorage(scenarioName);
     const projectSchema = getProjectSchemaFromLocalStorage(scenarioName);
-    const { componentsMap: componentsMapArray, componentsTree } = projectSchema;
+    const { componentsMap: componentsMapArray, componentsTree , i18n} = projectSchema;
     const componentsMap: any = {};
     componentsMapArray.forEach((component: any) => {
       componentsMap[component.componentName] = component;
     });
-    const schema = componentsTree[0];
+    const pageSchema = componentsTree[0];
 
     const libraryMap = {};
     const libraryAsset = [];
@@ -47,16 +47,24 @@ const SamplePreview = () => {
     const components = await injectComponents(buildComponents(libraryMap, componentsMap));
 
     setData({
-      schema,
+      schema: pageSchema,
       components,
+      i18n,
     });
   }
 
-  const { schema, components } = data;
+  const { schema, components, i18n = {} } = data as any;
 
   if (!schema || !components) {
     init();
     return <Loading fullScreen />;
+  }
+  const currentLocale = getPreviewLocale(getScenarioName());
+
+  if (!(window as any).setPreviewLocale) {
+    // for demo use only, can use this in console to switch language for i18n test
+    // 在控制台 window.setPreviewLocale('en-US') 或 window.setPreviewLocale('zh-CN') 查看切换效果
+    (window as any).setPreviewLocale = (locale:string) => setPreviewLocale(getScenarioName(), locale);
   }
 
   return (
@@ -65,6 +73,8 @@ const SamplePreview = () => {
         className="lowcode-plugin-sample-preview-content"
         schema={schema}
         components={components}
+        locale={currentLocale}
+        messages={i18n}
         appHelper={appHelper}
       />
     </div>
