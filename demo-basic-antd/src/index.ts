@@ -23,7 +23,7 @@ import './global.scss';
 async function registerPlugins() {
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'basic-antd',
-    displayName: '基础antd组件',
+    displayName: '基础 AntD 组件',
     info: {
       urls: [
         {

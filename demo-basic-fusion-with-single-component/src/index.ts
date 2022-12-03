@@ -23,7 +23,7 @@ import './global.scss';
 async function registerPlugins() {
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'basic-fusion-with-single-component',
-    displayName: '基础Fusion组件+单自定义组件',
+    displayName: '基础 Fusion 组件 + 单自定义组件',
     info: {
       urls: [
         {
