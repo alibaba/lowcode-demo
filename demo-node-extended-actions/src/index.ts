@@ -95,7 +95,7 @@ async function registerNodeActionPlugins() {
 (async function main() {
   // 一般插件注册
   await registerPlugins();
-  // node Actions相关插件注册
+  // node Actions 相关插件注册
   await registerNodeActionPlugins();
 
   init(document.getElementById('lce-container')!, {

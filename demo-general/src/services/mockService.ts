@@ -103,7 +103,6 @@ export const getPageSchema = async (scenarioName: string = 'unknown') => {
     return pageSchema;
   }
 
-  console.log(`failed to get page schema for scenarioName ${scenarioName} from localstorage, use default page schema`, DefaultPageSchema);
   return DefaultPageSchema;
 };
 

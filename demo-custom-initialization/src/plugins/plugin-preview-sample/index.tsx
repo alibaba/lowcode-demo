@@ -11,8 +11,7 @@ const PreviewSamplePlugin = (ctx: ILowCodePluginContext) => {
       const { skeleton, config } = ctx;
       const doPreview = () => {
         const scenarioName = config.get('scenarioName');
-        console.log('go preview with scenarioName:',scenarioName );
-        saveSchema(scenarioName);;
+        saveSchema(scenarioName);
         setTimeout(() => {
           const search = location.search ? `${location.search}&scenarioName=${scenarioName}` : `?scenarioName=${scenarioName}`;
           window.open(`./preview.html${search}`);

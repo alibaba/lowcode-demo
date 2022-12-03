@@ -12,7 +12,7 @@ const EditorInitPlugin = (ctx: ILowCodePluginContext, options: any) => {
       const scenarioName = options['scenarioName'];
       const scenarioDisplayName = options['displayName'] || scenarioName;
       const scenarioInfo = options['info'] || {};
-      // 保存在config中用于引擎范围其他插件使用
+      // 保存在 config 中用于引擎范围其他插件使用
       config.set('scenarioName', scenarioName);
       config.set('scenarioDisplayName', scenarioDisplayName);
       config.set('scenarioInfo', scenarioInfo);
@@ -20,7 +20,6 @@ const EditorInitPlugin = (ctx: ILowCodePluginContext, options: any) => {
       await material.setAssets(await injectAssets(assets));
       const schema = await getPageSchema(scenarioName);
 
-      console.log(`get schema for scenarioName ${scenarioName}:`, schema);
       // 加载 schema
       project.openDocument(schema);
     },
@@ -34,7 +33,7 @@ EditorInitPlugin.meta = {
       {
         key: 'scenarioName',
         type: 'string',
-        description: '用于localstorage存储key',
+        description: '用于 localstorage 存储 key',
       },
       {
         key: 'displayName',
