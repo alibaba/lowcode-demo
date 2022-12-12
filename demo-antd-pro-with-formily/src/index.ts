@@ -22,6 +22,8 @@ import { PluginFormily } from '@seada/antd-plugins'
 import './global.scss';
 
 async function registerPlugins() {
+  await plugins.register(InjectPlugin);
+
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'antd-pro-with-formily',
     displayName: 'antd 高级组件 + formily 表单组件',
@@ -54,8 +56,6 @@ async function registerPlugins() {
 
   // 注册中英文切换
   await plugins.register(ZhEnPlugin);
-
-  await plugins.register(InjectPlugin);
 
   await plugins.register(SetRefPropPlugin);
 

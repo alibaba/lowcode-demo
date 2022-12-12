@@ -23,6 +23,8 @@ import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import './global.scss';
 
 async function registerPlugins() {
+  await plugins.register(InjectPlugin);
+
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'custom-initialization',
     displayName: '自定义初始化',
@@ -51,8 +53,6 @@ async function registerPlugins() {
 
   // 注册中英文切换
   await plugins.register(ZhEnPlugin);
-
-  await plugins.register(InjectPlugin);
 
   await plugins.register(SetRefPropPlugin);
 

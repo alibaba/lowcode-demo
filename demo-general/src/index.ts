@@ -23,6 +23,8 @@ import appHelper from './appHelper';
 import './global.scss';
 
 async function registerPlugins() {
+  await plugins.register(InjectPlugin);
+
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'general',
     displayName: '综合场景',
@@ -60,8 +62,6 @@ async function registerPlugins() {
 
   // 注册中英文切换
   await plugins.register(ZhEnPlugin);
-
-  await plugins.register(InjectPlugin);
 
   await plugins.register(SetRefPropPlugin);
 

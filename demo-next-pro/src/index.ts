@@ -21,6 +21,8 @@ import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import './global.scss';
 
 async function registerPlugins() {
+  await plugins.register(InjectPlugin);
+
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'next-pro',
     displayName: '基于 next 实现的高级表单低代码物料',
@@ -53,8 +55,6 @@ async function registerPlugins() {
 
   // 注册中英文切换
   await plugins.register(ZhEnPlugin);
-
-  await plugins.register(InjectPlugin);
 
   await plugins.register(SetRefPropPlugin);
 
