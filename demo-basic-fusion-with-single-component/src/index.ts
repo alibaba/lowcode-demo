@@ -21,6 +21,8 @@ import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import './global.scss';
 
 async function registerPlugins() {
+  await plugins.register(InjectPlugin);
+
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'basic-fusion-with-single-component',
     displayName: '基础 Fusion 组件 + 单自定义组件',
@@ -49,8 +51,6 @@ async function registerPlugins() {
 
   // 注册中英文切换
   await plugins.register(ZhEnPlugin);
-
-  await plugins.register(InjectPlugin);
 
   await plugins.register(SetRefPropPlugin);
 

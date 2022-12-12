@@ -24,6 +24,7 @@ import './global.scss';
 
 
 async function registerPlugins() {
+  await plugins.register(InjectPlugin);
 
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'node-extended-actions',
@@ -53,8 +54,6 @@ async function registerPlugins() {
 
   // 注册中英文切换
   await plugins.register(ZhEnPlugin);
-
-  await plugins.register(InjectPlugin);
 
   await plugins.register(SetRefPropPlugin);
 
