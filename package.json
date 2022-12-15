@@ -10,7 +10,8 @@
     "build": "build-scripts build",
     "prepublishOnly": "npm run build",
     "pub": "node ./scripts/watchdog.js && npm pub",
-    "sync": "tnpm sync @alilc/lowcode-demo"
+    "sync": "tnpm sync @alilc/lowcode-demo",
+    "syncOss": "node ./scripts/sync-oss.js"
   },
   "files": [
     "build"
