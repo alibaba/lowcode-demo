@@ -19,6 +19,7 @@ import CustomSetterSamplePlugin from './plugins/plugin-custom-setter-sample';
 import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop';
 import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import { PluginFormily } from '@seada/antd-plugins'
+import 'antd/dist/antd.css'
 import './global.scss';
 
 async function registerPlugins() {
