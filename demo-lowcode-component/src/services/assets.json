@@ -68,7 +68,8 @@
       },
       "componentName": "BlockPicker",
       "title": "BlockPicker",
-      "category": "其他"
+      "category": "其他",
+      "group":"原子组件"
     },
     {
       "reference": {
@@ -76,15 +77,15 @@
         "id": "@alilc/lowcode-materials"
       },
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/meta.js",
-        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/meta.design.js"
+        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.6/build/lowcode/meta.js",
+        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.6/build/lowcode/meta.design.js"
       },
       "devMode": "procode",
       "npm": {
         "package": "@alilc/lowcode-materials"
       },
       "exportName": "AlilcLowcodeMaterialsMeta",
-      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/meta.js"
+      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.6/build/lowcode/meta.js"
     },
     {
       "reference": {
@@ -105,6 +106,7 @@
     {
       "componentId": "LCC-6X91-SW86D1OP80P6HBSW73RL2-KSZSXBBL-2",
       "icon": "",
+      "group": "低代码组件",
       "experimental": {
         "initials": [
           {
@@ -172,7 +174,7 @@
       "reference": {
         "destructuring": false,
         "id": "LCC-6X91-SW86D1OP80P6HBSW73RL2-KSZSXBBL-2",
-        "version": "0.1.0"
+        "version": "1.0.0"
       },
       "devMode": "lowcode",
       "snippets": [
@@ -197,7 +199,7 @@
     "runtimeUtils": [],
     "lowCodeComponentsConfig": {
       "LCC-6X91-SW86D1OP80P6HBSW73RL2-KSZSXBBL-2": {
-        "configId": 45
+        "configId": 46
       }
     }
   },
@@ -269,46 +271,46 @@
     },
     {
       "urls": [
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.5f3e005.js"
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.c346c98.js"
       ],
       "library": "ReactColor",
       "package": "react-color",
       "id": "react-color",
       "advancedUrls": {
         "default": [
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.5f3e005.js"
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.c346c98.js"
         ]
       },
       "version": "2.19.3"
     },
     {
       "urls": [
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.797be82.js"
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.25.2/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.80e3df4.js"
       ],
       "library": "AlilcLowcodeMaterials",
       "package": "@alilc/lowcode-materials",
       "id": "@alilc/lowcode-materials",
       "advancedUrls": {
         "default": [
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.797be82.js"
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.25.2/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.80e3df4.js"
         ]
       },
       "version": "1.0.6"
     },
     {
       "urls": [
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alifd/next/1.24.18/theme.7c897c2.css",
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.7c9b2cb.js"
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.25.2/@alifd/next/1.24.18/theme.7c897c2.css",
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.597cade.js"
       ],
       "library": "Next",
       "package": "@alifd/next",
       "id": "@alifd/next",
       "advancedUrls": {
         "default": [
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alifd/next/1.24.18/theme.7c897c2.css",
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.7c9b2cb.js"
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.25.2/@alifd/next/1.24.18/theme.7c897c2.css",
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.597cade.js"
         ]
       },
       "version": "1.24.18"
@@ -457,7 +459,7 @@
       },
       "id": "LCC-6X91-SW86D1OP80P6HBSW73RL2-KSZSXBBL-2",
       "type": "lowcode",
-      "version": "0.1.0"
+      "version": "1.0.0"
     }
   ],
   "version": "1.1.0"
