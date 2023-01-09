@@ -29,10 +29,11 @@
         "exportName": "BlockPicker",
         "version": "2.19.3"
       },
-      "experimental": {
-        "callbacks": {}
-      },
+    
       "configure": {
+        "advanced": {
+          "callbacks": {}
+        },
         "component": {
           "isContainer": false,
           "isModal": false
@@ -68,8 +69,7 @@
       },
       "componentName": "BlockPicker",
       "title": "BlockPicker",
-      "category": "其他",
-      "group":"原子组件"
+      "category": "其他"
     },
     {
       "reference": {
@@ -104,22 +104,22 @@
       "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.js"
     },
     {
-      "componentId": "LCC-6X91-SW86D1OP80P6HBSW73RL2-KSZSXBBL-2",
+      "componentId": "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0",
       "icon": "",
-      "group": "低代码组件",
-      "experimental": {
-        "initials": [
-          {
-            "initial": {
-              "type": "JSFunction",
-              "value": "(node) => {\n                                    return `${node.componentName.charAt(0).toLowerCase() + node.componentName.substr(1)}_${Math.random()\n                                        .toString(36)\n                                        .substring(6)}`;\n                                }"
-            },
-            "name": "fieldId"
-          }
-        ],
-        "callbacks": {}
-      },
+      "category": "低代码组件",
       "configure": {
+        "advanced": {
+          "initials": [
+            {
+              "initial": {
+                "type": "JSFunction",
+                "value": "(node) => {\n                                    return `${node.componentName.charAt(0).toLowerCase() + node.componentName.substr(1)}_${Math.random()\n                                        .toString(36)\n                                        .substring(6)}`;\n                                }"
+              },
+              "name": "fieldId"
+            }
+          ],
+          "callbacks": {}
+        },
         "component": {
           "isContainer": false,
           "rootSelector": "",
@@ -127,10 +127,10 @@
         },
         "props": [
           {
-            "name": "content",
+            "name": "titleText",
             "type": "field",
             "title": {
-              "label": "文本内容"
+              "label": "标题内容"
             },
             "setter": {
               "componentName": "MixedSetter",
@@ -138,7 +138,7 @@
                 "setters": [
                   {
                     "componentName": "StringSetter",
-                    "initialValue": "",
+                    "initialValue": "我是标题",
                     "props": {}
                   },
                   "VariableSetter"
@@ -169,27 +169,27 @@
           }
         ]
       },
-      "title": "LCC2",
+      "title": "LCC3",
       "tags": "",
       "reference": {
         "destructuring": false,
-        "id": "LCC-6X91-SW86D1OP80P6HBSW73RL2-KSZSXBBL-2",
-        "version": "1.0.0"
+        "id": "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0",
+        "version": "0.1.0"
       },
       "devMode": "lowcode",
       "snippets": [
         {
           "schema": {
-            "componentName": "LccLbbxstae",
+            "componentName": "LccLcofqh6f",
             "props": {
-              "content": ""
+              "titleText": "我是标题"
             }
           },
-          "title": "LCC2"
+          "title": "LCC3"
         }
       ],
       "docUrl": "",
-      "componentName": "LccLbbxstae"
+      "componentName": "LccLcofqh6f"
     }
   ],
   "plugins": [],
@@ -198,8 +198,8 @@
     "vcComponents": [],
     "runtimeUtils": [],
     "lowCodeComponentsConfig": {
-      "LCC-6X91-SW86D1OP80P6HBSW73RL2-KSZSXBBL-2": {
-        "configId": 46
+      "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0": {
+        "configId": 53
       }
     }
   },
@@ -271,46 +271,46 @@
     },
     {
       "urls": [
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.c346c98.js"
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.85b0ad9.js"
       ],
       "library": "ReactColor",
       "package": "react-color",
       "id": "react-color",
       "advancedUrls": {
         "default": [
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.c346c98.js"
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.85b0ad9.js"
         ]
       },
       "version": "2.19.3"
     },
     {
       "urls": [
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.25.2/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.80e3df4.js"
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.e953b84.js"
       ],
       "library": "AlilcLowcodeMaterials",
       "package": "@alilc/lowcode-materials",
       "id": "@alilc/lowcode-materials",
       "advancedUrls": {
         "default": [
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.25.2/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.80e3df4.js"
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.e953b84.js"
         ]
       },
       "version": "1.0.6"
     },
     {
       "urls": [
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.25.2/@alifd/next/1.24.18/theme.7c897c2.css",
-        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.597cade.js"
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alifd/next/1.24.18/theme.7c897c2.css",
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.059bccd.js"
       ],
       "library": "Next",
       "package": "@alifd/next",
       "id": "@alifd/next",
       "advancedUrls": {
         "default": [
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.25.2/@alifd/next/1.24.18/theme.7c897c2.css",
-          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.597cade.js"
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alifd/next/1.24.18/theme.7c897c2.css",
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.059bccd.js"
         ]
       },
       "version": "1.24.18"
@@ -320,12 +320,14 @@
         "css": ".text_k8e4nalo {\n  font-size: 14px;\n  color: #666;\n}\n\n.div_k8e4nalp {\n  padding: 12px;\n  background: #f2f2f2;\n  border: 1px solid #ddd;\n}",
         "methods": {
           "onClick": {
-            "source": "function onClick() {\n  this.setState({\n    a: \"文本吧2\"\n  });\n}",
+            "source": "function onClick() {\n  this.setState({\n    hello: \"The lowcode world is so magic\"\n  });\n}",
             "type": "JSFunction",
-            "value": "function onClick() {\n  this.setState({\n    a: \"文本吧2\"\n  });\n}"
+            "value": "function onClick() {\n  this.setState({\n    hello: \"The lowcode world is so magic\"\n  });\n}"
           }
         },
-        "defaultProps": {},
+        "defaultProps": {
+          "titleText": "我是标题"
+        },
         "loopArgs": [
           "item",
           "index"
@@ -380,7 +382,11 @@
                 "props": {
                   "strong": false,
                   "code": false,
-                  "children": "欢迎使用低代码组件",
+                  "children": {
+                    "mock": "欢迎使用低代码组件",
+                    "type": "JSExpression",
+                    "value": "this.props.titleText"
+                  },
                   "underline": false,
                   "style": {
                     "marginTop": "60px"
@@ -407,15 +413,6 @@
                   "delete": false,
                   "mark": false
                 }
-              },
-              {
-                "condition": true,
-                "id": "node_oclbbxw39n2",
-                "componentName": "Calendar",
-                "title": "卡片型",
-                "props": {
-                  "shape": "card"
-                }
               }
             ],
             "id": "node_ocl9cku8453",
@@ -430,25 +427,34 @@
               "align": "center",
               "direction": "column"
             }
+          },
+          {
+            "condition": true,
+            "id": "node_oclcoi4jah2",
+            "componentName": "Calendar",
+            "title": "卡片型",
+            "props": {
+              "shape": "card"
+            }
           }
         ],
         "propTypes": [
           {
-            "defaultValue": "",
+            "defaultValue": "我是标题",
             "display": "inline",
-            "name": "content",
+            "name": "titleText",
             "__sid": "item_l9fexhbc",
             "setterProps": {},
             "type": "string",
-            "title": "文本内容",
+            "title": "标题内容",
             "setter": "StringSetter"
           }
         ],
         "id": "node_k8bnubvz",
         "state": {
-          "urlParams": {
+          "hello": {
             "type": "JSExpression",
-            "value": "this.utils.legaoBuiltin.getUrlParams()"
+            "value": "\"world\""
           }
         },
         "componentName": "Component",
@@ -457,9 +463,9 @@
           "sync": true
         }
       },
-      "id": "LCC-6X91-SW86D1OP80P6HBSW73RL2-KSZSXBBL-2",
+      "id": "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0",
       "type": "lowcode",
-      "version": "1.0.0"
+      "version": "0.1.0"
     }
   ],
   "version": "1.1.0"

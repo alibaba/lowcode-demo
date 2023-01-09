@@ -3,7 +3,6 @@ import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 import EditorInitPlugin from './plugins/plugin-editor-init';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
 import ZhEnPlugin from '@alilc/lowcode-plugin-zh-en';
-import CodeGenPlugin from '@alilc/lowcode-plugin-code-generator';
 import DataSourcePanePlugin from '@alilc/lowcode-plugin-datasource-pane';
 import SchemaPlugin from '@alilc/lowcode-plugin-schema';
 import CodeEditorPlugin from "@alilc/lowcode-plugin-code-editor";
@@ -12,10 +11,8 @@ import InjectPlugin from '@alilc/lowcode-plugin-inject';
 import SimulatorResizerPlugin from '@alilc/lowcode-plugin-simulator-select';
 import ComponentPanelPlugin from './plugins/plugin-component-panel';
 import DefaultSettersRegistryPlugin from './plugins/plugin-default-setters-registry';
-import LoadIncrementalAssetsWidgetPlugin from './plugins/plugin-load-incremental-assets-widget';
 import SaveSamplePlugin from './plugins/plugin-save-sample';
 import PreviewSamplePlugin from './plugins/plugin-preview-sample';
-import CustomSetterSamplePlugin from './plugins/plugin-custom-setter-sample';
 import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop';
 import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import './global.scss';
@@ -39,7 +36,15 @@ async function registerPlugins() {
 
   await plugins.register(ComponentPanelPlugin);
 
+  await plugins.register(LogoSamplePlugin);
+
   await plugins.register(SchemaPlugin);
+
+  // 注册回退/前进
+  await plugins.register(UndoRedoPlugin);
+
+  // 注册中英文切换
+  await plugins.register(ZhEnPlugin);
 
   await plugins.register(ManualPlugin);
 
@@ -82,8 +87,8 @@ async function registerPlugins() {
     // simulatorUrl 在当 engine-core.js 同一个父路径下时是不需要配置的！！！
     // 这里因为用的是 alifd cdn，在不同 npm 包，engine-core.js 和 react-simulator-renderer.js 是不同路径
     simulatorUrl: [
-      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@1.1.0-beta.9/dist/css/react-simulator-renderer.css',
-      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@1.1.0-beta.9/dist/js/react-simulator-renderer.js'
+      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@1.1.0-beta.21/dist/css/react-simulator-renderer.css',
+      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@1.1.0-beta.21/dist/js/react-simulator-renderer.js'
     ],
     requestHandlersMap: {
       fetch: createFetchHandler()
