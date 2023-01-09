@@ -29,7 +29,7 @@
         "exportName": "BlockPicker",
         "version": "2.19.3"
       },
-      "experimental": {
+      "configure.advanced": {
         "callbacks": {}
       },
       "configure": {
@@ -105,7 +105,8 @@
     {
       "componentId": "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0",
       "icon": "",
-      "experimental": {
+      "category":"低代码组件",
+      "configure.advanced": {
         "initials": [
           {
             "initial": {
@@ -428,110 +429,11 @@
           },
           {
             "condition": true,
-            "children": [
-              {
-                "condition": true,
-                "children": [
-                  {
-                    "condition": true,
-                    "id": "node_oclcofr5bd2",
-                    "componentName": "DatePicker",
-                    "title": "日期选择框",
-                    "props": {
-                      "followTrigger": true,
-                      "size": "medium",
-                      "hasClear": false,
-                      "prefix": "next-",
-                      "popupAlign": "tl tl",
-                      "defaultVisible": false,
-                      "format": "YYYY-MM-DD",
-                      "disabled": false,
-                      "label": "",
-                      "state": "success",
-                      "placeholder": "",
-                      "popupTriggerType": "click"
-                    }
-                  }
-                ],
-                "id": "node_oclcofr4slm",
-                "componentName": "Tab.Item",
-                "title": "",
-                "props": {
-                  "title": "Tab1",
-                  "primaryKey": "node_oclcofr4slj"
-                }
-              },
-              {
-                "condition": true,
-                "children": [
-                  {
-                    "condition": true,
-                    "id": "node_oclcofr5bd3",
-                    "componentName": "Input",
-                    "title": "输入框",
-                    "props": {
-                      "autoComplete": "off",
-                      "size": "medium",
-                      "hasBorder": true,
-                      "placeholder": "请输入"
-                    }
-                  }
-                ],
-                "id": "node_oclcofr4sln",
-                "componentName": "Tab.Item",
-                "title": "",
-                "props": {
-                  "title": "Tab2",
-                  "primaryKey": "node_oclcofr4slk"
-                }
-              },
-              {
-                "condition": true,
-                "children": [
-                  {
-                    "condition": true,
-                    "id": "node_oclcofr5bd5",
-                    "componentName": "Rating",
-                    "title": "评分",
-                    "props": {
-                      "size": "medium",
-                      "prefix": "next-",
-                      "count": 5
-                    }
-                  }
-                ],
-                "id": "node_oclcofr4slo",
-                "componentName": "Tab.Item",
-                "title": "",
-                "props": {
-                  "title": "Tab3",
-                  "primaryKey": "node_oclcofr4sll"
-                }
-              }
-            ],
-            "id": "node_oclcofr4sli",
-            "componentName": "Tab",
-            "title": "普通型",
+            "id": "node_oclcoi4jah2",
+            "componentName": "Calendar",
+            "title": "卡片型",
             "props": {
-              "size": "medium",
-              "shape": "pure",
-              "needBadge": false,
-              "excessMode": "slide",
-              "items": [
-                {
-                  "title": "Tab1",
-                  "primaryKey": "node_oclcofr4slj"
-                },
-                {
-                  "title": "Tab2",
-                  "primaryKey": "node_oclcofr4slk"
-                },
-                {
-                  "title": "Tab3",
-                  "primaryKey": "node_oclcofr4sll"
-                }
-              ],
-              "unmountInactiveTabs": false
+              "shape": "card"
             }
           }
         ],

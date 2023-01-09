@@ -1,9 +1,6 @@
 import { init, plugins } from '@alilc/lowcode-engine';
 import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
 import EditorInitPlugin from './plugins/plugin-editor-init';
-import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
-import ZhEnPlugin from '@alilc/lowcode-plugin-zh-en';
-import CodeGenPlugin from '@alilc/lowcode-plugin-code-generator';
 import DataSourcePanePlugin from '@alilc/lowcode-plugin-datasource-pane';
 import SchemaPlugin from '@alilc/lowcode-plugin-schema';
 import CodeEditorPlugin from "@alilc/lowcode-plugin-code-editor";
@@ -12,10 +9,8 @@ import InjectPlugin from '@alilc/lowcode-plugin-inject';
 import SimulatorResizerPlugin from '@alilc/lowcode-plugin-simulator-select';
 import ComponentPanelPlugin from './plugins/plugin-component-panel';
 import DefaultSettersRegistryPlugin from './plugins/plugin-default-setters-registry';
-import LoadIncrementalAssetsWidgetPlugin from './plugins/plugin-load-incremental-assets-widget';
 import SaveSamplePlugin from './plugins/plugin-save-sample';
 import PreviewSamplePlugin from './plugins/plugin-preview-sample';
-import CustomSetterSamplePlugin from './plugins/plugin-custom-setter-sample';
 import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop';
 import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import './global.scss';
@@ -38,6 +33,8 @@ async function registerPlugins() {
   await plugins.register(DefaultSettersRegistryPlugin);
 
   await plugins.register(ComponentPanelPlugin);
+
+  await plugins.register(LogoSamplePlugin);
 
   await plugins.register(SchemaPlugin);
 
