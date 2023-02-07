@@ -1,8 +1,8 @@
 ## Low-Code Engine Demo
-demo是一个组合内核、setter、插件、物料的示范工程，因为未经长期生产环境打磨，可能还会有一些各个模块间结合的 bug，希望大家理解~
+demo 是一个组合内核、setter、插件、物料的示范工程，因为未经长期生产环境打磨，可能还会有一些各个模块间结合的 bug，希望大家理解~
 
 ## 如何使用
-目前包含多个独立 demo 工程目录，每个 demo 目录都是一个独立的工程, 代表一个特定的 demo 场景，可以选择其一单独使用。
+目前包含多个独立 demo 工程目录，每个 demo 目录都是一个独立的工程，代表一个特定的 demo 场景，可以选择其一单独使用。
 
 ```bash
 git clone git@github.com:alibaba/lowcode-demo.git
@@ -22,9 +22,10 @@ npm run start
 - [node-extended-actions](https://lowcode-engine.cn/demo/demo-node-extended-actions/index.html)
 - [next-pro](https://lowcode-engine.cn/demo/demo-next-pro/index.html)
 - [antd-pro-with-formily](https://lowcode-engine.cn/demo/demo-antd-pro-with-formily/index.html)
+- [lowcode-component](https://lowcode-engine.cn/demo/demo-lowcode-component/index.html)
 
 更多参考资料：
 
 - [马上玩一下](https://lowcode-engine.cn/demo/demo-general/index.html)
 - [低代码引擎官网](http://lowcode-engine.cn)
-- [引擎主包](https://github.com/alibaba/lowcode-engine)
+- [引擎主仓库](https://github.com/alibaba/lowcode-engine)
