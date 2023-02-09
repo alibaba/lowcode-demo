@@ -106,6 +106,7 @@ async function registerPlugins() {
     enableCanvasLock: true,
     // 默认绑定变量
     supportVariableGlobally: true,
+    device: 'phone',
     requestHandlersMap: {
       fetch: createFetchHandler(),
     },

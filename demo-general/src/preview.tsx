@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom';
 import React, { useState } from 'react';
 import { Loading } from '@alifd/next';
+import mergeWith from 'lodash/mergeWith';
+import isArray from 'lodash/isArray';
 import { buildComponents, assetBundle, AssetLevel, AssetLoader } from '@alilc/lowcode-utils';
 import ReactRenderer from '@alilc/lowcode-react-renderer';
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
@@ -21,7 +23,12 @@ const SamplePreview = () => {
     const scenarioName = getScenarioName();
     const packages = getPackagesFromLocalStorage(scenarioName);
     const projectSchema = getProjectSchemaFromLocalStorage(scenarioName);
-    const { componentsMap: componentsMapArray, componentsTree , i18n} = projectSchema;
+    const {
+      componentsMap: componentsMapArray,
+      componentsTree,
+      i18n,
+      dataSource: projectDataSource,
+    } = projectSchema;
     const componentsMap: any = {};
     componentsMapArray.forEach((component: any) => {
       componentsMap[component.componentName] = component;
@@ -50,10 +57,11 @@ const SamplePreview = () => {
       schema: pageSchema,
       components,
       i18n,
+      projectDataSource,
     });
   }
 
-  const { schema, components, i18n = {} } = data as any;
+  const { schema, components, i18n = {}, projectDataSource = {} } = data as any;
 
   if (!schema || !components) {
     init();
@@ -67,11 +75,20 @@ const SamplePreview = () => {
     (window as any).setPreviewLocale = (locale:string) => setPreviewLocale(getScenarioName(), locale);
   }
 
+  function customizer(objValue: [], srcValue: []) {
+    if (isArray(objValue)) {
+      return objValue.concat(srcValue || []);
+    }
+  }
+
   return (
     <div className="lowcode-plugin-sample-preview">
       <ReactRenderer
         className="lowcode-plugin-sample-preview-content"
-        schema={schema}
+        schema={{
+          ...schema,
+          dataSource: mergeWith(schema.dataSource, projectDataSource, customizer),
+        }}
         components={components}
         locale={currentLocale}
         messages={i18n}
