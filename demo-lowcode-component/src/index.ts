@@ -87,8 +87,8 @@ async function registerPlugins() {
     // simulatorUrl 在当 engine-core.js 同一个父路径下时是不需要配置的！！！
     // 这里因为用的是 alifd cdn，在不同 npm 包，engine-core.js 和 react-simulator-renderer.js 是不同路径
     simulatorUrl: [
-      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@1.1.1-beta.1/dist/css/react-simulator-renderer.css',
-      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@1.1.1-beta.1/dist/js/react-simulator-renderer.js'
+      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@1.1.1/dist/css/react-simulator-renderer.css',
+      'https://alifd.alicdn.com/npm/@alilc/lowcode-react-simulator-renderer@1.1.1/dist/js/react-simulator-renderer.js'
     ],
     requestHandlersMap: {
       fetch: createFetchHandler()
