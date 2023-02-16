@@ -1,10 +1,10 @@
-import { ILowCodePluginContext } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 import { injectAssets } from '@alilc/lowcode-plugin-inject';
 import assets from '../../services/assets.json';
 import {
   getPageSchema,
 } from '../../services/mockService';
-const EditorInitPlugin = (ctx: ILowCodePluginContext, options: any) => {
+const EditorInitPlugin = (ctx: IPublicModelPluginContext, options: any) => {
   return {
     async init() {
       const { material, project, config } = ctx;

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Icon, Message } from '@alifd/next';
-import { ILowCodePluginContext, Node } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext, Node } from '@alilc/lowcode-engine';
 export interface IProps {
   logo?: string;
   href?: string;
 }
 
-const AddHelloActionPlugin = (ctx: ILowCodePluginContext) => {
+const AddHelloActionPlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
       const { addBuiltinComponentAction } = ctx.material;

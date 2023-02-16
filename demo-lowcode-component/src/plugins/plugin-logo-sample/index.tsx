@@ -1,5 +1,5 @@
 import React from 'react';
-import { ILowCodePluginContext } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 import { Dropdown, Menu } from '@alifd/next';
 import './index.scss';
 export interface IProps {
@@ -44,7 +44,7 @@ const Logo: React.FC<IProps> = (props): React.ReactElement => {
   );
 };
 // 示例 Logo widget
-const LogoSamplePlugin = (ctx: ILowCodePluginContext) => {
+const LogoSamplePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
       const { skeleton, config } = ctx;

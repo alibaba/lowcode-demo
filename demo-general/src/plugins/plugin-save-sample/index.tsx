@@ -1,4 +1,4 @@
-import { ILowCodePluginContext } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 import { Button } from '@alifd/next';
 import {
   saveSchema,
@@ -6,7 +6,7 @@ import {
 } from '../../services/mockService';
 
 // 保存功能示例
-const SaveSamplePlugin = (ctx: ILowCodePluginContext) => {
+const SaveSamplePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
       const { skeleton, hotkey, config } = ctx;
