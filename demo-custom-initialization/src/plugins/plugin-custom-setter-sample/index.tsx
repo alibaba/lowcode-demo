@@ -1,10 +1,10 @@
-import { ILowCodePluginContext } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 import TitleSetter from '@alilc/lowcode-setter-title';
 import BehaviorSetter from './setters/behavior-setter';
 import CustomSetter from './setters/custom-setter';
 
 // 保存功能示例
-const CustomSetterSamplePlugin = (ctx: ILowCodePluginContext) => {
+const CustomSetterSamplePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
       const { setters } = ctx;

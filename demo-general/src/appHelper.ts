@@ -1,4 +1,4 @@
-import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
+import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler';
 const appHelper = {
   requestHandlersMap: {
     fetch: createFetchHandler()

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ILowCodePluginContext } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 import { Select } from '@alifd/next';
 
 const Option = Select.Option;
@@ -27,7 +27,7 @@ const LocaleSelect: React.FC<IProps> = (props): React.ReactElement => {
   );
 };
 // 画布区域语言切换
-const SimulatorLocalePlugin = (ctx: ILowCodePluginContext) => {
+const SimulatorLocalePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
       const { project, skeleton } = ctx;

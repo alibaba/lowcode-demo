@@ -1,4 +1,4 @@
-import { ILowCodePluginContext } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 import { Button } from '@alifd/next';
 import { material } from '@alilc/lowcode-engine';
 import { Message } from '@alifd/next';
@@ -144,7 +144,7 @@ const loadIncrementalAssets = () => {
     ],
   });
 };
-const LoadIncrementalAssetsWidgetPlugin = (ctx: ILowCodePluginContext) => {
+const LoadIncrementalAssetsWidgetPlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
       const { skeleton } = ctx;

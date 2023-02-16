@@ -1,9 +1,9 @@
-import { ILowCodePluginContext, project } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 import ComponentsPane from '@alilc/lowcode-plugin-components-pane';
-const ComponentPanelPlugin = (ctx: ILowCodePluginContext) => {
+const ComponentPanelPlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
-      const { skeleton } = ctx;
+      const { skeleton, project } = ctx;
       // 注册组件面板
       const componentsPane = skeleton.add({
         area: 'leftArea',
