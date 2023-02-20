@@ -29,7 +29,7 @@
         "exportName": "BlockPicker",
         "version": "2.19.3"
       },
-    
+
       "configure": {
         "advanced": {
           "callbacks": {}
@@ -77,15 +77,15 @@
         "id": "@alilc/lowcode-materials"
       },
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.6/build/lowcode/meta.js",
-        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.6/build/lowcode/meta.design.js"
+        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js",
+        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.design.js"
       },
       "devMode": "procode",
       "npm": {
         "package": "@alilc/lowcode-materials"
       },
       "exportName": "AlilcLowcodeMaterialsMeta",
-      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.6/build/lowcode/meta.js"
+      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js"
     },
     {
       "reference": {
@@ -93,15 +93,15 @@
         "id": "@alifd/next"
       },
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.js",
-        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.design.js"
+        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js",
+        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.design.js"
       },
       "devMode": "procode",
       "npm": {
         "package": "@alifd/next"
       },
       "exportName": "AlifdNext",
-      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.js"
+      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js"
     },
     {
       "componentId": "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0",
