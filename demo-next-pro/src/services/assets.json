@@ -76,15 +76,15 @@
         "id": "@alilc/lowcode-materials"
       },
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/meta.js",
-        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/meta.design.js"
+        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js",
+        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.design.js"
       },
       "devMode": "procode",
       "npm": {
         "package": "@alilc/lowcode-materials"
       },
       "exportName": "AlilcLowcodeMaterialsMeta",
-      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.2/build/lowcode/meta.js"
+      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js"
     },
     {
       "reference": {
@@ -92,15 +92,15 @@
         "id": "@alifd/next"
       },
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.js",
-        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.design.js"
+        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js",
+        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.design.js"
       },
       "devMode": "procode",
       "npm": {
         "package": "@alifd/next"
       },
       "exportName": "AlifdNext",
-      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.4/build/lowcode/meta.js"
+      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js"
     },
     {
       "componentId": "LCC-6X91-SW86D1OP80P6HBSW73RL2-KSZSXBBL-2",
