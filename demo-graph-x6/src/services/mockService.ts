@@ -63,18 +63,6 @@ const setProjectSchemaToLocalStorage = (scenarioName: string) => {
   );
 }
 
-// const setPackgesToLocalStorage = async (scenarioName: string) => {
-//   if (!scenarioName) {
-//     console.error('scenarioName is required!');
-//     return;
-//   }
-//   const packages = await filterPackages(material.getAssets().packages);
-//   window.localStorage.setItem(
-//     getLSName(scenarioName, 'packages'),
-//     JSON.stringify(packages),
-//   );
-// }
-
 export const getPackagesFromLocalStorage = (scenarioName: string) => {
   if (!scenarioName) {
     console.error('scenarioName is required!');
