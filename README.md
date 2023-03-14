@@ -4,6 +4,16 @@ demo 是一个组合内核、setter、插件、物料的示范工程，因为未
 ## 如何使用
 目前包含多个独立 demo 工程目录，每个 demo 目录都是一个独立的工程，代表一个特定的 demo 场景，可以选择其一单独使用。
 
+[推荐]使用yarn
+```bash
+git clone git@github.com:alibaba/lowcode-demo.git
+cd lowcode-demo
+cd demo-general
+yarn
+yarn run start
+```
+
+使用npm
 ```bash
 git clone git@github.com:alibaba/lowcode-demo.git
 cd lowcode-demo
