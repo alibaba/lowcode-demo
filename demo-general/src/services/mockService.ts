@@ -1,11 +1,11 @@
 import { material, project } from '@alilc/lowcode-engine';
 import { filterPackages } from '@alilc/lowcode-plugin-inject'
 import { Message, Dialog } from '@alifd/next';
-import { ProjectSchema, TransformStage } from '@alilc/lowcode-types';
+import { IPublicTypeProjectSchema, IPublicEnumTransformStage } from '@alilc/lowcode-types';
 import DefaultPageSchema from './defaultPageSchema.json';
 import DefaultI18nSchema from './defaultI18nSchema.json';
 
-const generateProjectSchema = (pageSchema: any, i18nSchema: any): ProjectSchema => {
+const generateProjectSchema = (pageSchema: any, i18nSchema: any): IPublicTypeProjectSchema => {
   return {
     componentsTree: [pageSchema],
     componentsMap: material.componentsMap as any,
@@ -68,7 +68,7 @@ const setProjectSchemaToLocalStorage = (scenarioName: string) => {
   }
   window.localStorage.setItem(
     getLSName(scenarioName),
-    JSON.stringify(project.exportSchema(TransformStage.Save))
+    JSON.stringify(project.exportSchema(IPublicEnumTransformStage.Save))
   );
 }
 
@@ -92,7 +92,7 @@ export const getPackagesFromLocalStorage = (scenarioName: string) => {
   return JSON.parse(window.localStorage.getItem(getLSName(scenarioName, 'packages')) || '{}');
 }
 
-export const getProjectSchema = async (scenarioName: string = 'unknown') : Promise<ProjectSchema> => {
+export const getProjectSchema = async (scenarioName: string = 'unknown') : Promise<IPublicTypeProjectSchema> => {
   const pageSchema = await getPageSchema(scenarioName);
   return generateProjectSchema(pageSchema, DefaultI18nSchema);
 };
