@@ -6,7 +6,7 @@ import schema from './schema.json';
 
 export const saveSchema = async (scenarioName: string = 'unknown') => {
   setProjectSchemaToLocalStorage(scenarioName);
-  await setPackgesToLocalStorage(scenarioName);
+  await setPackagesToLocalStorage(scenarioName);
   Message.success('成功保存到本地');
 };
 
@@ -38,7 +38,7 @@ export const resetSchema = async (scenarioName: string = 'unknown') => {
   project.simulatorHost?.rerender();
 
   setProjectSchemaToLocalStorage(scenarioName);
-  await setPackgesToLocalStorage(scenarioName);
+  await setPackagesToLocalStorage(scenarioName);
   Message.success('成功重置页面');
 }
 
@@ -63,7 +63,7 @@ const setProjectSchemaToLocalStorage = (scenarioName: string) => {
   );
 }
 
-const setPackgesToLocalStorage = async (scenarioName: string) => {
+const setPackagesToLocalStorage = async (scenarioName: string) => {
   if (!scenarioName) {
     console.error('scenarioName is required!');
     return;
