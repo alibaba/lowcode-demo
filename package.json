@@ -1,6 +1,6 @@
 {
   "name": "@alilc/lowcode-demo",
-  "version": "1.1.24",
+  "version": "1.1.26",
   "description": "Low-Code Engine 低代码搭建引擎 Demo 项目",
   "repository": "git@github.com:alibaba/lowcode-demo.git",
   "license": "MIT",
@@ -37,6 +37,10 @@
     "@formily/core": "2.2.15",
     "@formily/react": "2.2.15",
     "@seada/antd-plugins": "^1.0.0-rc.27",
+    "@alilc/lce-graph-core": "^1.0.6",
+    "@alilc/lce-graph-tools": "^1.0.6",
+    "@alilc/lce-graph-x6-designer": "^1.0.6",
+    "@alilc/lce-graph-x6-stencil": "^1.0.6",
     "antd": "^4.21.4",
     "moment": "^2.29.3",
     "uuid": "^8.3.2"

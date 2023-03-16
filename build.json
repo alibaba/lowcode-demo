@@ -22,7 +22,9 @@
     "demo-node-extended-actions/preview" : "./demo-node-extended-actions/src/preview.tsx",
 
     "demo-lowcode-component/index": "./demo-lowcode-component/src/index.ts",
-    "demo-lowcode-component/preview": "./demo-lowcode-component/src/preview.tsx"
+    "demo-lowcode-component/preview": "./demo-lowcode-component/src/preview.tsx",
+
+    "demo-graph-x6/index": "./demo-graph-x6/src/index.ts"
   },
   "vendor": false,
   "devServer": {
