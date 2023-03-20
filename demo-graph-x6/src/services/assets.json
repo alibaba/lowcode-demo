@@ -2,20 +2,20 @@
   "packages": [
     {
       "package": "@alilc/lce-x6-items",
-      "version": "1.0.2",
+      "version": "1.0.7",
       "library": "AlilcLceX6Items",
       "urls": [
-        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.2/build/lowcode/render/default/view.js",
-        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.2/build/lowcode/render/default/view.css"
+        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/render/default/view.js",
+        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/render/default/view.css"
       ],
       "editUrls": [
-        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.2/build/lowcode/view.js",
-        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.2/build/lowcode/view.css"
+        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/view.js",
+        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/view.css"
       ],
       "advancedUrls": {
         "default": [
-          "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.2/build/lowcode/render/default/view.js",
-          "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.2/build/lowcode/render/default/view.css"
+          "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/render/default/view.js",
+          "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/render/default/view.css"
         ]
       },
       "advancedEditUrls": {}
@@ -26,15 +26,15 @@
       "exportName": "AlilcLceX6ItemsMeta",
       "npm": {
         "package": "@alilc/lce-x6-items",
-        "version": "1.0.2"
+        "version": "1.0.7"
       },
-      "url": "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.2/build/lowcode/meta.js",
+      "url": "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/meta.js",
       "urls": {
-        "default": "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.2/build/lowcode/meta.js"
+        "default": "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/meta.js"
       },
       "advancedUrls": {
         "default": [
-          "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.2/build/lowcode/meta.js"
+          "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/meta.js"
         ]
       }
     }

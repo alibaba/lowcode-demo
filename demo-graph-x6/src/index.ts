@@ -1,6 +1,6 @@
 import { plugins, init } from '@alilc/lowcode-engine';
 import PluginX6Designer from '@alilc/lce-graph-x6-designer';
-import PluginX6Stencil from '@alilc/lce-graph-x6-stencil';
+import PluginMaterialsPane from '@alilc/lce-graph-materials-pane';
 import PluginCore from '@alilc/lce-graph-core';
 import { RemoveItemPlugin, OperateButtonPlugin, UndoRedoPlugin, ZoomPlugin, logo } from '@alilc/lce-graph-tools';
 import PluginX6DesignerExtension from './plugins/x6-designer-extension';
@@ -15,7 +15,7 @@ import './global.scss';
     schema
   });
   await plugins.register(PluginX6Designer);
-  await plugins.register(PluginX6Stencil);
+  await plugins.register(PluginMaterialsPane);
   await plugins.register(PluginX6DesignerExtension);
   await plugins.register(logo);
   await plugins.register(RemoveItemPlugin);

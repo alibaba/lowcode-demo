@@ -16,10 +16,10 @@
   ],
   "config": {},
   "dependencies": {
-    "@alilc/lce-graph-core": "^1.0.6",
-    "@alilc/lce-graph-tools": "^1.0.6",
-    "@alilc/lce-graph-x6-designer": "^1.0.6",
-    "@alilc/lce-graph-x6-stencil": "^1.0.6"
+    "@alilc/lce-graph-core": "^1.0.10",
+    "@alilc/lce-graph-tools": "^1.0.10",
+    "@alilc/lce-graph-x6-designer": "^1.0.10",
+    "@alilc/lce-graph-materials-pane": "^1.0.10"
   },
   "devDependencies": {
     "@alib/build-scripts": "^0.1.18",

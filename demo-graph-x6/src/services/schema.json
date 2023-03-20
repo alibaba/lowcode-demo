@@ -6,7 +6,7 @@
   "children": [
     {
       "id": "node-start",
-      "componentName": "StartEvent",
+      "componentName": "StartEnd",
       "title": "开始节点",
       "props": {
         "name": "开始节点",
@@ -18,7 +18,7 @@
     },
     {
       "id": "node_ockn610kx9m",
-      "componentName": "CustomEvent",
+      "componentName": "SendEmail",
       "title": "发送邮件",
       "props": {
         "name": "发送邮件",
@@ -30,7 +30,7 @@
     },
     {
       "id": "node-end",
-      "componentName": "StartEvent",
+      "componentName": "StartEnd",
       "title": "结束节点",
       "props": {
         "name": "结束节点",
