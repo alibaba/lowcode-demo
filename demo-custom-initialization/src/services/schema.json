@@ -72,126 +72,9 @@
   "conditionGroup": "",
   "children": [
     {
-      "componentName": "NextPage",
-      "id": "node_ockzs2vw431",
+      "componentName": "FDPage",
+      "id": "node_oclfjqwpr91",
       "props": {
-        "headerDivider": true,
-        "minHeight": "100vh",
-        "presetNav": true,
-        "presetAside": true,
-        "footer": false,
-        "nav": false,
-        "aside": false,
-        "placeholderStyle": {
-          "gridRowEnd": "span 1",
-          "gridColumnEnd": "span 12"
-        },
-        "headerProps": {
-          "background": "surface"
-        },
-        "header": {
-          "type": "JSSlot",
-          "value": [
-            {
-              "componentName": "NextPageHeader",
-              "id": "node_ockzs2vw433",
-              "props": {},
-              "title": "页面头部",
-              "hidden": false,
-              "isLocked": false,
-              "condition": true,
-              "conditionGroup": "",
-              "children": [
-                {
-                  "componentName": "NextRowColContainer",
-                  "id": "node_ockzs2vw434",
-                  "props": {
-                    "rowGap": 20,
-                    "colGap": 20
-                  },
-                  "title": "行列容器",
-                  "hidden": false,
-                  "isLocked": false,
-                  "condition": true,
-                  "conditionGroup": "",
-                  "children": [
-                    {
-                      "componentName": "NextRow",
-                      "id": "node_ockzs2vw435",
-                      "props": {},
-                      "title": "行",
-                      "hidden": false,
-                      "isLocked": false,
-                      "condition": true,
-                      "conditionGroup": "",
-                      "children": [
-                        {
-                          "componentName": "NextCol",
-                          "id": "node_ockzs2vw436",
-                          "props": {
-                            "colSpan": 1
-                          },
-                          "title": "列",
-                          "hidden": false,
-                          "isLocked": false,
-                          "condition": true,
-                          "conditionGroup": "",
-                          "children": [
-                            {
-                              "componentName": "NextP",
-                              "id": "node_ockzvfoetv17",
-                              "props": {
-                                "wrap": false,
-                                "type": "body2",
-                                "verAlign": "middle",
-                                "textSpacing": true,
-                                "align": "left"
-                              },
-                              "docId": "dockzvfoetv",
-                              "title": "段落",
-                              "hidden": false,
-                              "isLocked": false,
-                              "condition": true,
-                              "conditionGroup": "",
-                              "children": [
-                                {
-                                  "componentName": "NextText",
-                                  "id": "node_ockzvfoetv18",
-                                  "props": {
-                                    "type": "h5",
-                                    "children": {
-                                      "type": "JSExpression",
-                                      "value": "this.state.info?.info",
-                                      "mock": "标题标题"
-                                    },
-                                    "mark": false,
-                                    "code": false,
-                                    "delete": false,
-                                    "underline": false,
-                                    "strong": false
-                                  },
-                                  "docId": "dockzvfoetv",
-                                  "hidden": false,
-                                  "title": "",
-                                  "isLocked": false,
-                                  "condition": true,
-                                  "conditionGroup": ""
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "title": "header"
-        },
-        "isTab": false,
-        "contentAlignCenter": false,
         "contentProps": {
           "style": {
             "background": "rgba(255,255,255,0)"
@@ -205,24 +88,13 @@
       "conditionGroup": "",
       "children": [
         {
-          "componentName": "NextBlock",
-          "id": "node_ockzs2vw437",
+          "componentName": "FDSection",
+          "id": "node_oclfjqwpr92",
           "props": {
-            "placeholderStyle": {
-              "height": "100%"
-            },
-            "noPadding": false,
-            "noBorder": false,
-            "title": "区域标题",
-            "rowGap": 20,
-            "colGap": 20,
-            "background": "surface",
-            "layoutmode": "O",
-            "strict": true,
-            "colSpan": 12,
-            "rowSpan": 1,
-            "mode": "transparent",
-            "childTotalColumns": 12
+            "style": {
+              "backgroundColor": "rgba(255,255,255,1)",
+              "minHeight": ""
+            }
           },
           "title": "区域",
           "hidden": false,
@@ -231,59 +103,114 @@
           "conditionGroup": "",
           "children": [
             {
-              "componentName": "NextBlockCell",
-              "id": "node_ockzs2vw438",
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr93",
               "props": {
-                "colSpan": 12,
-                "rowSpan": 1,
-                "mode": "procard",
-                "isAutoContainer": true,
-                "title": "区块标题"
+                "mode": "transparent",
+                "span": 12,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
               },
+              "title": "区块",
               "hidden": false,
-              "title": "",
               "isLocked": false,
               "condition": true,
               "conditionGroup": "",
               "children": [
                 {
-                  "componentName": "NextRowColContainer",
-                  "id": "node_ockzs2vw439",
-                  "props": {
-                    "rowGap": 20,
-                    "colGap": 20
-                  },
-                  "title": "行列容器",
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr94",
+                  "props": {},
+                  "title": "容器",
                   "hidden": false,
                   "isLocked": false,
                   "condition": true,
-                  "conditionGroup": "",
-                  "children": [
-                    {
-                      "componentName": "NextRow",
-                      "id": "node_ockzs2vw43a",
-                      "props": {},
-                      "title": "行",
-                      "hidden": false,
-                      "isLocked": false,
-                      "condition": true,
-                      "conditionGroup": "",
-                      "children": [
-                        {
-                          "componentName": "NextCol",
-                          "id": "node_ockzs2vw43b",
-                          "props": {
-                            "colSpan": 1
-                          },
-                          "title": "列",
-                          "hidden": false,
-                          "isLocked": false,
-                          "condition": true,
-                          "conditionGroup": ""
-                        }
-                      ]
-                    }
-                  ]
+                  "conditionGroup": ""
+                }
+              ]
+            },
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr95",
+              "props": {
+                "mode": "transparent",
+                "span": 6,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr96",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            },
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr97",
+              "props": {
+                "mode": "transparent",
+                "span": 6,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr98",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            },
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr99",
+              "props": {
+                "mode": "transparent",
+                "span": 12,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr9a",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
                 }
               ]
             }
