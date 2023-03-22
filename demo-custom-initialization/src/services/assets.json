@@ -53,12 +53,12 @@
       "version": "2.0.7",
       "library": "AlifdLayout",
       "urls": [
-        "https://g.alipay.com/@alifd/layout@2.0.7/dist/AlifdLayout.js",
-        "https://g.alipay.com/@alifd/layout@2.0.7/dist/AlifdLayout.css"
+        "https://alifd.alicdn.com/npm/@alifd/layout@2.0.7/dist/AlifdLayout.js",
+        "https://alifd.alicdn.com/npm/@alifd/layout@2.0.7/dist/AlifdLayout.css"
       ],
       "editUrls": [
-        "https://g.alipay.com/@alifd/layout@2.0.7/build/lowcode/view.js",
-        "https://g.alipay.com/@alifd/layout@2.0.7/build/lowcode/view.css"
+        "https://alifd.alicdn.com/npm/@alifd/layout@2.0.7/build/lowcode/view.js",
+        "https://alifd.alicdn.com/npm/@alifd/layout@2.0.7/build/lowcode/view.css"
       ]
     },
     {
@@ -93,9 +93,9 @@
         "package": "@alifd/layout",
         "version": "2.0.7"
       },
-      "url": "https://g.alipay.com/@alifd/layout@2.0.7/build/lowcode/meta.js",
+      "url": "https://alifd.alicdn.com/npm/@alifd/layout@2.0.7/build/lowcode/meta.js",
       "urls": {
-        "default": "https://g.alipay.com/@alifd/layout@2.0.7/build/lowcode/meta.js"
+        "default": "https://alifd.alicdn.com/npm/@alifd/layout@2.0.7/build/lowcode/meta.js"
       }
     },
     {

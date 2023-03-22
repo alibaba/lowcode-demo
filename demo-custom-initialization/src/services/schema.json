@@ -70,5 +70,153 @@
   "isLocked": false,
   "condition": true,
   "conditionGroup": "",
-  "children": []
+  "children": [
+    {
+      "componentName": "FDPage",
+      "id": "node_oclfjqwpr91",
+      "props": {
+        "contentProps": {
+          "style": {
+            "background": "rgba(255,255,255,0)"
+          }
+        }
+      },
+      "title": "页面",
+      "hidden": false,
+      "isLocked": false,
+      "condition": true,
+      "conditionGroup": "",
+      "children": [
+        {
+          "componentName": "FDSection",
+          "id": "node_oclfjqwpr92",
+          "props": {
+            "style": {
+              "backgroundColor": "rgba(255,255,255,1)",
+              "minHeight": ""
+            }
+          },
+          "title": "区域",
+          "hidden": false,
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr93",
+              "props": {
+                "mode": "transparent",
+                "span": 12,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr94",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            },
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr95",
+              "props": {
+                "mode": "transparent",
+                "span": 6,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr96",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            },
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr97",
+              "props": {
+                "mode": "transparent",
+                "span": 6,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr98",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            },
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr99",
+              "props": {
+                "mode": "transparent",
+                "span": 12,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr9a",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
