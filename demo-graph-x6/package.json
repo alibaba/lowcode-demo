@@ -1,0 +1,40 @@
+{
+  "name": "@alilc/lowcode-demo-graph-x6",
+  "version": "1.0.28",
+  "description": "Low-Code Engine 低代码搭建引擎 Demo 项目 - X6 画布",
+  "repository": "git@github.com:alibaba/lowcode-demo.git",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "build-scripts start --disable-reload --port 5556",
+    "build": "build-scripts build",
+    "prepublishOnly": "npm run build",
+    "pub": "node ./scripts/watchdog.js && npm pub"
+  },
+  "files": [
+    "build"
+  ],
+  "config": {},
+  "dependencies": {
+    "@alilc/lce-graph-core": "^1.0.10",
+    "@alilc/lce-graph-tools": "^1.0.10",
+    "@alilc/lce-graph-x6-designer": "^1.0.10",
+    "@alilc/lce-graph-materials-pane": "^1.0.10"
+  },
+  "devDependencies": {
+    "@alib/build-scripts": "^0.1.18",
+    "@alilc/lowcode-engine": "^1.1.2",
+    "@alilc/lowcode-engine-ext": "^1.0.0",
+    "@alilc/lowcode-types": "^1.1.1",
+    "@types/events": "^3.0.0",
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.2",
+    "@types/streamsaver": "^2.0.0",
+    "@types/uuid": "^8.3.4",
+    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "build-plugin-react-app": "^1.1.2",
+    "fs-extra": "^10.0.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0"
+  }
+}

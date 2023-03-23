@@ -1,0 +1,472 @@
+{
+  "components": [
+    {
+      "reference": {
+        "package": "react-color",
+        "destructuring": true,
+        "subName": "",
+        "main": "lib/index.js",
+        "exportName": "BlockPicker",
+        "id": "react-color",
+        "version": "2.19.3"
+      },
+      "componentId": "2diq52i9ojh0",
+      "devMode": "procode",
+      "snippets": [
+        {
+          "schema": {
+            "componentName": "BlockPicker",
+            "props": {}
+          },
+          "title": "BlockPicker"
+        }
+      ],
+      "npm": {
+        "package": "react-color",
+        "destructuring": true,
+        "subName": "",
+        "main": "lib/index.js",
+        "exportName": "BlockPicker",
+        "version": "2.19.3"
+      },
+
+      "configure": {
+        "advanced": {
+          "callbacks": {}
+        },
+        "component": {
+          "isContainer": false,
+          "isModal": false
+        },
+        "supports": {
+          "style": false
+        },
+        "props": [
+          {
+            "important": false,
+            "name": "width",
+            "type": "field",
+            "title": "宽度",
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": [
+                  {
+                    "componentName": "NumberSetter",
+                    "props": {
+                      "placeholder": "请输入"
+                    }
+                  },
+                  "VariableSetter"
+                ]
+              }
+            },
+            "extraProps": {
+              "display": "inline"
+            }
+          }
+        ]
+      },
+      "componentName": "BlockPicker",
+      "title": "BlockPicker",
+      "category": "其他"
+    },
+    {
+      "reference": {
+        "package": "@alilc/lowcode-materials",
+        "id": "@alilc/lowcode-materials"
+      },
+      "urls": {
+        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js",
+        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.design.js"
+      },
+      "devMode": "procode",
+      "npm": {
+        "package": "@alilc/lowcode-materials"
+      },
+      "exportName": "AlilcLowcodeMaterialsMeta",
+      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js"
+    },
+    {
+      "reference": {
+        "package": "@alifd/next",
+        "id": "@alifd/next"
+      },
+      "urls": {
+        "default": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js",
+        "design": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.design.js"
+      },
+      "devMode": "procode",
+      "npm": {
+        "package": "@alifd/next"
+      },
+      "exportName": "AlifdNext",
+      "url": "https://alifd.alicdn.com/npm/@alilc/lowcode-materials@1.0.7/build/lowcode/meta.js"
+    },
+    {
+      "componentId": "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0",
+      "icon": "",
+      "category": "低代码组件",
+      "configure": {
+        "advanced": {
+          "initials": [
+            {
+              "initial": {
+                "type": "JSFunction",
+                "value": "(node) => {\n                                    return `${node.componentName.charAt(0).toLowerCase() + node.componentName.substr(1)}_${Math.random()\n                                        .toString(36)\n                                        .substring(6)}`;\n                                }"
+              },
+              "name": "fieldId"
+            }
+          ],
+          "callbacks": {}
+        },
+        "component": {
+          "isContainer": false,
+          "rootSelector": "",
+          "isModal": false
+        },
+        "props": [
+          {
+            "name": "titleText",
+            "type": "field",
+            "title": {
+              "label": "标题内容"
+            },
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": [
+                  {
+                    "componentName": "StringSetter",
+                    "initialValue": "我是标题",
+                    "props": {}
+                  },
+                  "VariableSetter"
+                ]
+              }
+            },
+            "extraProps": {
+              "display": "inline"
+            }
+          },
+          {
+            "name": "fieldId",
+            "type": "field",
+            "title": "唯一标识",
+            "setter": {
+              "componentName": "StringSetter",
+              "props": {}
+            },
+            "extraProps": {
+              "display": "block"
+            }
+          },
+          {
+            "display": "accordion",
+            "name": "__style__",
+            "title": "样式设置",
+            "setter": "StyleSetter"
+          }
+        ]
+      },
+      "title": "LCC3",
+      "tags": "",
+      "reference": {
+        "destructuring": false,
+        "id": "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0",
+        "version": "0.1.0"
+      },
+      "devMode": "lowcode",
+      "snippets": [
+        {
+          "schema": {
+            "componentName": "LccLcofqh6f",
+            "props": {
+              "titleText": "我是标题"
+            }
+          },
+          "title": "LCC3"
+        }
+      ],
+      "docUrl": "",
+      "componentName": "LccLcofqh6f"
+    }
+  ],
+  "plugins": [],
+  "extConfig": {
+    "visionPlugins": [],
+    "vcComponents": [],
+    "runtimeUtils": [],
+    "lowCodeComponentsConfig": {
+      "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0": {
+        "configId": 53
+      }
+    }
+  },
+  "setters": [],
+  "sort": {
+    "categoryList": [],
+    "groupList": []
+  },
+  "packages": [
+    {
+      "external": true,
+      "library": "AliLowCodeEngine",
+      "package": "@ali/lowcode-engine",
+      "id": "@ali/lowcode-engine"
+    },
+    {
+      "external": true,
+      "library": "Babel",
+      "package": "babel-standalone",
+      "id": "babel-standalone"
+    },
+    {
+      "urls": [
+        "https://g.alicdn.com/platform/c/lodash/4.6.1/lodash.min.js"
+      ],
+      "external": true,
+      "library": "_",
+      "package": "lodash",
+      "id": "lodash"
+    },
+    {
+      "urls": [
+        "https://g.alicdn.com/mylib/moment/2.24.0/min/moment.min.js"
+      ],
+      "external": true,
+      "library": "moment",
+      "package": "moment",
+      "id": "moment"
+    },
+    {
+      "external": true,
+      "library": "PropTypes",
+      "package": "prop-types",
+      "id": "prop-types"
+    },
+    {
+      "external": true,
+      "library": "React",
+      "package": "react",
+      "id": "react"
+    },
+    {
+      "external": true,
+      "library": "ReactDOM",
+      "package": "react-dom",
+      "id": "react-dom"
+    },
+    {
+      "external": true,
+      "library": "ReactRouter",
+      "package": "react-router",
+      "id": "react-router"
+    },
+    {
+      "external": true,
+      "library": "ReactRouterDOM",
+      "package": "react-router-dom",
+      "id": "react-router-dom"
+    },
+    {
+      "urls": [
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.85b0ad9.js"
+      ],
+      "library": "ReactColor",
+      "package": "react-color",
+      "id": "react-color",
+      "advancedUrls": {
+        "default": [
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/react-color/2.19.3/main.85b0ad9.js"
+        ]
+      },
+      "version": "2.19.3"
+    },
+    {
+      "urls": [
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.e953b84.js"
+      ],
+      "library": "AlilcLowcodeMaterials",
+      "package": "@alilc/lowcode-materials",
+      "id": "@alilc/lowcode-materials",
+      "advancedUrls": {
+        "default": [
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alilc/lowcode-materials/1.0.6/theme.7c897c2.css",
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alilc/lowcode-materials/1.0.6/main.e953b84.js"
+        ]
+      },
+      "version": "1.0.6"
+    },
+    {
+      "urls": [
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alifd/next/1.24.18/theme.7c897c2.css",
+        "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.059bccd.js"
+      ],
+      "library": "Next",
+      "package": "@alifd/next",
+      "id": "@alifd/next",
+      "advancedUrls": {
+        "default": [
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alife/theme-254/1.29.5/@alifd/next/1.24.18/theme.7c897c2.css",
+          "https://g.alicdn.com/legao-comp/web_bundle_0724/@alifd/next/1.24.18/main.059bccd.js"
+        ]
+      },
+      "version": "1.24.18"
+    },
+    {
+      "schema": {
+        "css": ".text_k8e4nalo {\n  font-size: 14px;\n  color: #666;\n}\n\n.div_k8e4nalp {\n  padding: 12px;\n  background: #f2f2f2;\n  border: 1px solid #ddd;\n}",
+        "methods": {
+          "onClick": {
+            "source": "function onClick() {\n  this.setState({\n    hello: \"The lowcode world is so magic\"\n  });\n}",
+            "type": "JSFunction",
+            "value": "function onClick() {\n  this.setState({\n    hello: \"The lowcode world is so magic\"\n  });\n}"
+          }
+        },
+        "defaultProps": {
+          "titleText": "我是标题"
+        },
+        "loopArgs": [
+          "item",
+          "index"
+        ],
+        "title": "",
+        "props": {
+          "style": {
+            "mock": {},
+            "type": "JSExpression",
+            "value": "this.props.style"
+          },
+          "className": "component_k8e4naln",
+          "cls": {
+            "mock": {},
+            "type": "JSExpression",
+            "value": "this.props.className"
+          },
+          "fieldId": "symbol_k8bnubw4"
+        },
+        "lifeCycles": {
+          "componentDidUpdate": {
+            "source": "function componentDidUpdate() {\n  console.log('componentDidUpdate');\n}",
+            "type": "JSFunction",
+            "value": "function componentDidUpdate() {\n  console.log('componentDidUpdate');\n}"
+          },
+          "componentWillUnmount": {
+            "source": "function componentWillUnmount() {\n  console.log('componentWillUnmount');\n}",
+            "type": "JSFunction",
+            "value": "function componentWillUnmount() {\n  console.log('componentWillUnmount');\n}"
+          },
+          "componentDidCatch": {
+            "source": "function componentDidCatch() {\n  console.log('componentDidCatch');\n}",
+            "type": "JSFunction",
+            "value": "function componentDidCatch() {\n  console.log('componentDidCatch');\n}"
+          },
+          "componentDidMount": {
+            "source": "function componentDidMount() {\n  console.log('componentDidMount');\n}",
+            "type": "JSFunction",
+            "value": "function componentDidMount() {\n  console.log('componentDidMount');\n}"
+          }
+        },
+        "condition": true,
+        "children": [
+          {
+            "condition": true,
+            "children": [
+              {
+                "condition": true,
+                "id": "node_ocl9cku8455",
+                "componentName": "NextText",
+                "title": "标题",
+                "props": {
+                  "strong": false,
+                  "code": false,
+                  "children": {
+                    "mock": "欢迎使用低代码组件",
+                    "type": "JSExpression",
+                    "value": "this.props.titleText"
+                  },
+                  "underline": false,
+                  "style": {
+                    "marginTop": "60px"
+                  },
+                  "type": "h4",
+                  "delete": false,
+                  "mark": false
+                }
+              },
+              {
+                "condition": true,
+                "id": "node_ocl9mio96k2",
+                "componentName": "NextText",
+                "title": "正文",
+                "props": {
+                  "strong": false,
+                  "code": false,
+                  "children": "物料研发新模式。通过低代码的形式生产组件，极低上手门槛，提供丰富的原子组件用于组合，完善的调试预览和组件生命周期控制。生产的组件既可以在低代码引擎项目中使用，也可以出码后在普通源码项目中使用。",
+                  "underline": false,
+                  "style": {
+                    "marginTop": "12px"
+                  },
+                  "type": "body1",
+                  "delete": false,
+                  "mark": false
+                }
+              }
+            ],
+            "id": "node_ocl9cku8453",
+            "componentName": "Box",
+            "title": "Box",
+            "props": {
+              "spacing": 0,
+              "justify": "center",
+              "style": {
+                "width": ""
+              },
+              "align": "center",
+              "direction": "column"
+            }
+          },
+          {
+            "condition": true,
+            "id": "node_oclcoi4jah2",
+            "componentName": "Calendar",
+            "title": "卡片型",
+            "props": {
+              "shape": "card"
+            }
+          }
+        ],
+        "propTypes": [
+          {
+            "defaultValue": "我是标题",
+            "display": "inline",
+            "name": "titleText",
+            "__sid": "item_l9fexhbc",
+            "setterProps": {},
+            "type": "string",
+            "title": "标题内容",
+            "setter": "StringSetter"
+          }
+        ],
+        "id": "node_k8bnubvz",
+        "state": {
+          "hello": {
+            "type": "JSExpression",
+            "value": "\"world\""
+          }
+        },
+        "componentName": "Component",
+        "dataSource": {
+          "list": [],
+          "sync": true
+        }
+      },
+      "id": "LCC-6B91-AE87JJVTDSQF26LK508C3-9EOQFOCL-0",
+      "type": "lowcode",
+      "version": "0.1.0"
+    }
+  ],
+  "version": "1.1.0"
+}

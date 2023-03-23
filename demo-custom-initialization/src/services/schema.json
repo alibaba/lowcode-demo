@@ -1,0 +1,222 @@
+{
+  "componentName": "Page",
+  "id": "node_dockcviv8fo1",
+  "props": {
+    "ref": "outerView",
+    "style": {
+      "height": "100%"
+    }
+  },
+  "fileName": "/",
+  "dataSource": {
+    "list": [
+      {
+        "type": "fetch",
+        "isInit": true,
+        "options": {
+          "params": {},
+          "method": "GET",
+          "isCors": true,
+          "timeout": 5000,
+          "headers": {},
+          "uri": "mock/info.json"
+        },
+        "id": "info",
+        "shouldFetch": {
+          "type": "JSFunction",
+          "value": "function() { \n  console.log('should fetch.....');\n  return true; \n}"
+        }
+      }
+    ]
+  },
+  "state": {
+    "text": {
+      "type": "JSExpression",
+      "value": "\"outer\""
+    },
+    "isShowDialog": {
+      "type": "JSExpression",
+      "value": "false"
+    }
+  },
+  "css": "body {\n  font-size: 12px;\n}\n\n.button {\n  width: 100px;\n  color: #ff00ff\n}",
+  "lifeCycles": {
+    "componentDidMount": {
+      "type": "JSFunction",
+      "value": "function componentDidMount() {\n  console.log('did mount');\n}"
+    },
+    "componentWillUnmount": {
+      "type": "JSFunction",
+      "value": "function componentWillUnmount() {\n  console.log('will unmount');\n}"
+    }
+  },
+  "methods": {
+    "testFunc": {
+      "type": "JSFunction",
+      "value": "function testFunc() {\n  console.log('test func');\n}"
+    },
+    "onClick": {
+      "type": "JSFunction",
+      "value": "function onClick() {\n  this.setState({\n    isShowDialog: true\n  });\n}"
+    },
+    "closeDialog": {
+      "type": "JSFunction",
+      "value": "function closeDialog() {\n  this.setState({\n    isShowDialog: false\n  });\n}"
+    }
+  },
+  "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    })\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    })\n  }\n}",
+  "hidden": false,
+  "title": "",
+  "isLocked": false,
+  "condition": true,
+  "conditionGroup": "",
+  "children": [
+    {
+      "componentName": "FDPage",
+      "id": "node_oclfjqwpr91",
+      "props": {
+        "contentProps": {
+          "style": {
+            "background": "rgba(255,255,255,0)"
+          }
+        }
+      },
+      "title": "页面",
+      "hidden": false,
+      "isLocked": false,
+      "condition": true,
+      "conditionGroup": "",
+      "children": [
+        {
+          "componentName": "FDSection",
+          "id": "node_oclfjqwpr92",
+          "props": {
+            "style": {
+              "backgroundColor": "rgba(255,255,255,1)",
+              "minHeight": ""
+            }
+          },
+          "title": "区域",
+          "hidden": false,
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr93",
+              "props": {
+                "mode": "transparent",
+                "span": 12,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr94",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            },
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr95",
+              "props": {
+                "mode": "transparent",
+                "span": 6,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr96",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            },
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr97",
+              "props": {
+                "mode": "transparent",
+                "span": 6,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr98",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            },
+            {
+              "componentName": "FDBlock",
+              "id": "node_oclfjqwpr99",
+              "props": {
+                "mode": "transparent",
+                "span": 12,
+                "style": {
+                  "backgroundColor": "rgba(255,255,255,1)"
+                }
+              },
+              "title": "区块",
+              "hidden": false,
+              "isLocked": false,
+              "condition": true,
+              "conditionGroup": "",
+              "children": [
+                {
+                  "componentName": "FDCell",
+                  "id": "node_oclfjqwpr9a",
+                  "props": {},
+                  "title": "容器",
+                  "hidden": false,
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "componentName": "Page",
+  "id": "node_dockcviv8fo1",
+  "fileName": "",
+  "props": {},
+  "children": [
+    {
+      "id": "node-start",
+      "componentName": "StartEnd",
+      "title": "开始节点",
+      "props": {
+        "name": "开始节点",
+        "position": {
+          "x": 82,
+          "y": 71
+        }
+      }
+    },
+    {
+      "id": "node_ockn610kx9m",
+      "componentName": "SendEmail",
+      "title": "发送邮件",
+      "props": {
+        "name": "发送邮件",
+        "position": {
+          "x": 84,
+          "y": 263
+        }
+      }
+    },
+    {
+      "id": "node-end",
+      "componentName": "StartEnd",
+      "title": "结束节点",
+      "props": {
+        "name": "结束节点",
+        "position": {
+          "x": 82,
+          "y": 455
+        }
+      }
+    },
+    {
+      "id": "node_ockn610kx9b",
+      "componentName": "Line",
+      "title": "线",
+      "props": {
+        "name": "线",
+        "source": "node-start",
+        "target": "node_ockn610kx9m",
+        "sourcePortId": "b",
+        "targetPortId": "t"
+      }
+    },
+    {
+      "id": "node_ockn610kx9a",
+      "componentName": "Line",
+      "title": "线",
+      "props": {
+        "name": "线",
+        "source": "node_ockn610kx9m",
+        "target": "node-end",
+        "sourcePortId": "b",
+        "targetPortId": "t"
+      }
+    }
+  ]
+}

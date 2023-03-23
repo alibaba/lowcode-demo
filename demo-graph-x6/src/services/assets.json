@@ -1,0 +1,67 @@
+{
+  "packages": [
+    {
+      "package": "@alilc/lce-x6-items",
+      "version": "1.0.7",
+      "library": "AlilcLceX6Items",
+      "urls": [
+        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/render/default/view.js",
+        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/render/default/view.css"
+      ],
+      "editUrls": [
+        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/view.js",
+        "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/view.css"
+      ],
+      "advancedUrls": {
+        "default": [
+          "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/render/default/view.js",
+          "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/render/default/view.css"
+        ]
+      },
+      "advancedEditUrls": {}
+    }
+  ],
+  "components": [
+    {
+      "exportName": "AlilcLceX6ItemsMeta",
+      "npm": {
+        "package": "@alilc/lce-x6-items",
+        "version": "1.0.7"
+      },
+      "url": "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/meta.js",
+      "urls": {
+        "default": "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/meta.js"
+      },
+      "advancedUrls": {
+        "default": [
+          "https://uipaas-assets.com/prod/npm/@alilc/lce-x6-items/1.0.7/build/lowcode/meta.js"
+        ]
+      }
+    }
+  ],
+  "sort": {
+    "groupList": [
+      "精选组件",
+      "原子组件"
+    ],
+    "categoryList": [
+      "基础元素",
+      "布局容器类",
+      "表格类",
+      "表单详情类",
+      "帮助类",
+      "对话框类",
+      "业务类",
+      "通用",
+      "引导",
+      "信息输入",
+      "信息展示",
+      "信息反馈"
+    ]
+  },
+  "groupList": [
+    "精选组件",
+    "原子组件"
+  ],
+  "ignoreComponents": {}
+}
