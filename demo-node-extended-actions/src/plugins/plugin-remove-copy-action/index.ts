@@ -7,8 +7,8 @@ export interface IProps {
 const RemoveCopyActionPlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
-      const { removeBuiltinComponentAction } = ctx.material;
-      removeBuiltinComponentAction('copy');
+      const { material } = ctx;
+      material.removeBuiltinComponentAction('copy');
     },
   };
 }

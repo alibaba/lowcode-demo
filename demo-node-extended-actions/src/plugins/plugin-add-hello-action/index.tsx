@@ -9,8 +9,8 @@ export interface IProps {
 const AddHelloActionPlugin = (ctx: IPublicModelPluginContext) => {
   return {
     async init() {
-      const { addBuiltinComponentAction } = ctx.material;
-      addBuiltinComponentAction({
+      const { material } = ctx;
+      material.addBuiltinComponentAction({
         name: 'hello',
         content: {
           icon: <Icon type="atm" size="small" />,
