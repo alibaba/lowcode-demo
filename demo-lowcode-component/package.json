@@ -19,7 +19,7 @@
     "@alilc/lowcode-datasource-fetch-handler": "^1.0.1",
     "@alilc/lowcode-plugin-code-editor": "^1.0.3",
     "@alilc/lowcode-plugin-code-generator": "^1.0.4",
-    "@alilc/lowcode-plugin-components-pane": "^1.0.4",
+    "@alilc/lowcode-plugin-components-pane": "^2.0.0",
     "@alilc/lowcode-plugin-datasource-pane": "^1.0.9",
     "@alilc/lowcode-plugin-inject": "^1.2.1",
     "@alilc/lowcode-plugin-manual": "^1.0.4",

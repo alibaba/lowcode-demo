@@ -9,7 +9,7 @@ import CodeEditorPlugin from "@alilc/lowcode-plugin-code-editor";
 import ManualPlugin from "@alilc/lowcode-plugin-manual";
 import InjectPlugin from '@alilc/lowcode-plugin-inject';
 import SimulatorResizerPlugin from '@alilc/lowcode-plugin-simulator-select';
-import ComponentPanelPlugin from './plugins/plugin-component-panel';
+import ComponentPanelPlugin from '@alilc/lowcode-plugin-components-pane';
 import DefaultSettersRegistryPlugin from './plugins/plugin-default-setters-registry';
 import SaveSamplePlugin from './plugins/plugin-save-sample';
 import PreviewSamplePlugin from './plugins/plugin-preview-sample';
