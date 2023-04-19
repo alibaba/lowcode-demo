@@ -1,7 +1,7 @@
 import { material, project } from '@alilc/lowcode-engine';
 import { filterPackages } from '@alilc/lowcode-plugin-inject'
 import { Message, Dialog } from '@alifd/next';
-import { TransformStage } from '@alilc/lowcode-types';
+import { IPublicEnumTransformStage } from '@alilc/lowcode-types';
 import schema from './schema.json';
 
 export const saveSchema = async (scenarioName: string = 'unknown') => {
@@ -59,7 +59,7 @@ const setProjectSchemaToLocalStorage = (scenarioName: string) => {
   }
   window.localStorage.setItem(
     getLSName(scenarioName),
-    JSON.stringify(project.exportSchema(TransformStage.Save))
+    JSON.stringify(project.exportSchema(IPublicEnumTransformStage.Save))
   );
 }
 
