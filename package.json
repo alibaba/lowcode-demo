@@ -1,6 +1,6 @@
 {
   "name": "@alilc/lowcode-demo",
-  "version": "1.1.52",
+  "version": "1.1.53",
   "description": "Low-Code Engine 低代码搭建引擎 Demo 项目",
   "repository": "git@github.com:alibaba/lowcode-demo.git",
   "license": "MIT",
@@ -63,6 +63,11 @@
     "tsconfig-paths-webpack-plugin": "^3.2.0"
   },
   "resolutions": {
-    "@babel/core": "7.20.12"
+    "@babel/core": "7.20.12",
+    "@formily/antd": "2.2.15",
+    "@formily/core": "2.2.15",
+    "@formily/react": "2.2.15",
+    "@formily/next": "2.2.15",
+    "@monaco-editor/react": "4.4.6"
   }
 }
