@@ -61,6 +61,7 @@
     "@formily/core": "2.2.15",
     "@formily/react": "2.2.15",
     "@formily/next": "2.2.15",
-    "@babel/core": "7.20.12"
+    "@babel/core": "7.20.12",
+    "@monaco-editor/react": "4.4.6"
   }
 }
