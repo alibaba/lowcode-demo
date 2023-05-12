@@ -25,8 +25,8 @@
       "package": "antd",
       "version": "4.19.5",
       "urls": [
-        "//g.alicdn.com/code/lib/antd/4.19.4/antd.min.js",
-        "//g.alicdn.com/code/lib/antd/4.19.4/antd.min.css"
+        "//g.alicdn.com/code/lib/antd/4.23.0/antd.min.js",
+        "//g.alicdn.com/code/lib/antd/4.23.0/antd.min.css"
       ],
       "library": "antd"
     },
@@ -42,15 +42,15 @@
     },
     {
       "package": "@alilc/antd-lowcode-materials",
-      "version": "1.1.1",
+      "version": "1.2.1",
       "library": "AntdLowcode",
       "urls": [
-        "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.1.1/build/lowcode/view.js",
-        "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.1.1/build/lowcode/view.css"
+        "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.2.1/build/lowcode/view.js",
+        "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.2.1/build/lowcode/view.css"
       ],
       "editUrls": [
-        "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.1.1/build/lowcode/view.js",
-        "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.1.1/build/lowcode/view.css"
+        "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.2.1/build/lowcode/view.js",
+        "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.2.1/build/lowcode/view.css"
       ]
     }
   ],
@@ -59,11 +59,11 @@
       "exportName": "AlilcAntdLowcodeMaterialsMeta",
       "npm": {
         "package": "@alilc/antd-lowcode-materials",
-        "version": "1.1.1"
+        "version": "1.2.1"
       },
-      "url": "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.1.1/build/lowcode/meta.js",
+      "url": "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.2.1/build/lowcode/meta.js",
       "urls": {
-        "default": "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.1.1/build/lowcode/meta.js"
+        "default": "https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.2.1/build/lowcode/meta.js"
       }
     }
   ],
