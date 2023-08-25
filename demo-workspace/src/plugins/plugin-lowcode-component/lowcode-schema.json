@@ -1,0 +1,342 @@
+{
+  "version": "1.0.0",
+  "componentsMap": [
+  ],
+  "componentsTree": [
+    {
+      "componentName": "Component",
+      "id": "node_dockcviv8fo1",
+      "props": {
+        "ref": "outerView",
+        "style": {
+          "height": "100%"
+        }
+      },
+      "docId": "doclaqkk3b9",
+      "fileName": "/",
+      "dataSource": {
+        "list": [
+          {
+            "type": "fetch",
+            "isInit": true,
+            "options": {
+              "params": {},
+              "method": "GET",
+              "isCors": true,
+              "timeout": 5000,
+              "headers": {},
+              "uri": "mock/info.json"
+            },
+            "id": "info",
+            "shouldFetch": {
+              "type": "JSFunction",
+              "value": "function() { \n  console.log('should fetch.....');\n  return true; \n}"
+            }
+          }
+        ]
+      },
+      "state": {
+        "text": {
+          "type": "JSExpression",
+          "value": "\"outer\""
+        },
+        "isShowDialog": {
+          "type": "JSExpression",
+          "value": "false"
+        }
+      },
+      "css": "body {\n  font-size: 12px;\n}\n\n.button {\n  width: 100px;\n  color: #ff00ff\n}",
+      "lifeCycles": {
+        "componentDidMount": {
+          "type": "JSFunction",
+          "value": "function componentDidMount() {\n  console.log('did mount');\n}"
+        },
+        "componentWillUnmount": {
+          "type": "JSFunction",
+          "value": "function componentWillUnmount() {\n  console.log('will unmount');\n}"
+        }
+      },
+      "methods": {
+        "testFunc": {
+          "type": "JSFunction",
+          "value": "function testFunc() {\n  console.log('test func');\n}"
+        },
+        "onClick": {
+          "type": "JSFunction",
+          "value": "function onClick() {\n  this.setState({\n  isShowDialog: true\n  });\n}"
+        },
+        "closeDialog": {
+          "type": "JSFunction",
+          "value": "function closeDialog() {\n  this.setState({\n  isShowDialog: false\n  });\n}"
+        },
+        "getHelloWorldText": {
+          "type": "JSFunction",
+          "value": "function getHelloWorldText() {\n  return this.i18n('i18n-jwg27yo4');\n}"
+        },
+        "getHelloWorldText2": {
+          "type": "JSFunction",
+          "value": "function getHelloWorldText2() {\n  return this.i18n('i18n-jwg27yo3', {\n  name: '絮黎'\n  });\n}"
+        },
+        "onTestConstantsButtonClicked": {
+          "type": "JSFunction",
+          "value": "function onTestConstantsButtonClicked() {\n  console.log('constants.ConstantA:', this.constants.ConstantA);\n  console.log('constants.ConstantB:', this.constants.ConstantB);\n}"
+        },
+        "onTestUtilsButtonClicked": {
+          "type": "JSFunction",
+          "value": "function onTestUtilsButtonClicked() {\n  this.utils.demoUtil('param1', 'param2');\n}"
+        }
+      },
+      "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    });\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    });\n  }\n  getHelloWorldText() {\n    return this.i18n('i18n-jwg27yo4');\n  }\n  getHelloWorldText2() {\n    return this.i18n('i18n-jwg27yo3', {\n      name: '絮黎',\n    });\n  }\n  onTestConstantsButtonClicked() {\n    console.log('constants.ConstantA:', this.constants.ConstantA);\n    console.log('constants.ConstantB:', this.constants.ConstantB);\n\t}\n\tonTestUtilsButtonClicked(){\n    this.utils.demoUtil('param1', 'param2');\n\t}\n}",
+      "hidden": false,
+      "title": "",
+      "isLocked": false,
+      "condition": true,
+      "conditionGroup": "",
+      "children": [
+        {
+          "componentName": "NextRowColContainer",
+          "id": "node_oclawu71ac3",
+          "docId": "doclawu75i0",
+          "props": {
+              "rowGap": 20,
+              "colGap": 20
+          },
+          "title": "行列容器",
+          "hidden": false,
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [
+              {
+                  "componentName": "NextRow",
+                  "id": "node_oclawu71ac4",
+                  "docId": "doclawu75i0",
+                  "props": {},
+            "title": "行",
+            "hidden": false,
+            "isLocked": false,
+            "condition": true,
+            "conditionGroup": "",
+            "children": [
+                {
+                    "componentName": "NextCol",
+                    "id": "node_oclawu71ac5",
+                    "docId": "doclawu75i0",
+                    "props": {
+                        "colSpan": 1
+                    },
+                    "title": "列",
+                    "hidden": false,
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                        {
+                            "componentName": "NextP",
+                            "id": "node_oclawu71ac3n",
+                            "docId": "doclawu71ac",
+                            "props": {
+                                "wrap": false,
+                                "type": "body2",
+                                "verAlign": "middle",
+                                "textSpacing": true,
+                                "align": "left",
+                                "prefix": "",
+                                "full": false,
+                                "flex": false
+                            },
+                            "title": "段落",
+                            "hidden": false,
+                            "isLocked": false,
+                            "condition": true,
+                            "conditionGroup": "",
+                            "children": [
+                                {
+                                    "componentName": "Button",
+                                    "id": "node_oclawu71ac3o",
+                                    "docId": "doclawu71ac",
+                                    "props": {
+                                        "prefix": "next-",
+                                        "type": "primary",
+                                        "size": "medium",
+                                        "htmlType": "button",
+                                        "component": "button",
+                                        "children": "constants",
+                                        "iconSize": "xxs",
+                                        "loading": false,
+                                        "text": false,
+                                        "warning": false,
+                                        "disabled": false,
+                                        "ref": "button-4951c2d3",
+                                        "__events": {
+                                            "eventDataList": [
+                                                {
+                                                    "type": "componentEvent",
+                                                    "name": "onClick",
+                                                    "relatedEventName": "onTestConstantsButtonClicked"
+                                                }
+                                            ],
+                                            "eventList": [
+                                                {
+                                                    "name": "onClick",
+                                                    "description": "点击按钮的回调\n@param {Object} e Event Object",
+                                                    "disabled": true
+                                                },
+                                                {
+                                                    "name": "onMouseUp",
+                                                    "disabled": false
+                                                }
+                                            ]
+                                        },
+                                        "onClick": {
+                                            "type": "JSFunction",
+                                            "value": "function(){this.onTestConstantsButtonClicked.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                                        }
+                                    },
+                                    "hidden": false,
+                                    "title": "",
+                                    "isLocked": false,
+                                    "condition": true,
+                                    "conditionGroup": ""
+                                },
+                                {
+                                    "componentName": "Button",
+                                    "id": "node_oclawu71ac3p",
+                                    "docId": "doclawu71ac",
+                                    "props": {
+                                        "prefix": "next-",
+                                        "type": "primary",
+                                        "size": "medium",
+                                        "htmlType": "button",
+                                        "component": "button",
+                                        "children": "utils",
+                                        "iconSize": "xxs",
+                                        "loading": false,
+                                        "text": false,
+                                        "warning": false,
+                                        "disabled": false,
+                                        "__events": {
+                                            "eventDataList": [
+                                                {
+                                                    "type": "componentEvent",
+                                                    "name": "onClick",
+                                                    "relatedEventName": "onTestUtilsButtonClicked"
+                                                }
+                                            ],
+                                            "eventList": [
+                                                {
+                                                    "name": "onClick",
+                                                    "description": "点击按钮的回调\n@param {Object} e Event Object",
+                                                    "disabled": true
+                                                },
+                                                {
+                                                    "name": "onMouseUp",
+                                                    "disabled": false
+                                                }
+                                            ]
+                                        },
+                                        "onClick": {
+                                            "type": "JSFunction",
+                                            "value": "function(){this.onTestUtilsButtonClicked.apply(this,Array.prototype.slice.call(arguments).concat([])) }"
+                                        }
+                                    },
+                                    "hidden": false,
+                                    "title": "",
+                                    "isLocked": false,
+                                    "condition": true,
+                                    "conditionGroup": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "componentName": "NextP",
+          "id": "node_oclaqjdn9qv",
+          "docId": "doclaqjdn9q",
+          "props": {
+              "wrap": false,
+              "type": "body2",
+              "verAlign": "middle",
+              "textSpacing": true,
+              "align": "left",
+              "prefix": "",
+              "full": false,
+              "flex": false
+          },
+          "title": "段落",
+          "hidden": false,
+          "isLocked": false,
+          "condition": true,
+          "conditionGroup": "",
+          "children": [
+              {
+                  "componentName": "NextText",
+                  "id": "node_oclaqjdn9qw",
+                  "docId": "doclaqjdn9q",
+                  "props": {
+                      "type": "h5",
+                      "children": {
+                          "type": "JSExpression",
+                          "value": "this.getHelloWorldText()",
+                          "mock": "标题标题"
+                      },
+                      "prefix": "",
+                      "classname": "",
+                      "mark": false,
+                      "code": false,
+                      "delete": false,
+                      "underline": false,
+                      "strong": false
+                  },
+                  "hidden": false,
+                  "title": "",
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+              },
+              {
+                  "componentName": "NextText",
+                  "id": "node_oclarv0wja2",
+                  "docId": "doclarv56xh",
+                  "props": {
+                      "type": "h5",
+                      "children": {
+                          "type": "JSExpression",
+                          "value": "this.getHelloWorldText2()",
+                          "mock": "另一个i18n"
+                      },
+                      "prefix": "",
+                      "classname": "",
+                      "mark": false,
+                      "code": false,
+                      "delete": false,
+                      "underline": false,
+                      "strong": false
+                  },
+                  "hidden": false,
+                  "title": "",
+                  "isLocked": false,
+                  "condition": true,
+                  "conditionGroup": ""
+              }
+          ]
+        }
+      ]
+    }
+  ],
+  "i18n": {
+    "zh-CN": {
+      "i18n-jwg27yo4": "你好 ",
+      "i18n-jwg27yo3": "{name} 博士"
+    },
+    "en-US": {
+      "i18n-jwg27yo4": "Hello ",
+      "i18n-jwg27yo3": "Doctor {name}"
+    }
+  }
+}
