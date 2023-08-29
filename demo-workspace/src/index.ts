@@ -19,6 +19,7 @@ import controller from './viewController';
 import SaveSamplePlugin from './plugins/plugin-save-sample';
 import PreviewSamplePlugin from './plugins/plugin-preview-sample';
 import SimulatorLocalePlugin from './plugins/plugin-simulator-locale';
+import DefaultSettersDialogRegistryPlugin from './plugins/plugin-default-setters-dialog-registry'
 
 import appHelper from './appHelper';
 import './global.scss';
@@ -62,6 +63,8 @@ import './global.scss';
   await workspace.plugins.register(SaveSamplePlugin);
 
   await workspace.plugins.register(PreviewSamplePlugin);
+
+  await workspace.plugins.register(DefaultSettersDialogRegistryPlugin);
 
   // 应用级顶部二级面板
   await workspace.plugins.register(pluginResourceTabs, {
