@@ -50,7 +50,7 @@
     },
     {
       "package": "@alifd/layout",
-      "version": "2.0.12",
+      "version": "2.4.1",
       "library": "AlifdLayout",
       "urls": [
         "https://alifd.alicdn.com/npm/@alifd/layout@2.4.1/dist/AlifdLayout.js",
@@ -91,7 +91,7 @@
       "exportName": "AlifdLayoutMeta",
       "npm": {
         "package": "@alifd/layout",
-        "version": "2.0.12"
+        "version": "2.4.1"
       },
       "url": "https://alifd.alicdn.com/npm/@alifd/layout@2.4.1/build/lowcode/meta.js",
       "urls": {
