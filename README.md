@@ -30,8 +30,8 @@ npm run start
 - [custom-initialization](https://lowcode-engine.cn/demo/demo-custom-initialization/index.html)
 - [node-extended-actions](https://lowcode-engine.cn/demo/demo-node-extended-actions/index.html)
 - [next-pro](https://lowcode-engine.cn/demo/demo-next-pro/index.html)
-- [antd-pro-with-formily](https://lowcode-engine.cn/demo/demo-antd-pro-with-formily/index.html)
 - [lowcode-component](https://lowcode-engine.cn/demo/demo-lowcode-component/index.html)
+- [lowcode-workspace](https://lowcode-engine.cn/demo/demo-workspace/index.html)
 
 更多参考资料：
 

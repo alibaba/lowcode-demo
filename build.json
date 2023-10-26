@@ -3,9 +3,6 @@
     "demo-general/index" : "./demo-general/src/index.ts",
     "demo-general/preview" : "./demo-general/src/preview.tsx",
 
-    "demo-antd-pro-with-formily/index" : "./demo-antd-pro-with-formily/src/index.ts",
-    "demo-antd-pro-with-formily/preview" : "./demo-antd-pro-with-formily/src/preview.tsx",
-
     "demo-basic-antd/index" : "./demo-basic-antd/src/index.ts",
     "demo-basic-antd/preview" : "./demo-basic-antd/src/preview.tsx",
 
