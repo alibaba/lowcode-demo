@@ -9,9 +9,6 @@
     "demo-basic-fusion/index" : "./demo-basic-fusion/src/index.ts",
     "demo-basic-fusion/preview" : "./demo-basic-fusion/src/preview.tsx",
 
-    "demo-custom-initialization/index" : "./demo-custom-initialization/src/index.tsx",
-    "demo-custom-initialization/preview" : "./demo-custom-initialization/src/preview.tsx",
-
     "demo-next-pro/index" : "./demo-next-pro/src/index.ts",
     "demo-next-pro/preview" : "./demo-next-pro/src/preview.tsx",
 
