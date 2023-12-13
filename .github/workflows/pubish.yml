@@ -22,11 +22,7 @@ jobs:
         run: npm install
 
       - name: Update Version
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          npm version patch -m "Upgrade to %s" # 可以使用 major、minor 或 patch
-          git push --follow-tags
+        run: npm version patch -m "Upgrade to %s" # 可以使用 major、minor 或 patch
 
       - name: Run Build
         run: npm run build
@@ -36,3 +32,9 @@ jobs:
         env:
           # 设置环境变量，如需要的 API 密钥、令牌等
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+      - name: Save Version
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git push --follow-tags
