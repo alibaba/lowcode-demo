@@ -23,6 +23,8 @@ jobs:
 
       - name: Update Version
         run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           npm version patch -m "Upgrade to %s" # 可以使用 major、minor 或 patch
           git push --follow-tags
 
