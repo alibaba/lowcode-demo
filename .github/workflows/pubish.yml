@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
+      
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -21,18 +21,21 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # - name: Update Version
-      #   run: |
-      #     git config --local user.email "action@github.com"
-      #     git config --local user.name "GitHub Action"
-      #     npm version patch -m "Upgrade to %s" # 可以使用 major、minor 或 patch
-      #     git push --follow-tags
+      - name: Update Version
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          npm version patch -m "Upgrade to %s" # 可以使用 major、minor 或 patch
+          git push --follow-tags
+
+      - name: Create .npmrc file
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
 
       - name: Run Build
         run: npm run build
 
       - name: Run Publish
-        run: npm run pub
+        run: npm publish
         env:
           # 设置环境变量，如需要的 API 密钥、令牌等
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
