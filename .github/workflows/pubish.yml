@@ -4,7 +4,7 @@ name: Build and Publish on Main Branch
 on:
   push:
     branches:
-      - main
+      - chore/publish
 
 jobs:
   build-and-publish:
@@ -21,10 +21,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Update Version
-        run: |
-          npm version patch -m "Upgrade to %s" # 可以使用 major、minor 或 patch
-          git push --follow-tags
+      # - name: Update Version
+      #   run: |
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     npm version patch -m "Upgrade to %s" # 可以使用 major、minor 或 patch
+      #     git push --follow-tags
 
       - name: Run Build
         run: npm run build
