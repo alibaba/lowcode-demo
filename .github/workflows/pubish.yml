@@ -1,0 +1,36 @@
+name: Build and Publish on Main Branch
+
+# 当 main 分支有 push 操作时触发
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # 指定 Node.js 的版本
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Update Version
+        run: |
+          npm version patch -m "Upgrade to %s" # 可以使用 major、minor 或 patch
+          git push --follow-tags
+
+      - name: Run Build
+        run: npm run build
+
+      - name: Run Publish
+        run: npm run pub
+        env:
+          # 设置环境变量，如需要的 API 密钥、令牌等
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
