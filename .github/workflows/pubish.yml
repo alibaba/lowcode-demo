@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Update Version
-        run: npm version patch -m "Upgrade to %s" # 可以使用 major、minor 或 patch
+        run: npm version patch
 
       - name: Run Build
         run: npm run build
@@ -37,4 +37,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git add package.json
+          git commit -m "Update package version"
           git push --follow-tags
