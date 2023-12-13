@@ -4,7 +4,7 @@ name: Build and Publish on Main Branch
 on:
   push:
     branches:
-      - chore/publish
+      - main
 
 jobs:
   build-and-publish:
