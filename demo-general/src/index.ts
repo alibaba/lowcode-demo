@@ -113,5 +113,6 @@ async function registerPlugins() {
       fetch: createFetchHandler(),
     },
     appHelper,
+    enableContextMenu: true,
   });
 })();
