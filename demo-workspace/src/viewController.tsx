@@ -1,13 +1,10 @@
 import React from 'react';
 import { Dialog, Form, Input, Button } from '@alifd/next';
+import * as pluginContext from "@alilc/lowcode-engine";
 import { IPublicModelPluginContext, IPublicModelResource } from '@alilc/lowcode-types';
 
 class Controller {
-  pluginContext?: IPublicModelPluginContext;
-
-  init = (ctx: IPublicModelPluginContext) => {
-    this.pluginContext = ctx;
-  }
+  pluginContext?: IPublicModelPluginContext = pluginContext;
 
   onAddPage = () => {
     const dialog = Dialog.show({
