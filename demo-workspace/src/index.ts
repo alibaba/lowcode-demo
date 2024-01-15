@@ -101,6 +101,7 @@ import { IPublicModelPluginContext, IPublicModelResource, IPublicModelWindow, IP
 
   // 应用级左侧面板
   await workspace.plugins.register(pluginViewManagerPane, {
+    init: controller.init,
     contextMenuActions: (ctx: IPublicModelPluginContext) => ([
       {
         name: 'add',
