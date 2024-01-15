@@ -23,7 +23,7 @@ import DefaultSettersDialogRegistryPlugin from './plugins/plugin-default-setters
 
 import appHelper from './appHelper';
 import './global.scss';
-import { IPublicModelPluginContext } from '@alilc/lowcode-types';
+import { IPublicModelPluginContext, IPublicModelResource, IPublicModelWindow, IPublicTypeContextMenuAction } from '@alilc/lowcode-types';
 
 (async function main() {
   // 注册应用级资源类型
@@ -71,6 +71,29 @@ import { IPublicModelPluginContext } from '@alilc/lowcode-types';
   await workspace.plugins.register(pluginResourceTabs, {
     appKey: 'general',
     shape: 'text',
+    tabContextMenuActions: (ctx: IPublicModelPluginContext, resource: IPublicModelResource): IPublicTypeContextMenuAction[] => {
+      return [
+        {
+          name: 'close',
+          title: '关闭',
+          action: () => {
+            ctx.workspace.removeEditorWindow(resource);
+          },
+        },
+        {
+          name: 'closeOthers',
+          title: '关闭其他',
+          action: () => {
+            workspace.windows.forEach((editorWindow: IPublicModelWindow) => {
+              if (editorWindow.resource?.id !== resource.id) {
+                editorWindow.resource && ctx.workspace.removeEditorWindow(editorWindow.resource);
+              }
+            });
+          },
+          disabled: () => workspace.windows.length <= 1,
+        }
+      ]
+    }
   });
 
   // 设计器区域多语言切换
@@ -78,7 +101,6 @@ import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 
   // 应用级左侧面板
   await workspace.plugins.register(pluginViewManagerPane, {
-    init: controller.init,
     contextMenuActions: (ctx: IPublicModelPluginContext) => ([
       {
         name: 'add',
@@ -86,13 +108,22 @@ import { IPublicModelPluginContext } from '@alilc/lowcode-types';
         action: controller.onAddPage,
       },
     ]),
-    resourceContextMenuActions: (ctx: IPublicModelPluginContext) => ([
+    resourceContextMenuActions: (ctx: IPublicModelPluginContext, resource: IPublicModelResource) => ([
       {
         name: 'delete',
         title: '删除页面',
-        action: controller.onDeletePage,
+        action: () => {
+          controller.onDeletePage(resource);
+        },
       }
-    ])
+    ]),
+    skeletonConfig: {
+      panelProps: {
+        width: '200px',
+        area: 'leftFixedArea',
+      }
+    },
+    showIconText: false,
   });
 
   init(document.getElementById('lce-container')!, {
