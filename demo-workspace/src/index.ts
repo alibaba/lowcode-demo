@@ -23,6 +23,7 @@ import DefaultSettersDialogRegistryPlugin from './plugins/plugin-default-setters
 
 import appHelper from './appHelper';
 import './global.scss';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 
 (async function main() {
   // 注册应用级资源类型
@@ -77,9 +78,21 @@ import './global.scss';
 
   // 应用级左侧面板
   await workspace.plugins.register(pluginViewManagerPane, {
-    onAddPage: controller.onAddPage,
     init: controller.init,
-    onDeletePage: controller.onDeletePage,
+    contextMenuActions: (ctx: IPublicModelPluginContext) => ([
+      {
+        name: 'add',
+        title: '添加页面',
+        action: controller.onAddPage,
+      },
+    ]),
+    resourceContextMenuActions: (ctx: IPublicModelPluginContext) => ([
+      {
+        name: 'delete',
+        title: '删除页面',
+        action: controller.onDeletePage,
+      }
+    ])
   });
 
   init(document.getElementById('lce-container')!, {
@@ -94,5 +107,6 @@ import './global.scss';
       fetch: createFetchHandler(),
     },
     appHelper,
+    enableContextMenu: true,
   });
 })();
